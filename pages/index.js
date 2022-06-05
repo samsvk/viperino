@@ -7,8 +7,8 @@ export default function Home() {
       </Head>
 
       <div className="flex flex-col items-center justify-center w-full h-screen">
-        <div className="p-6 rounded bg-slate-800">
-          <h1 className="text-3xl">test.</h1>
+        <div className="p-6 border rounded border-neutral-700 bg-neutral-900 drop-shadow-md">
+          <h1 className="text-3xl"></h1>
         </div>
       </div>
     </div>
