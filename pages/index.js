@@ -32,8 +32,10 @@ import Articles from "../src/components/articles";
 export default function Home({ posts }) {
   return (
     <>
-      <h1>Articles</h1>
-      <Articles posts={posts} />
+      <div className="w-full max-w-3xl p-10 mx-auto my-0">
+        <h1>Articles</h1>
+        <Articles posts={posts} />
+      </div>
     </>
   );
 }
