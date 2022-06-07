@@ -23,10 +23,14 @@ body {
 }
 
 p {
-  @apply mb-2 text-sm;
+  @apply mb-4 text-sm text-neutral-400;
 }
 
 h1,
 h2 {
-  @apply my-4 text-xl;
+  @apply my-4 text-xl text-green-500;
+}
+
+li {
+  @apply mb-4 text-sm text-neutral-400;
 }
