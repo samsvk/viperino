@@ -21,3 +21,7 @@ body {
   background: rgb(29, 29, 29);
   color: white;
 }
+
+p {
+  @apply my-4 leading-7;
+}
