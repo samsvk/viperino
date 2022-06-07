@@ -12,8 +12,10 @@ export default function PostPage({ post }) {
       <Head>
         <title>{post.meta.title}</title>
       </Head>
-      <h1>{post.meta.title}</h1>
-      <MDXRemote {...post.source} />
+      <div className="w-full max-w-4xl p-10 mx-auto my-0">
+        <h1>{post.meta.title}</h1>
+        <MDXRemote {...post.source} />
+      </div>
     </>
   );
 }
