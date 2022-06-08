@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function Articles({ posts }) {
+  console.log(posts);
   return (
     <ul>
       {posts.map((post) => (

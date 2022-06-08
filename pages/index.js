@@ -26,23 +26,30 @@
 //   );
 // }
 
-import { getAllPosts } from "../src/api";
 import Articles from "../src/components/articles";
+import Image from "next/image";
+import path from "path";
+import fs from "fs";
 
 export default function Home({ posts }) {
   return (
     <>
-      <div className="w-full max-w-3xl p-10 mx-auto my-0">
-        <h1>Articles</h1>
-        <Articles posts={posts} />
-      </div>
+      {posts.map((post, index) => (
+        <div key={index} className="flex items-center justify-center w-full max-w-3xl min-h-screen p-10 mx-auto my-0">
+          <div className="flex flex-col items-center justify-center">
+            <div className="px-4 py-2.5 bg-gray-200 rounded-md hover:bg-gray-400 duration-300 hover:cursor-pointer">
+              <Image src="/folder.png" alt="folder picture" width="100px" height="100px" />
+            </div>
+            <h1 className="m-0 mt-2 text-xs font-semibold text-gray-500">{post}</h1>
+          </div>
+        </div>
+      ))}
     </>
   );
 }
 
 export async function getStaticProps() {
-  const posts = getAllPosts()
-    .slice(0, 9)
-    .map((post) => post.meta);
+  const postDirectory = path.join(process.cwd(), "classes/");
+  const posts = await fs.readdirSync(postDirectory).filter((file) => file);
   return { props: { posts } };
 }

@@ -18,8 +18,7 @@ a {
 }
 
 body {
-  background: rgb(29, 29, 29);
-  color: white;
+  @apply bg-gray-200;
 }
 
 p {
