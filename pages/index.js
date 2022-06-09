@@ -25,8 +25,6 @@
 //     </div>
 //   );
 // }
-
-import Articles from "../src/components/articles";
 import Image from "next/image";
 import path from "path";
 import fs from "fs";
