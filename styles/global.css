@@ -18,11 +18,10 @@ a {
 }
 
 body {
-  @apply bg-gray-200;
+  @apply bg-zinc-900 text-zinc-500;
 }
-
 p {
-  @apply mb-4 text-sm text-neutral-400;
+  @apply mb-4 text-sm text-zinc-500;
 }
 
 h1,
