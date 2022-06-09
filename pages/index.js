@@ -5,7 +5,6 @@
 //       <Head>
 //         <title>Viperino</title>
 //       </Head>
-
 //       <div className="flex flex-col items-center justify-center w-full h-screen">
 //         <div className="w-full max-w-screen-lg border rounded border-gray-100 bg-white drop-shadow-md min-h-[500px] flex flex-row">
 //           <div className="w-full bg-gray-100 max-w-[185px]">
