@@ -10,12 +10,7 @@ export default function Viper({ posts }) {
     <>
       <div className="flex items-center justify-center w-full max-w-3xl min-h-screen gap-3 p-10 mx-auto my-0">
         {posts.map((post, index) => {
-          const {
-            date,
-            title,
-            image,
-            post: link,
-          } = post.meta;
+          const { date, title, image, post: link } = post.meta;
 
           return (
             <div
@@ -60,14 +55,12 @@ export default function Viper({ posts }) {
 
 export async function getStaticProps() {
   const paths = path.join(process.cwd(), `classes/viper`);
-  const tempPosts = await fs
-    .readdirSync(paths)
-    .map((path) => {
-      const parts = path.split("/");
-      const fileName = parts[parts.length - 1];
-      const [slug, _ext] = fileName.split(".");
-      return slug;
-    });
+  const tempPosts = await fs.readdirSync(paths).map((path) => {
+    const parts = path.split("/");
+    const fileName = parts[parts.length - 1];
+    const [slug, _ext] = fileName.split(".");
+    return slug;
+  });
 
   const posts = tempPosts.map((post) => {
     const postPath = path.join(
