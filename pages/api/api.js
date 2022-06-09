@@ -33,19 +33,19 @@ export const getSlugs = () => {};
 //   return posts;
 // };
 
-// export const getPostFromSlug = (slug) => {
-//   const postPath = path.join(POSTS_PATH, `${slug}.mdx`);
-//   const source = fs.readFileSync(postPath);
-//   const { content, data } = matter(source);
+export const getPostFromSlug = (slug) => {
+  const postPath = path.join(POSTS_PATH, `${slug}.mdx`);
+  const source = fs.readFileSync(postPath);
+  const { content, data } = matter(source);
 
-//   return {
-//     content,
-//     meta: {
-//       slug,
-//       excerpt: data.excerpt ?? "",
-//       title: data.title ?? slug,
-//       tags: (data.tags ?? []).sort(),
-//       date: (data.date ?? new Date()).toString(),
-//     },
-//   };
-// };
+  return {
+    content,
+    meta: {
+      slug,
+      excerpt: data.excerpt ?? "",
+      title: data.title ?? slug,
+      tags: (data.tags ?? []).sort(),
+      date: (data.date ?? new Date()).toString(),
+    },
+  };
+};
