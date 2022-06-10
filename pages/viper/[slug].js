@@ -8,8 +8,23 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import { MDXRemote } from "next-mdx-remote";
 import matter from "gray-matter";
+import { IoConstructOutline } from "react-icons/io5";
+
+function YouTube({ id }) {
+  return (
+    <div className="pb-[56.25%] relative h-[0] overflow-hidden max-w-full my-5">
+      <iframe
+        src={`https://www.youtube.com/embed/${id}`}
+        allow="autoplay; encrypted-media"
+        title="Embedded YouTube video"
+        className="absolute top-0 bottom-0 left-0 right-0 w-full h-full border-0"
+      />
+    </div>
+  );
+}
 
 export default function PostPage({ post }) {
+  console.log(post);
   return (
     <>
       <Head>
@@ -19,6 +34,7 @@ export default function PostPage({ post }) {
         <div className="w-full max-w-3xl p-10 mx-auto my-0">
           {/* <Link href="/">Home</Link> */}
           <h1>{post.meta.title}</h1>
+          <YouTube id={post.meta.url} />
           <MDXRemote {...post.source} />
         </div>
       </div>
@@ -42,6 +58,7 @@ export const getStaticProps = async ({ params }) => {
     title: data.title ?? slug,
     tags: (data.tags ?? []).sort(),
     date: (data.date ?? new Date()).toString(),
+    url: data.url ?? "",
   };
 
   const mdxSource = await serialize(content, {
