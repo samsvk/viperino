@@ -17,7 +17,7 @@ export default function PostPage({ post }) {
       </Head>
       <div className="w-full max-w-3xl p-10 mx-auto my-0">
         <div className="w-full max-w-3xl p-10 mx-auto my-0">
-          <Link href="/">Home</Link>
+          {/* <Link href="/">Home</Link> */}
           <h1>{post.meta.title}</h1>
           <MDXRemote {...post.source} />
         </div>
@@ -28,7 +28,10 @@ export default function PostPage({ post }) {
 
 export const getStaticProps = async ({ params }) => {
   const { slug } = params;
-  const postPath = path.join(path.join(process.cwd(), `classes/viper/`), `${slug}.mdx`);
+  const postPath = path.join(
+    path.join(process.cwd(), `classes/viper/`),
+    `${slug}.mdx`
+  );
 
   const source = fs.readFileSync(postPath);
   const { content, data } = matter(source);
@@ -43,7 +46,11 @@ export const getStaticProps = async ({ params }) => {
 
   const mdxSource = await serialize(content, {
     mdxOptions: {
-      rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: "wrap" }], rehypeHighlight],
+      rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, { behavior: "wrap" }],
+        rehypeHighlight,
+      ],
     },
   });
 

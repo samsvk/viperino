@@ -70,10 +70,10 @@ export default function Viper({ posts }) {
                     <h1 className="mt-1 text-sm font-semibold tracking-wide text-left text-zinc-300 ">
                       {title}
                     </h1>
-                    <ul className="flex w-full gap-2 mt-[-11px]">
-                      <li className="px-1.5 pt-.5 pb-0.5 rounded bg-zinc-800 flex justify-center items-center">
+                    <ul className="flex w-full gap-2 mt-[-12px]">
+                      <li className="px-1.5 pt-.5 rounded bg-zinc-800 flex justify-center items-center">
                         <span
-                          className="inline-block w-1.5 h-1.5 mr-1.5 mt-0.5 rounded-full max-w-3"
+                          className="inline-block w-1.5 h-1.5 mr-1.5 rounded-full max-w-3"
                           style={{
                             background: `${
                               diff == 1
@@ -95,9 +95,9 @@ export default function Viper({ posts }) {
                       {tags.map((tag, index) => (
                         <li
                           key={index}
-                          className="px-1.5 pt-.5 pb-0.5 rounded bg-zinc-800 flex justify-center items-center"
+                          className="px-1.5 pt-.5 rounded bg-zinc-800 flex justify-center items-center"
                         >
-                          <span className="text-xs font-[11px] text-zinc-400">
+                          <span className="text-xs font-semibold text-zinc-400">
                             {tag}
                           </span>
                         </li>

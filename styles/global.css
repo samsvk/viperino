@@ -25,16 +25,22 @@ body {
   @apply bg-zinc-900 text-zinc-500;
 }
 p {
-  @apply mb-4 text-sm font-medium leading-5 text-slate-400;
+  @apply my-2 text-sm font-medium leading-5 mb-9 text-slate-400;
 }
 
 h1 {
-  @apply my-4 text-5xl font-semibold text-zinc-200;
+  @apply mb-3 text-5xl font-semibold text-zinc-200;
 }
 h2 {
-  @apply my-4 text-2xl font-semibold text-zinc-300;
+  @apply mb-3 text-2xl font-semibold text-zinc-300;
+}
+h3 {
+  @apply mb-3 text-base font-semibold text-zinc-300;
 }
 
+ul {
+  @apply my-2 ml-5 list-disc mb-9;
+}
 li {
-  @apply mb-4 text-sm text-neutral-400;
+  @apply mb-2 text-sm font-medium leading-5 text-slate-400;
 }
