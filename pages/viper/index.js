@@ -8,7 +8,7 @@ import { IoPlayCircleOutline } from "react-icons/io5";
 export default function Viper({ posts }) {
   return (
     <>
-      <div className="flex items-center justify-center w-full max-w-3xl min-h-screen gap-3 p-10 mx-auto my-0">
+      <div className="flex items-center justify-center w-full max-w-3xl min-h-screen gap-10 p-10 mx-auto my-0">
         {posts.map((post, index) => {
           const {
             date,
@@ -16,6 +16,7 @@ export default function Viper({ posts }) {
             image,
             post: link,
             tags,
+            diff,
           } = post.meta;
 
           return (
@@ -62,6 +63,27 @@ export default function Viper({ posts }) {
                 </h1>
               </div>
               <ul className="flex gap-3">
+                <li className="px-1.5 pt-.5 pb-0.5 rounded bg-zinc-800 flex justify-center items-center">
+                  <span
+                    className="inline-block w-1.5 h-1.5 mr-1.5 mt-0.5 rounded-full max-w-3"
+                    style={{
+                      background: `${
+                        diff == 1
+                          ? "#f87171"
+                          : diff === 2
+                          ? "#facc14"
+                          : "#49de80"
+                      }`,
+                    }}
+                  ></span>
+                  <span className="text-xs font-semibold text-zinc-400">
+                    {diff == 1
+                      ? "Hard"
+                      : diff === 2
+                      ? "Medium"
+                      : "Easy"}
+                  </span>
+                </li>
                 {tags.map((tag) => (
                   <li
                     key={tag}
@@ -100,7 +122,7 @@ export async function getStaticProps() {
     return {
       meta: {
         post,
-        excerpt: data.excerpt ?? "",
+        diff: data.diff ?? "",
         title: data.title ?? slug,
         tags: (data.tags ?? []).sort(),
         date: (data.date ?? new Date()).toString(),
