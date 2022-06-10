@@ -10,13 +10,16 @@ export default function Viper({ posts }) {
     <>
       <div className="flex items-center justify-center w-full max-w-3xl min-h-screen gap-3 p-10 mx-auto my-0">
         {posts.map((post, index) => {
-          const { date, title, image, post: link } = post.meta;
+          const {
+            date,
+            title,
+            image,
+            post: link,
+            tags,
+          } = post.meta;
 
           return (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center"
-            >
+            <div key={index} className="flex flex-col">
               <Link href={`/viper/${link}`}>
                 <div className="relative block overflow-auto duration-200 scale-105 rounded-md shadow-inner-lg will-change-transform drop-shadow-sm hover:cursor-pointer">
                   <div
@@ -42,9 +45,34 @@ export default function Viper({ posts }) {
                   />
                 </div>
               </Link>
-              <h1 className="m-0 mt-2 text-xs font-semibold text-zinc-500">
-                {title}
-              </h1>
+              <div className="flex gap-3 mt-2">
+                <Image
+                  quality={100}
+                  src={`/viper.png`}
+                  alt="viper picture"
+                  loading="lazy"
+                  layout="fixed"
+                  width="28px"
+                  height="28px"
+                  objectFit="cover"
+                  className="block rounded-md"
+                />
+                <h1 className="mt-1 text-sm font-semibold tracking-wide text-left text-zinc-300">
+                  {title}
+                </h1>
+              </div>
+              <ul className="flex gap-3">
+                {tags.map((tag) => (
+                  <li
+                    key={tag}
+                    className="px-1.5 pt-.5 pb-0.5 rounded bg-zinc-800 flex justify-center items-center"
+                  >
+                    <span className="text-xs font-semibold text-zinc-400">
+                      {tag}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
           );
         })}

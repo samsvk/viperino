@@ -15,7 +15,7 @@ export default function PostPage({ post }) {
       </Head>
       <div className="w-full max-w-3xl p-10 mx-auto my-0">
         <Link href="/">Home</Link>
-        <h1>{post.meta.title}</h1>
+        <h1 className="">{post.meta.title}</h1>
         <MDXRemote {...post.source} />
       </div>
     </>
@@ -27,7 +27,11 @@ export const getStaticProps = async ({ params }) => {
   const { content, meta } = getPostFromSlug(slug);
   const mdxSource = await serialize(content, {
     mdxOptions: {
-      rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: "wrap" }], rehypeHighlight],
+      rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, { behavior: "wrap" }],
+        rehypeHighlight,
+      ],
     },
   });
 
