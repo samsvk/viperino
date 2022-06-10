@@ -8,7 +8,8 @@ import { IoPlayCircleOutline } from "react-icons/io5";
 export default function Viper({ posts }) {
   return (
     <>
-      <div className="flex items-center justify-center w-full max-w-3xl min-h-screen gap-10 p-10 mx-auto my-0">
+      {/* <div className="flex flex-wrap justify-start max-w-6xl m-0 mx-auto my-20 gap-y-12"> */}
+      <div className="grid flex-wrap justify-start max-w-6xl grid-cols-4 p-12 m-0 mx-auto my-20 gap-y-12">
         {posts.map((post, index) => {
           const {
             date,
@@ -20,16 +21,19 @@ export default function Viper({ posts }) {
           } = post.meta;
 
           return (
-            <div key={index} className="flex flex-col">
+            <div
+              key={index}
+              className="flex flex-col self-start max-w-full max-h-max"
+            >
               <Link href={`/viper/${link}`}>
-                <div className="relative block overflow-auto duration-200 scale-105 rounded-md shadow-inner-lg will-change-transform drop-shadow-sm hover:cursor-pointer">
+                <div className="relative block overflow-auto duration-200 scale-105 rounded-md max-w-max shadow-inner-lg will-change-transform drop-shadow-sm hover:cursor-pointer">
                   <div
-                    className="absolute top-0 bottom-0 rounded-md  left-0 right-0 z-30 block w-full h-full
-                   bg-zinc-900 opacity-40 max-h-[145px]"
+                    className="absolute top-0 bottom-0 rounded-md left-0 right-0 z-30 block w-full h-full
+                   bg-zinc-900 opacity-40 max-h-[145px] max-w-full"
                   />
                   <div
                     className="absolute flex top-0 justify-center items-center bottom-0 rounded-md 
-                  text-zinc-100 z-50 left-0 right-0 w-full h-full max-h-[145px]"
+                  text-zinc-100 z-50 left-0 right-0 w-full h-full max-h-[145px] "
                   >
                     <IoPlayCircleOutline size={40} />
                   </div>
