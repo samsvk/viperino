@@ -16,17 +16,23 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+@layer base {
+  html {
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+}
 body {
   @apply bg-zinc-900 text-zinc-500;
 }
 p {
-  @apply mb-4 text-sm text-zinc-500;
+  @apply mb-4 text-sm font-medium leading-5 text-slate-400;
 }
 
-h1,
+h1 {
+  @apply my-4 text-5xl font-semibold text-zinc-200;
+}
 h2 {
-  @apply my-4 text-xl text-green-500;
+  @apply my-4 text-2xl font-semibold text-zinc-300;
 }
 
 li {
