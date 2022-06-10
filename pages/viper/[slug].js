@@ -12,7 +12,7 @@ import { IoConstructOutline } from "react-icons/io5";
 
 function YouTube({ id }) {
   return (
-    <div className="pb-[56.25%] relative h-[0] overflow-hidden max-w-full my-5">
+    <div className="pb-[56.25%] relative h-[0] overflow-hidden max-w-full mt-1.5 mb-5 ">
       <iframe
         src={`https://www.youtube.com/embed/${id}`}
         allow="autoplay; encrypted-media"
@@ -24,17 +24,60 @@ function YouTube({ id }) {
 }
 
 export default function PostPage({ post }) {
-  console.log(post);
   return (
     <>
       <Head>
         <title>{post.meta.title}</title>
       </Head>
-      <div className="w-full max-w-3xl p-10 mx-auto my-0">
-        <div className="w-full max-w-3xl p-10 mx-auto my-0">
-          {/* <Link href="/">Home</Link> */}
-          <h1>{post.meta.title}</h1>
+      <div className="w-full max-w-4xl p-10 mx-auto my-0">
+        <div className="w-full max-w-4xl p-10 mx-auto my-0">
+          {/* <Link href="/">
+            <a className="my-2 text-sm font-medium leading-5 text-blue-300 mb-9">
+              Return to Index
+            </a>
+          </Link> */}
+          <h1 className="mb-5">{post.meta.title}</h1>
+          <ul className="flex w-full gap-2 mt-[-12px] ml-0 leading-4 mb-0">
+            <li className="px-1.5 pt-.5 rounded bg-zinc-800 flex justify-center items-center">
+              <span
+                className="inline-block w-1.5 h-1.5 mr-1.5 rounded-full max-w-3"
+                style={{
+                  background: `${
+                    post.meta.diff == 1
+                      ? "#f87171"
+                      : post.meta.diff === 2
+                      ? "#facc14"
+                      : "#49de80"
+                  }`,
+                }}
+              ></span>
+              <span className="text-xs font-semibold text-zinc-400">
+                {post.meta.diff == 1
+                  ? "Hard"
+                  : post.meta.diff === 2
+                  ? "Medium"
+                  : "Easy"}
+              </span>
+            </li>
+            {post.meta.tags.map((tag, index) => (
+              <li
+                key={index}
+                className="px-1.5 pt-.5 rounded bg-zinc-800 flex justify-center items-center"
+              >
+                <span className="text-xs font-semibold text-zinc-400">
+                  {tag}
+                </span>
+              </li>
+            ))}
+          </ul>
+
           <YouTube id={post.meta.url} />
+          <div className="w-full px-3 py-1.5 my-4 flex border-l-2 border-zinc-800">
+            <span className="text-sm italic">
+              Promotion: One to One coaching available from $50
+              p/h from top professionals.
+            </span>
+          </div>
           <MDXRemote {...post.source} />
         </div>
       </div>
