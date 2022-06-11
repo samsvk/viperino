@@ -25,10 +25,15 @@ export default function Viper({ posts }) {
             >
               <div
                 key={index}
-                className="w-100% max-w-[245px] min-w-[245px]  max-h-max mb-3.5 items-center justify-center"
+                className="w-100% max-w-[245px] min-w-[245px] max-h-max items-center justify-center"
               >
                 <Link href={`/viper/${link}`}>
-                  <div className="relative block overflow-auto duration-200 rounded-md max-w-max shadow-inner-lg will-change-transform drop-shadow-sm hover:cursor-pointer">
+                  <h1 className="mb-1 text-sm font-semibold tracking-wide text-left duration-200 text-zinc-300 hover:text-zinc-50 hover:cursor-pointer">
+                    {title}
+                  </h1>
+                </Link>
+                <Link href={`/viper/${link}`}>
+                  <div className="relative block overflow-auto duration-200 rounded-md drop-shadow-md max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
                     <div
                       className="absolute top-0 bottom-0 rounded-md left-0 right-0 z-30 block w-full h-full
                    bg-zinc-900 opacity-40 max-h-[145px] max-w-full"
@@ -54,56 +59,40 @@ export default function Viper({ posts }) {
                     </div>
                   </div>
                 </Link>
-                <div className="flex items-start justify-start w-full max-w-full mt-3">
-                  <Image
-                    quality={100}
-                    src={`/viper.png`}
-                    alt="viper picture"
-                    loading="lazy"
-                    layout="fixed"
-                    width="40px"
-                    height="40px"
-                    objectFit="cover"
-                    className="block leading-[0px]"
-                  />
-                  <div className="ml-3 mt-[-5px]">
-                    <h1 className="mt-1 text-sm font-semibold tracking-wide text-left text-zinc-300 ">
-                      {title}
-                    </h1>
-                    <ul className="flex w-full flex-wrap gap-x-2 mt-[-12px] ml-0">
-                      <li className="px-1.5 pt-.5 rounded bg-zinc-800 flex justify-center items-center">
-                        <span
-                          className="inline-block w-1.5 h-1.5 mr-1.5 rounded-full max-w-3"
-                          style={{
-                            background: `${
-                              diff == 1
-                                ? "#f87171"
-                                : diff === 2
-                                ? "#facc14"
-                                : "#49de80"
-                            }`,
-                          }}
-                        ></span>
-                        <span className="text-xs font-semibold text-zinc-400">
-                          {diff == 1
-                            ? "Hard"
-                            : diff === 2
-                            ? "Medium"
-                            : "Easy"}
+                <div className="flex items-start justify-start w-full mt-.5 max-w-max">
+                  <ul className="flex flex-wrap w-full ml-0 gap-x-2">
+                    <li className="px-1.5 rounded bg-zinc-800 flex justify-center items-center">
+                      <span
+                        className="inline-block w-1.5 h-1.5 mr-1.5 rounded-full max-w-3"
+                        style={{
+                          background: `${
+                            diff == 1
+                              ? "#f87171"
+                              : diff === 2
+                              ? "#facc14"
+                              : "#49de80"
+                          }`,
+                        }}
+                      ></span>
+                      <span className="text-[11px] font-semibold text-zinc-400">
+                        {diff == 1
+                          ? "Hard"
+                          : diff === 2
+                          ? "Medium"
+                          : "Easy"}
+                      </span>
+                    </li>
+                    {tags.map((tag, index) => (
+                      <li
+                        key={index}
+                        className="px-1.5 rounded bg-zinc-800 flex justify-center items-center"
+                      >
+                        <span className="text-[11px] font-semibold text-zinc-400">
+                          {tag}
                         </span>
                       </li>
-                      {tags.map((tag, index) => (
-                        <li
-                          key={index}
-                          className="px-1.5 pt-.5 rounded bg-zinc-800 flex justify-center items-center"
-                        >
-                          <span className="text-xs font-semibold text-zinc-400">
-                            {tag}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
