@@ -29,13 +29,6 @@ export default function Viper({ posts }) {
                 className="w-100% max-w-[245px] min-w-[245px] max-h-max items-center justify-center"
               >
                 <Link href={`/viper/${link}`}>
-                  <>
-                    <h1 className="flex items-center mb-1 text-sm font-semibold tracking-wide text-left duration-200 text-zinc-300 hover:text-zinc-50 hover:cursor-pointer">
-                      {title}
-                    </h1>
-                  </>
-                </Link>
-                <Link href={`/viper/${link}`}>
                   <div className="relative block overflow-auto duration-200 rounded-md drop-shadow-md max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
                     <div
                       className="absolute top-0 bottom-0 rounded-md left-0 right-0 z-30 block w-full h-full
@@ -46,6 +39,18 @@ export default function Viper({ posts }) {
                   text-zinc-100 z-50 left-0 right-0 w-full h-full max-h-[145px] "
                     >
                       <IoPlayCircleOutline size={40} />
+                    </div>
+                    <div className="absolute bottom-0 left-1.5 min-w-[26px] z-50 opacity-90">
+                      <Image
+                        quality={90}
+                        src={`/Poison_Cloud.webp`}
+                        alt="folder picture"
+                        loading="eager"
+                        width="20"
+                        height="20"
+                        objectFit="cover"
+                        className="inline align-bottom scale-110 rounded-md line-height"
+                      />
                     </div>
                     <div className="w-[245px] h-[138px] rounded-md block overflow-hidden">
                       <Image
@@ -62,7 +67,12 @@ export default function Viper({ posts }) {
                     </div>
                   </div>
                 </Link>
-                <div className="flex items-start justify-start w-full mt-.5 max-w-max">
+                <Link href={`/viper/${link}`}>
+                  <h1 className="flex items-center mt-1 mb-1 text-sm font-semibold tracking-wide text-left duration-200 text-zinc-300 hover:text-zinc-50 hover:cursor-pointer">
+                    {title}
+                  </h1>
+                </Link>
+                <div className="flex items-start justify-start w-full mt-[-8px] max-w-max">
                   <ul className="flex flex-wrap w-full ml-0 gap-x-2">
                     <li className="px-1.5 rounded bg-zinc-800 flex justify-center items-center">
                       <span

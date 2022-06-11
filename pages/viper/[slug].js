@@ -8,7 +8,6 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import { MDXRemote } from "next-mdx-remote";
 import matter from "gray-matter";
-import { IoConstructOutline } from "react-icons/io5";
 
 function YouTube({ id }) {
   return (
@@ -96,6 +95,7 @@ export const getStaticProps = async ({ params }) => {
     tags: (data.tags ?? []).sort(),
     date: (data.date ?? new Date()).toString(),
     url: data.url ?? "",
+    diff: data.diff ?? "",
   };
 
   const mdxSource = await serialize(content, {
