@@ -39,7 +39,7 @@ export default function PostPage({ post }) {
           <ul className="flex w-full gap-2 mt-[-12px] ml-0 leading-4 mb-0">
             <li className="px-1.5 pt-.5 rounded  bg-zinc-800 flex justify-center items-center">
               <span
-                className="inline-block w-1.5 h-1.5 mr-1.5 rounded-full max-w-3"
+                className="inline-block w-2 h-2 mr-2 rounded-full max-w-3"
                 style={{
                   background: `${
                     post.meta.diff == 1
@@ -50,7 +50,7 @@ export default function PostPage({ post }) {
                   }`,
                 }}
               ></span>
-              <span className="text-[12px] font-medium  text-zinc-400">
+              <span className="text-[11px] font-bold tracking-wider text-zinc-400">
                 {post.meta.diff == 1
                   ? "Hard"
                   : post.meta.diff === 2
@@ -63,7 +63,7 @@ export default function PostPage({ post }) {
                 key={index}
                 className="px-1.5 pt-.5 rounded bg-zinc-800 flex justify-center items-center"
               >
-                <span className="text-[12px] font-medium text-zinc-400">
+                <span className="text-[11px] font-bold tracking-wider text-zinc-400">
                   {tag}
                 </span>
               </li>

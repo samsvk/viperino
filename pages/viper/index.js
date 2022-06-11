@@ -9,7 +9,15 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 export default function Viper({ posts }) {
   return (
     <>
-      <div className="gap-1 max-w-[1050px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-100% grid mx-auto mt-40">
+      <div className="w-100%  mx-auto max-w-[1048px] mt-20 px-1.5 flex justify-start gap-2">
+        <button className="px-4 py-1 mb-3 text-sm font-medium tracking-wide rounded bg-zinc-800 text-zinc-200">
+          Filters
+        </button>
+        <button className="px-4 py-1 mb-3 text-sm font-medium tracking-wide bg-yellow-600 rounded text-zinc-50">
+          Buy Coaching
+        </button>
+      </div>
+      <div className="gap-5 max-w-[1000px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100% grid mx-auto mt-2">
         {posts.map((post, index) => {
           const {
             date,
@@ -26,33 +34,33 @@ export default function Viper({ posts }) {
             >
               <div
                 key={index}
-                className="w-100% max-w-[245px] min-w-[245px] max-h-max items-center justify-center"
+                className="w-100% max-w-[325px] min-w-[245px] max-h-max items-center justify-center mb-[-1.3rem]"
               >
                 <Link href={`/viper/${link}`}>
-                  <div className="relative block overflow-auto duration-200 rounded-md drop-shadow-md max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
+                  <div className="relative block overflow-auto duration-200 rounded-md drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
                     <div
                       className="absolute top-0 bottom-0 rounded-md left-0 right-0 z-30 block w-full h-full
-                   bg-zinc-900 opacity-40 max-h-[145px] max-w-full"
+                   bg-zinc-900 opacity-40 max-h-[168px] max-w-full"
                     />
                     <div
                       className="absolute flex top-0 justify-center items-center bottom-0 rounded-md 
-                  text-zinc-100 z-50 left-0 right-0 w-full h-full max-h-[145px] "
+                  text-zinc-100 z-50 left-0 right-0 w-full h-full max-h-[168px] "
                     >
                       <IoPlayCircleOutline size={40} />
                     </div>
-                    <div className="absolute bottom-0 left-1.5 min-w-[26px] z-50 opacity-90">
+                    <div className="absolute top-2 right-2 min-w-[26px] z-50 opacity-70">
                       <Image
                         quality={90}
                         src={`/Poison_Cloud.webp`}
                         alt="folder picture"
                         loading="eager"
-                        width="20"
-                        height="20"
+                        width="26"
+                        height="26"
                         objectFit="cover"
                         className="inline align-bottom scale-110 rounded-md line-height"
                       />
                     </div>
-                    <div className="w-[245px] h-[138px] rounded-md block overflow-hidden">
+                    <div className="w-[320px] h-[168px] rounded-md block overflow-hidden">
                       <Image
                         quality={90}
                         src={`${image}`}
@@ -68,15 +76,15 @@ export default function Viper({ posts }) {
                   </div>
                 </Link>
                 <Link href={`/viper/${link}`}>
-                  <h1 className="flex items-center mb-[-12px] mt-[-5px] text-[15px] font-semibold tracking-wide text-left duration-200 text-zinc-300 hover:text-zinc-50 hover:cursor-pointer">
+                  <h1 className="flex items-center mb-[-8px] mt-[-4px] text-[15px] font-medium tracking-wide text-left duration-200 text-zinc-300 hover:text-zinc-50 hover:cursor-pointer">
                     {title}
                   </h1>
                 </Link>
-                <div className="flex items-start justify-start w-full mt-[-8px] max-w-max">
-                  <ul className="flex flex-wrap w-full ml-0 gap-x-2">
-                    <li className="px-1.5 rounded bg-zinc-800 flex justify-center items-center">
+                <div className="flex items-start justify-start w-full mt-[-12px] max-w-max">
+                  <ul className="flex flex-wrap w-full ml-0 gap-x-2.5">
+                    <li className="flex items-center justify-center px-2 rounded bg-zinc-800">
                       <span
-                        className="inline-block w-1.5 h-1.5 mr-1.5 rounded-full max-w-3"
+                        className="inline-block w-2 h-2 mr-2 rounded-full max-w-3"
                         style={{
                           background: `${
                             diff == 1
@@ -87,7 +95,7 @@ export default function Viper({ posts }) {
                           }`,
                         }}
                       ></span>
-                      <span className="text-[12px] font-medium text-zinc-400">
+                      <span className="text-[11px] font-bold tracking-wider text-zinc-400">
                         {diff == 1
                           ? "Hard"
                           : diff === 2
@@ -98,9 +106,9 @@ export default function Viper({ posts }) {
                     {tags.map((tag, index) => (
                       <li
                         key={index}
-                        className="px-1.5 rounded bg-zinc-800 flex justify-center items-center"
+                        className="flex items-center justify-center px-2 rounded bg-zinc-800"
                       >
-                        <span className="text-[12px] font-medium text-zinc-400">
+                        <span className="text-[11px] font-bold tracking-wider text-zinc-400">
                           {tag}
                         </span>
                       </li>
