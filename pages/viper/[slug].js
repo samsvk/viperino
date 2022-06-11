@@ -96,6 +96,7 @@ export const getStaticProps = async ({ params }) => {
     date: (data.date ?? new Date()).toString(),
     url: data.url ?? "",
     diff: data.diff ?? "",
+    map: data.amp ?? "",
   };
 
   const mdxSource = await serialize(content, {
