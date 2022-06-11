@@ -9,7 +9,7 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 export default function Viper({ posts }) {
   return (
     <>
-      <div className="max-w-[1050px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-100% grid mx-auto mt-40">
+      <div className="gap-1 max-w-[1050px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-100% grid mx-auto mt-40">
         {posts.map((post, index) => {
           const {
             date,
@@ -68,7 +68,7 @@ export default function Viper({ posts }) {
                   </div>
                 </Link>
                 <Link href={`/viper/${link}`}>
-                  <h1 className="flex items-center mt-1 mb-1 text-sm font-semibold tracking-wide text-left duration-200 text-zinc-300 hover:text-zinc-50 hover:cursor-pointer">
+                  <h1 className="flex items-center mb-[-12px] mt-[-5px] text-[15px] font-semibold tracking-wide text-left duration-200 text-zinc-300 hover:text-zinc-50 hover:cursor-pointer">
                     {title}
                   </h1>
                 </Link>
@@ -87,7 +87,7 @@ export default function Viper({ posts }) {
                           }`,
                         }}
                       ></span>
-                      <span className="text-[11px] font-semibold text-zinc-400">
+                      <span className="text-[12px] font-medium text-zinc-400">
                         {diff == 1
                           ? "Hard"
                           : diff === 2
@@ -100,7 +100,7 @@ export default function Viper({ posts }) {
                         key={index}
                         className="px-1.5 rounded bg-zinc-800 flex justify-center items-center"
                       >
-                        <span className="text-[11px] font-semibold text-zinc-400">
+                        <span className="text-[12px] font-medium text-zinc-400">
                           {tag}
                         </span>
                       </li>

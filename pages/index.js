@@ -28,6 +28,8 @@ import Image from "next/image";
 import path from "path";
 import fs from "fs";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import Router from "next/router";
 
 export default function Home({ posts }) {
   return (
@@ -48,9 +50,6 @@ export default function Home({ posts }) {
                 />
               </div>
             </Link>
-            {/* <h1 className="m-0 mt-2 text-xs font-semibold text-zinc-50">
-              {post.replace(/^./, (str) => str.toUpperCase())}
-            </h1> */}
           </div>
         ))}
       </div>
