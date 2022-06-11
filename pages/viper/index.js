@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import matter from "gray-matter";
 import { IoPlayCircleOutline } from "react-icons/io5";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 export default function Viper({ posts }) {
   return (
@@ -28,9 +29,11 @@ export default function Viper({ posts }) {
                 className="w-100% max-w-[245px] min-w-[245px] max-h-max items-center justify-center"
               >
                 <Link href={`/viper/${link}`}>
-                  <h1 className="mb-1 text-sm font-semibold tracking-wide text-left duration-200 text-zinc-300 hover:text-zinc-50 hover:cursor-pointer">
-                    {title}
-                  </h1>
+                  <>
+                    <h1 className="flex items-center mb-1 text-sm font-semibold tracking-wide text-left duration-200 text-zinc-300 hover:text-zinc-50 hover:cursor-pointer">
+                      {title}
+                    </h1>
+                  </>
                 </Link>
                 <Link href={`/viper/${link}`}>
                   <div className="relative block overflow-auto duration-200 rounded-md drop-shadow-md max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
