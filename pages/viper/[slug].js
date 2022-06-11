@@ -51,7 +51,7 @@ export default function PostPage({ post }) {
                   }`,
                 }}
               ></span>
-              <span className="text-xs font-semibold text-zinc-400">
+              <span className="text-[11px] font-semibold text-zinc-400">
                 {post.meta.diff == 1
                   ? "Hard"
                   : post.meta.diff === 2
@@ -64,7 +64,7 @@ export default function PostPage({ post }) {
                 key={index}
                 className="px-1.5 pt-.5 rounded bg-zinc-800 flex justify-center items-center"
               >
-                <span className="text-xs font-semibold text-zinc-400">
+                <span className="text-[11px] font-semibold text-zinc-400">
                   {tag}
                 </span>
               </li>
@@ -72,12 +72,6 @@ export default function PostPage({ post }) {
           </ul>
 
           <YouTube id={post.meta.url} />
-          <div className="w-full px-3 py-1.5 my-4 flex border-l-2 border-zinc-800">
-            <span className="text-sm italic">
-              Promotion: One to One coaching available from $50
-              p/h from top professionals.
-            </span>
-          </div>
           <MDXRemote {...post.source} />
         </div>
       </div>

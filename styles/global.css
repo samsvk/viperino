@@ -18,7 +18,7 @@ a {
 }
 @layer base {
   html {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
 }
 body {
@@ -29,7 +29,7 @@ p {
 }
 
 h1 {
-  @apply mb-3 text-4xl font-semibold text-zinc-50;
+  @apply mb-3 text-4xl font-bold text-zinc-50;
 }
 h2 {
   @apply mb-3 text-xl font-semibold text-zinc-200;
