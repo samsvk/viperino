@@ -37,7 +37,7 @@ export default function PostPage({ post }) {
           </Link> */}
           <h1 className="mb-5">{post.meta.title}</h1>
           <ul className="flex w-full gap-2 mt-[-12px] ml-0 leading-4 mb-0">
-            <li className="px-1.5 pt-.5 rounded bg-zinc-800 flex justify-center items-center">
+            <li className="px-1.5 pt-.5 rounded  bg-zinc-800 flex justify-center items-center">
               <span
                 className="inline-block w-1.5 h-1.5 mr-1.5 rounded-full max-w-3"
                 style={{
