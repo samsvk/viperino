@@ -23,10 +23,10 @@ export const getPostFromSlug = (slug) => {
     process.cwd(),
     `classes/viper/${slug}.mdx`
   );
-
   const source = fs.readFileSync(postPath);
-  const { data } = matter(source);
+  const { content, data } = matter(source);
   return {
+    content,
     meta: {
       post: slug,
       diff: data.diff ?? "",

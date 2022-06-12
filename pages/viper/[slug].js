@@ -1,6 +1,4 @@
 import Head from "next/head";
-import path from "path";
-import fs from "fs";
 import Link from "next/link";
 import { serialize } from "next-mdx-remote/serialize";
 import rehypeSlug from "rehype-slug";
@@ -8,6 +6,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import { MDXRemote } from "next-mdx-remote";
 import matter from "gray-matter";
+import { getSlugs, getPostFromSlug } from "../api/api";
 
 function YouTube({ id }) {
   return (
@@ -80,24 +79,7 @@ export default function PostPage({ post }) {
 
 export const getStaticProps = async ({ params }) => {
   const { slug } = params;
-  const postPath = path.join(
-    path.join(process.cwd(), `classes/viper/`),
-    `${slug}.mdx`
-  );
-
-  const source = fs.readFileSync(postPath);
-  const { content, data } = matter(source);
-
-  const meta = {
-    slug,
-    excerpt: data.excerpt ?? "",
-    title: data.title ?? slug,
-    tags: (data.tags ?? []).sort(),
-    date: (data.date ?? new Date()).toString(),
-    url: data.url ?? "",
-    diff: data.diff ?? "",
-    map: data.amp ?? "",
-  };
+  const { content, meta } = getPostFromSlug(slug);
 
   const mdxSource = await serialize(content, {
     mdxOptions: {
@@ -113,16 +95,9 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const pats = path.join(process.cwd(), `classes/viper`);
-
-  const pathNames = await fs.readdirSync(pats).map((path) => {
-    const parts = path.split("/");
-    const fileName = parts[parts.length - 1];
-    const [slug, _ext] = fileName.split(".");
-    return slug;
-  });
-
-  const paths = pathNames.map((slug) => ({ params: { slug } }));
+  const paths = getSlugs().map((slug) => ({
+    params: { slug },
+  }));
 
   return {
     paths,
