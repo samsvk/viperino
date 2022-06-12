@@ -1,10 +1,10 @@
-import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import Image from "next/image";
 import matter from "gray-matter";
 import { IoPlayCircleOutline } from "react-icons/io5";
 import { BsLink45Deg } from "react-icons/bs";
+import { getSlugs, getPostFromSlug } from "../api/api";
 
 export default function Viper({ posts }) {
   return (
@@ -68,15 +68,14 @@ export default function Viper({ posts }) {
                   </div>
                 </Link>
                 <div className="overflow-hidden border-t rounded-b bg-zinc-800 border-zinc-700">
-                  <div className="px-4 my-3">
+                  <div className="flex items-center gap-2 px-4 my-3">
                     <Link href={`/viper/${link}`}>
                       <h1 className="flex items-center m-0 leading-4 text-[15px] font-medium tracking-wide text-left duration-200 text-zinc-300 hover:text-zinc-50 hover:cursor-pointer">
                         {title}
                       </h1>
                     </Link>
-                    <p className="flex items-center mt-1 mb-0 text-indigo-300 hover:cursor-pointer">
-                      {`/${link}`}
-                      <span className="ml-2.5 mt-[4px] text-[10px] flex items-center justify-center text-zinc-300 bg-zinc-700 max-h-[16px] px-1 rounded">
+                    <p className="flex items-center mt-1 mb-0 hover:cursor-pointer">
+                      <span className="text-[10px] flex items-center justify-center text-zinc-300 bg-zinc-700 max-h-[16px] px-1 rounded">
                         <BsLink45Deg
                           size={14}
                           className="mr-0.5"
@@ -125,34 +124,7 @@ export default function Viper({ posts }) {
 }
 
 export async function getStaticProps() {
-  const paths = path.join(process.cwd(), `classes/viper`);
-  const tempPosts = await fs.readdirSync(paths).map((path) => {
-    const parts = path.split("/");
-    const fileName = parts[parts.length - 1];
-    const [slug, _ext] = fileName.split(".");
-    return slug;
-  });
-
-  const posts = tempPosts.map((post) => {
-    const postPath = path.join(
-      process.cwd(),
-      `classes/viper/${post}.mdx`
-    );
-    const source = fs.readFileSync(postPath);
-    const { data } = matter(source);
-    return {
-      meta: {
-        post,
-        diff: data.diff ?? "",
-        title: data.title ?? slug,
-        tags: (data.tags ?? []).sort(),
-        date: (data.date ?? new Date()).toString(),
-        image: data.image ?? "",
-        url: data.url ?? "",
-        map: data.map ?? "",
-      },
-    };
-  });
-
+  const slugs = getSlugs();
+  const posts = slugs.map((slug) => getPostFromSlug(slug));
   return { props: { posts } };
 }
