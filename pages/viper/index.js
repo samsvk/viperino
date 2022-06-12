@@ -52,14 +52,12 @@ export default function Viper({ posts }) {
                         className="inline align-bottom scale-110 rounded-t line-height"
                       />
                     </div>
-                    <div className="w-[318px] h-[148px] rounded-t block overflow-hidden">
+                    <div className="w-[318px] h-[148px] rounded-t block overflow-hidden relative">
                       <Image
                         quality={90}
                         src={`${image}`}
                         alt="folder picture"
                         loading="eager"
-                        width="100%"
-                        height="100%"
                         layout="fill"
                         objectFit="cover"
                         className="inline align-bottom scale-110 rounded-t line-height"
