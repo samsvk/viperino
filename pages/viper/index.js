@@ -4,12 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import matter from "gray-matter";
 import { IoPlayCircleOutline } from "react-icons/io5";
-import { HiOutlineExternalLink } from "react-icons/hi";
+import { BsLink45Deg } from "react-icons/bs";
 
 export default function Viper({ posts }) {
   return (
     <>
-      <div className="gap-5 max-w-[1000px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100% grid mx-auto mt-2">
+      <div className="gap-5 max-w-[1000px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100% grid mx-auto mt-20">
         {posts.map((post, index) => {
           const {
             title,
@@ -52,7 +52,7 @@ export default function Viper({ posts }) {
                         className="inline align-bottom scale-110 rounded-t line-height"
                       />
                     </div>
-                    <div className="w-[318px] h-[168px] rounded-t block overflow-hidden">
+                    <div className="w-[318px] h-[148px] rounded-t block overflow-hidden">
                       <Image
                         quality={90}
                         src={`${image}`}
@@ -74,23 +74,38 @@ export default function Viper({ posts }) {
                         {title}
                       </h1>
                     </Link>
-                    <p className="mt-0 mb-0 text-indigo-300 hover:cursor-pointer">{`viperino.gg/v/${link}`}</p>
+                    <p className="flex items-center mt-1 mb-0 text-indigo-300 hover:cursor-pointer">
+                      {`/${link}`}
+                      <span className="ml-2.5 mt-[4px] text-[10px] flex items-center justify-center text-zinc-300 bg-zinc-700 max-h-[16px] px-1 rounded">
+                        <BsLink45Deg
+                          size={14}
+                          className="mr-0.5"
+                        />{" "}
+                        Copy Link
+                      </span>
+                    </p>
                   </div>
                   <ul className="flex w-full gap-2 mt-0 mb-0 ml-0 leading-4 border-t rounded-b bg-zinc-800 border-zinc-700">
-                    <li className="flex-1 mb-0 text-center list-none p-1.5">
-                      <span
-                        className="inline-block w-2 mb-[1px] h-2 mr-2 rounded-full max-w-3"
-                        style={{
-                          background: `${
-                            diff == 1
-                              ? "#f87171"
-                              : diff === 2
-                              ? "#facc14"
-                              : "#49de80"
-                          }`,
-                        }}
-                      ></span>
-                      <span>
+                    <li
+                      key={index}
+                      className="flex-1 p-1.5 mb-0 text-center list-none"
+                    >
+                      <span className="leading-4 text-[14px] font-medium tracking-wide text-left duration-200 text-zinc-400 hover:text-zinc-50 hover:cursor-pointer">
+                        {map}
+                      </span>
+                    </li>
+                    {tags.map((tag, index) => (
+                      <li
+                        key={index}
+                        className="flex-1 p-1.5 mb-0 text-center list-none border-l border-zinc-700"
+                      >
+                        <span className="leading-4 text-[14px] font-medium tracking-wide text-left duration-200 text-zinc-400 hover:text-zinc-50 hover:cursor-pointer">
+                          {tag}
+                        </span>
+                      </li>
+                    ))}
+                    <li className="flex-1 mb-0 text-center list-none p-1.5 border-l border-zinc-700">
+                      <span className="leading-4 text-[14px] font-medium tracking-wide text-left duration-200 text-zinc-400 hover:text-zinc-50 hover:cursor-pointer">
                         {diff == 1
                           ? "Hard"
                           : diff === 2
@@ -98,20 +113,6 @@ export default function Viper({ posts }) {
                           : "Easy"}
                       </span>
                     </li>
-                    <li
-                      key={index}
-                      className="flex-1 p-1.5 mb-0 text-center list-none"
-                    >
-                      <span>{map}</span>
-                    </li>
-                    {tags.map((tag, index) => (
-                      <li
-                        key={index}
-                        className="flex-1 p-1.5 mb-0 text-center list-none"
-                      >
-                        <span>{tag}</span>
-                      </li>
-                    ))}
                   </ul>
                 </div>
               </div>
