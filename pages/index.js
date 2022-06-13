@@ -120,7 +120,8 @@ export default function Home({ posts }) {
           Please consider that this iterration of Viperino is
           Beta. Any bug reports may be filled in on our{" "}
           <a>Discord</a> channel or if you are looking to support
-          it's development you can buy me a coffee at <a>Kofi</a>
+          it&#39;s development you can buy me a coffee at{" "}
+          <a>Kofi</a>
         </p>
       </div>
     </>
