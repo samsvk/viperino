@@ -31,8 +31,25 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Router from "next/router";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { HiOutlineArrowSmRight } from "react-icons/hi";
 
 export default function Home({ posts }) {
+  const password = 739739;
+  const [pw, setPW] = useState("");
+  const [err, setErr] = useState({
+    type: "No error",
+    truthy: false,
+  });
+
+  function checkPassword() {
+    if (+pw === password) {
+      console.log("yes");
+      Router.push("/viper");
+    } else {
+      setErr(true);
+    }
+  }
+
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen gap-3 p-10 mx-auto my-0 min-w-screen">
@@ -52,18 +69,28 @@ export default function Home({ posts }) {
             Welcome back, Guest.
           </h1>
 
-          <form className="rounded-[14px] min-h-[28px]  max-w-[185px] bg-gray-100 pl-2 flex relative">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              checkPassword();
+            }}
+            className="rounded-[14px] min-h-[28px]  max-w-[185px] bg-gray-100 pl-2 flex relative"
+          >
             <input
+              onChange={(e) => {
+                setPW(e.target.value);
+              }}
+              autoComplete="off"
               type="password"
               className="text-sm block bg-orange-500 font-normal leading-0 items-center text-gray-300 min-height-full max-w-[185px] bg-transparent pl-2 mr-5 focus:outline-none w-[80%]"
               placeholder="Enter Password"
             />
-            <span className="absolute text-gray-300 duration-200 top-1 group right-1 hover:color-slate-200 hover:text-gray-400 hover:cursor-pointer">
-              <BsFillArrowRightCircleFill
-                size={20}
-                style={{ color: "inherit" }}
-              />
-            </span>
+            <button
+              type={"submit"}
+              className="absolute text-gray-100 duration-200 rounded-full bg-slate-200 top-1 group right-1 hover:bg-gray-300 hover:text-slate-50 hover:cursor-pointer"
+            >
+              <HiOutlineArrowSmRight size={20} />
+            </button>
           </form>
           {/* <p className="text-[12px] mt-2 flex items-center justify-center max-w-fit px-2 rounded gap-1">
             Enter Password
