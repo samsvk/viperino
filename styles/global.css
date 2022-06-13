@@ -54,7 +54,7 @@ li {
 } */
 
 input::placeholder {
-  @apply flex items-center text-sm font-normal text-gray-300;
+  @apply flex items-center text-sm font-normal text-gray-300 align-middle;
 }
 
 h1 {

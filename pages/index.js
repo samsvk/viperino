@@ -52,12 +52,13 @@ export default function Home({ posts }) {
             Welcome back, Guest.
           </h1>
 
-          <form className="rounded-[14px] py-1 max-w-[185px] bg-gray-100 pl-2 flex relative">
+          <form className="rounded-[14px] min-h-[28px]  max-w-[185px] bg-gray-100 pl-2 flex relative">
             <input
-              className="text-sm font-normal text-gray-300 min-height-full max-w-[185px] bg-transparent pl-2 mr-5 focus:outline-none w-[80%]"
+              type="password"
+              className="text-sm block bg-orange-500 font-normal leading-0 items-center text-gray-300 min-height-full max-w-[185px] bg-transparent pl-2 mr-5 focus:outline-none w-[80%]"
               placeholder="Enter Password"
             />
-            <span className="absolute text-gray-300 duration-200 group right-1 hover:color-slate-200 hover:text-gray-400 hover:cursor-pointer">
+            <span className="absolute text-gray-300 duration-200 top-1 group right-1 hover:color-slate-200 hover:text-gray-400 hover:cursor-pointer">
               <BsFillArrowRightCircleFill
                 size={20}
                 style={{ color: "inherit" }}
