@@ -13,7 +13,7 @@ import {
 export default function Viper({ posts }) {
   return (
     <>
-      <div className="max-w-[970px] py-5 px-0 w-100 mx-auto mt-20 text-[12px]flex rounded flex justify-between border-b border-gray-100">
+      <div className="max-w-[970px] py-5 px-0 w-100 mx-auto mt-15 text-[12px]flex rounded flex justify-between border-b border-gray-100">
         <div className="max-w-max">
           <h1 className="text-[14px] font-semibold tracking-wide text-gray-800">
             Maps:
