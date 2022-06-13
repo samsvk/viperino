@@ -34,8 +34,34 @@ import Router from "next/router";
 export default function Home({ posts }) {
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen gap-3 p-10 mx-auto my-0 bg-gray-500 min-w-screen">
-        {posts.map((post, index) => (
+      <div className="flex flex-col items-center justify-center min-h-screen gap-3 p-10 mx-auto my-0 min-w-screen">
+        <div className="flex flex-col items-center justify-center max-w-5xl w-100">
+          <div className="w-[105px] h-[105px] block overflow-hidden relative rounded-full shadow-sm border border-gray-100">
+            <Image
+              quality={90}
+              src={`/avatar.png`}
+              alt="folder picture"
+              loading="eager"
+              layout="fill"
+              objectFit="cover"
+              className="inline shadow-inner align-bottom scale-[1.22] line-height"
+            />
+          </div>
+          <h1 className="mt-4 mb-2 text-sm font-medium text-gray-800">
+            Welcome back, Guest.
+          </h1>
+
+          <form className="rounded-[14px] py-1 max-w-[185px] bg-gray-100 pl-2">
+            <input
+              className=" text-sm font-normal text-gray-300 rounded-[14px] min-height-full max-w-[185px] bg-transparent pl-2 focus:outline-none"
+              placeholder="Enter Password"
+            />
+          </form>
+          {/* <p className="text-[12px] mt-2 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            Enter Password
+          </p> */}
+        </div>
+        {/* {posts.map((post, index) => (
           <div
             key={index}
             className="flex flex-col items-center justify-center"
@@ -51,7 +77,7 @@ export default function Home({ posts }) {
               </div>
             </Link>
           </div>
-        ))}
+        ))} */}
       </div>
     </>
   );

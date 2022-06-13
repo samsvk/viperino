@@ -54,5 +54,13 @@ li {
 } */
 
 input::placeholder {
-  @apply flex items-center text-[13px] font-normal tracking-wide text-zinc-400;
+  @apply flex items-center text-sm font-normal text-gray-300;
+}
+
+h1 {
+  @apply text-5xl font-bold text-gray-900;
+}
+
+ul {
+  @apply mt-1;
 }
