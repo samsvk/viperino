@@ -29,13 +29,11 @@ export const getPostFromSlug = (slug) => {
     content,
     meta: {
       post: slug,
-      diff: data.diff ?? "",
       title: data.title ?? slug,
       tags: (data.tags ?? []).sort(),
       date: (data.date ?? new Date()).toString(),
       image: data.image ?? "",
       url: data.url ?? "",
-      map: data.map ?? "",
     },
   };
 };

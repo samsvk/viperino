@@ -19,17 +19,17 @@ a {
 }
 @layer base {
   html {
-    font-family: "Sarabun", sans-serif;
+    font-family: "Hind Madurai", sans-serif;
   }
 }
 body {
-  @apply bg-zinc-900 text-zinc-500;
+  @apply bg-gray-50 text-zinc-500;
 }
-p {
+/* p {
   @apply my-2 text-sm font-medium leading-5 mb-9 text-zinc-500;
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3 {
   @apply tracking-wide;
@@ -51,7 +51,7 @@ ul {
 }
 li {
   @apply mb-1.5 text-sm font-medium leading-5 text-zinc-500;
-}
+} */
 
 input::placeholder {
   @apply flex items-center text-[13px] font-normal tracking-wide text-zinc-400;
