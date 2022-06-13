@@ -43,7 +43,6 @@ export default function Home({ posts }) {
 
   function checkPassword() {
     if (+pw === password) {
-      console.log("yes");
       Router.push("/viper");
     } else {
       setErr(true);
@@ -113,6 +112,16 @@ export default function Home({ posts }) {
             </Link>
           </div>
         ))} */}
+      </div>
+
+      <div className="fixed bottom-0 z-50 w-screen bg-gradient-to-t from-slate-50 to-bg-transparent left-0 right-0 ml-auto mr-auto h-[40vh] text-center z-100" />
+      <div className="fixed bottom-20 z-50 max-w-[700px] w-full left-0 right-0 ml-auto mr-auto h-[40px] text-center">
+        <p className="text-sm leading-5 tracking-wide text-gray-200">
+          Please consider that this iterration of Viperino is
+          Beta. Any bug reports may be filled in on our{" "}
+          <a>Discord</a> channel or if you are looking to support
+          it's development you can buy me a coffee at <a>Kofi</a>
+        </p>
       </div>
     </>
   );
