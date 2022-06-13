@@ -30,6 +30,7 @@ import fs from "fs";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Router from "next/router";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 export default function Home({ posts }) {
   return (
@@ -51,11 +52,17 @@ export default function Home({ posts }) {
             Welcome back, Guest.
           </h1>
 
-          <form className="rounded-[14px] py-1 max-w-[185px] bg-gray-100 pl-2">
+          <form className="rounded-[14px] py-1 max-w-[185px] bg-gray-100 pl-2 flex relative">
             <input
-              className=" text-sm font-normal text-gray-300 rounded-[14px] min-height-full max-w-[185px] bg-transparent pl-2 focus:outline-none"
+              className="text-sm font-normal text-gray-300 min-height-full max-w-[185px] bg-transparent pl-2 mr-5 focus:outline-none w-[80%]"
               placeholder="Enter Password"
             />
+            <span className="absolute text-gray-300 duration-200 group right-1 hover:color-slate-200 hover:text-gray-400 hover:cursor-pointer">
+              <BsFillArrowRightCircleFill
+                size={20}
+                style={{ color: "inherit" }}
+              />
+            </span>
           </form>
           {/* <p className="text-[12px] mt-2 flex items-center justify-center max-w-fit px-2 rounded gap-1">
             Enter Password
