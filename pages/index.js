@@ -34,7 +34,7 @@ import Router from "next/router";
 export default function Home({ posts }) {
   return (
     <>
-      <div className="flex items-center justify-center w-full max-w-3xl min-h-screen gap-3 p-10 mx-auto my-0">
+      <div className="flex items-center justify-center min-h-screen gap-3 p-10 mx-auto my-0 bg-gray-500 min-w-screen">
         {posts.map((post, index) => (
           <div
             key={index}

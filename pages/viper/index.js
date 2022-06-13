@@ -13,31 +13,31 @@ import {
 export default function Viper({ posts }) {
   return (
     <>
-      <div className="max-w-[970px] py-5 px-0 w-100 mx-auto mt-15 text-[12px]flex rounded flex justify-between border-b border-gray-100">
+      <div className="max-w-[970px] py-5 px-0 w-100 mx-auto mt-20 text-[12px]flex rounded flex justify-between border-b border-gray-100">
         <div className="max-w-max">
           <h1 className="text-[14px] font-semibold tracking-wide text-gray-800">
             Maps:
           </h1>
           <ul className="flex gap-2">
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Breeze</span>
             </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Bind</span>
             </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Fracture</span>
             </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Ascent</span>
             </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Haven</span>
             </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Icebox</span>
             </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Split</span>
             </li>
           </ul>
@@ -48,10 +48,10 @@ export default function Viper({ posts }) {
             Side:
           </h1>
           <ul className="flex gap-2">
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Attack</span>
             </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Defence</span>
             </li>
           </ul>
@@ -62,13 +62,13 @@ export default function Viper({ posts }) {
             Difficulty:
           </h1>
           <ul className="flex gap-2">
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Easy</span>
             </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Medium</span>
             </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
               <span className="mt-[2px]">Hard</span>
             </li>
           </ul>
@@ -94,7 +94,7 @@ export default function Viper({ posts }) {
                 className="w-100% max-w-[305px] min-w-[245px] items-center justify-center rounded-md "
               >
                 <Link href={`/viper/${link}`}>
-                  <div className="relative block overflow-auto duration-200 rounded-md drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
+                  <div className="relative block overflow-auto duration-200 rounded-md group drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
                     <div
                       className="absolute flex top-0 justify-center items-center bottom-0 rounded-t 
                   text-zinc-100 z-50 left-0 right-0 w-full h-full max-h-[168px] "
@@ -102,8 +102,8 @@ export default function Viper({ posts }) {
                       <IoPlayCircleOutline size={40} />
                     </div>
                     <div
-                      className="absolute top-0 bottom-0 rounded-t left-0 right-0 z-30 block w-full h-full
-                   bg-zinc-900 opacity-30 max-h-[168px] max-w-full"
+                      className="group-hover:opacity-5 duration-200 absolute top-0 bottom-0 rounded-t left-0 right-0 z-30 block w-full h-full
+                   bg-zinc-900 opacity-[35%] max-h-[168px] max-w-full"
                     />
                     <div className="w-[305px] h-[168px] block overflow-hidden relative">
                       <Image
