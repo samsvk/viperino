@@ -6,6 +6,8 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import { MDXRemote } from "next-mdx-remote";
 import matter from "gray-matter";
+import { YouTube } from "../../components/youtube";
+import { Menu } from "../../components/menu";
 import { getSlugs, getPostFromSlug } from "../api/api";
 import {
   IoLocation,
@@ -13,21 +15,6 @@ import {
   IoStatsChart,
 } from "react-icons/io5";
 import { GiUnlitBomb } from "react-icons/gi";
-
-function YouTube({ id }) {
-  return (
-    <div className="px-2 border border-gray-100 rounded-md">
-      <div className="pb-[56.25%] relative h-[0] overflow-hidden max-w-full mt-1.5 mb-5">
-        <iframe
-          src={`https://www.youtube.com/embed/${id}`}
-          allow="autoplay; encrypted-media"
-          title="Embedded YouTube video"
-          className="absolute top-0 bottom-0 left-0 right-0 w-full h-full border-0"
-        />
-      </div>
-    </div>
-  );
-}
 
 export default function PostPage({ post }) {
   return (
@@ -40,6 +27,8 @@ export default function PostPage({ post }) {
           Return to Index
         </a>
       </Link> */}
+
+      <Menu />
       <div className="w-full max-w-4xl p-10 mx-auto my-0">
         <div className="w-full max-w-4xl p-5 mx-auto my-0">
           <h1 className="mb-3">{post.meta.title}</h1>
