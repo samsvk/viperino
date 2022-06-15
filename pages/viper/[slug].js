@@ -27,12 +27,11 @@ export default function PostPage({ post }) {
           Return to Index
         </a>
       </Link> */}
-
       <Menu />
       <div className="w-full max-w-4xl p-10 mx-auto my-0">
-        <div className="w-full max-w-4xl p-5 mx-auto my-0">
-          <h1 className="mb-3">{post.meta.title}</h1>
-          <ul className="flex gap-2 mb-6">
+        <div className="w-full max-w-4xl mx-auto my-0">
+          <h1 className="mb-0">{post.meta.title}</h1>
+          <ul className="flex gap-2 mb-0 ml-0">
             <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
               <IoStatsChart />
               <span className="mt-[2px]">
@@ -56,7 +55,6 @@ export default function PostPage({ post }) {
               </span>
             </li>
           </ul>
-
           <YouTube id={post.meta.url} />
           <MDXRemote {...post.source} />
         </div>

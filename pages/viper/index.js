@@ -52,7 +52,6 @@ export default function Viper({ posts }) {
                     </div>
                   </div>
                 </Link>
-
                 <div className="mt-1.5 flex gap-2">
                   <div className="max-h-35 min-h-35">
                     <Image
@@ -64,11 +63,10 @@ export default function Viper({ posts }) {
                     />
                   </div>
                   <div className="flex flex-col">
-                    <h1 className="text-[14px] font-semibold tracking-wide text-gray-800">
+                    <h1 className="text-[14px] font-semibold tracking-wide text-gray-800 leading-none">
                       {title.split(" ").slice(1).join(" ")}
                     </h1>
-
-                    <ul className="flex gap-2">
+                    <ul className="flex gap-2 mb-0 ml-0">
                       <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
                         <IoStatsChart />
                         <span className="mt-[2px]">

@@ -5,7 +5,7 @@ export const Maps = () => {
         <h1 className="text-[14px] font-semibold tracking-wide text-gray-800">
           Maps:
         </h1>
-        <ul className="flex gap-2">
+        <ul className="flex gap-2 ml-0">
           <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
             <span className="mt-[2px]">Breeze</span>
           </li>
@@ -34,7 +34,7 @@ export const Maps = () => {
         <h1 className="text-[14px] font-semibold tracking-wide text-gray-800">
           Side:
         </h1>
-        <ul className="flex gap-2">
+        <ul className="flex gap-2 ml-0">
           <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
             <span className="mt-[2px]">Attack</span>
           </li>
@@ -48,7 +48,7 @@ export const Maps = () => {
         <h1 className="text-[14px] font-semibold tracking-wide text-gray-800">
           Difficulty:
         </h1>
-        <ul className="flex gap-2">
+        <ul className="flex gap-2 ml-0">
           <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
             <span className="mt-[2px]">Easy</span>
           </li>
