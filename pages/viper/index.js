@@ -17,14 +17,7 @@ export default function Viper({ posts }) {
       <Maps />
       <div className="gap-y-6 max-w-[990px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
         {posts.map((post, index) => {
-          const {
-            title,
-            image,
-            post: link,
-            tags,
-            diff,
-            map,
-          } = post.meta;
+          const { title, image, post: link, tags } = post.meta;
           return (
             <div
               className="flex items-start justify-center"
