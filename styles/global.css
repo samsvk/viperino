@@ -83,5 +83,5 @@ p {
   @apply mb-3 text-sm leading-5 tracking-wide text-gray-500;
 }
 a {
-  @apply text-sm leading-5 tracking-wide text-indigo-200 duration-200 hover:cursor-pointer hover:text-indigo-300;
+  @apply text-sm leading-5 tracking-wide text-indigo-300 duration-200 hover:cursor-pointer hover:text-indigo-400;
 }

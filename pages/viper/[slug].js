@@ -58,6 +58,16 @@ export default function PostPage({ post }) {
             <Menu />
           </div>
 
+          <div className="pl-2 mt-4 mb-6 border-l-2 border-gray-100">
+            <p>
+              Knowing lineups is great, but knowing when, why and
+              how to capitalise on them correctly is key to
+              levelling up your game. Find coaching from top
+              professional and ranked players for as little as
+              $50 a hour in our <a href="discord.gg">Discord</a>
+            </p>
+          </div>
+
           <YouTube id={post.meta.url} />
           <MDXRemote {...post.source} />
         </div>
