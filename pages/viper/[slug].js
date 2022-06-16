@@ -27,34 +27,37 @@ export default function PostPage({ post }) {
           Return to Index
         </a>
       </Link> */}
-      <Menu />
       <div className="w-full max-w-4xl p-10 mx-auto my-0">
         <div className="w-full max-w-4xl mx-auto my-0">
           <h1 className="mb-0">{post.meta.title}</h1>
-          <ul className="flex gap-2 mb-0 ml-0">
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
-              <IoStatsChart />
-              <span className="mt-[2px]">
-                {post.meta.tags[0] == 1
-                  ? "Hard"
-                  : post.meta.tags[0] === 2
-                  ? "Medium"
-                  : "Easy"}
-              </span>
-            </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
-              <GiUnlitBomb />
-              <span className="mt-[2px]">
-                {post.meta.tags[1]}
-              </span>
-            </li>
-            <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
-              <IoLocation />
-              <span className="mt-[2px]">
-                {post.meta.tags[2]}
-              </span>
-            </li>
-          </ul>
+          <div className="flex">
+            <ul className="flex gap-2 mb-0 ml-0">
+              <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+                <IoStatsChart />
+                <span className="mt-[2px]">
+                  {post.meta.tags[0] == 1
+                    ? "Hard"
+                    : post.meta.tags[0] === 2
+                    ? "Medium"
+                    : "Easy"}
+                </span>
+              </li>
+              <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+                <GiUnlitBomb />
+                <span className="mt-[2px]">
+                  {post.meta.tags[1]}
+                </span>
+              </li>
+              <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+                <IoLocation />
+                <span className="mt-[2px]">
+                  {post.meta.tags[2]}
+                </span>
+              </li>
+            </ul>
+            <Menu />
+          </div>
+
           <YouTube id={post.meta.url} />
           <MDXRemote {...post.source} />
         </div>
