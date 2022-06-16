@@ -31,7 +31,7 @@ export default function Viper({ posts }) {
                   <div className="relative block overflow-auto duration-200 rounded-md group drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
                     <div
                       className="absolute flex top-0 justify-center items-center bottom-0 rounded-t 
-                  text-zinc-100 z-50 left-0 right-0 w-full h-full max-h-[168px] "
+                  text-zinc-100 z-50 left-0 right-0 w-full h-full max-h-[168px]"
                     >
                       <IoPlayCircleOutline size={40} />
                     </div>
