@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { IoMdReturnLeft } from "react-icons/io";
 
 export const Menu = () => {
   const { asPath } = useRouter();
@@ -8,10 +9,13 @@ export const Menu = () => {
   return (
     <div className="flex items-center justify-end float-right w-full">
       <Link href={`/${path}`}>
-        <button className="text-sm leading-5 tracking-wide text-gray-400 duration-200 hover:cursor-pointer hover:text-indigo-300">
-          Return to{" "}
-          {path.charAt(0).toUpperCase() + path.slice(1)}{" "}
-          Dashboard
+        <button className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1   hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200">
+          <IoMdReturnLeft />
+          <span className="mt-[2px]">
+            Return to{" "}
+            {path.charAt(0).toUpperCase() + path.slice(1)}{" "}
+            Dashboard
+          </span>
         </button>
       </Link>
     </div>
