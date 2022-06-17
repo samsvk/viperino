@@ -5,6 +5,7 @@ import { Maps } from "../../components/maps";
 import matter from "gray-matter";
 import { getSlugs, getPostFromSlug } from "../api/api";
 import { GiUnlitBomb } from "react-icons/gi";
+import { useRouter } from "next/router";
 import {
   IoLocation,
   IoPlayCircleOutline,
