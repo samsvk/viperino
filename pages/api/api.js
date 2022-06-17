@@ -2,13 +2,11 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-const POSTS_PATH = path.join(process.cwd(), "posts");
+// const getPostPath = (uri) =>
+//   path.join(process.cwd(), `classes/${uri}`);
 
-const getPostPath = () =>
-  path.join(process.cwd(), `classes/${uri}`);
-
-export const getSlugs = () => {
-  const paths = path.join(process.cwd(), `classes/viper`);
+export const getSlugs = (uri) => {
+  const paths = path.join(process.cwd(), `classes/${uri}`);
   const slugs = fs.readdirSync(paths).map((path) => {
     const parts = path.split("/");
     const fileName = parts[parts.length - 1];
@@ -18,10 +16,10 @@ export const getSlugs = () => {
   return slugs;
 };
 
-export const getPostFromSlug = (slug) => {
+export const getPostFromSlug = (slug, uri) => {
   const postPath = path.join(
     process.cwd(),
-    `classes/viper/${slug}.mdx`
+    `classes/${uri}/${slug}.mdx`
   );
   const source = fs.readFileSync(postPath);
   const { content, data } = matter(source);

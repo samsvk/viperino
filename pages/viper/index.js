@@ -102,7 +102,9 @@ export default function Viper({ posts }) {
 }
 
 export async function getStaticProps() {
-  const slugs = getSlugs();
-  const posts = slugs.map((slug) => getPostFromSlug(slug));
+  const slugs = getSlugs("viper");
+  const posts = slugs.map((slug) =>
+    getPostFromSlug(slug, "viper")
+  );
   return { props: { posts } };
 }
