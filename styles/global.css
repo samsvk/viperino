@@ -71,7 +71,14 @@ h1 {
 }
 
 h2 > a {
-  @apply text-2xl font-bold text-gray-900 hover:text-inherit hover:underline;
+  @apply relative text-2xl font-bold text-gray-900 hover:text-inherit w-max;
+}
+h2 > a:hover:after {
+  @apply visible;
+}
+h2 > a::after {
+  @apply absolute top-0 bottom-0 left-[-1.5rem] right-0 w-full h-full text-gray-200 invisible;
+  content: "#";
 }
 h2 {
   @apply mb-5 text-5xl font-bold text-gray-900;

@@ -1,11 +1,10 @@
 import path from "path";
 import Link from "next/link";
 import Image from "next/image";
-import { Maps } from "../../components/maps";
 import matter from "gray-matter";
+import { Maps } from "../../components/maps";
 import { getSlugs, getPostFromSlug } from "../api/api";
 import { GiUnlitBomb } from "react-icons/gi";
-import { useRouter } from "next/router";
 import {
   IoLocation,
   IoPlayCircleOutline,
