@@ -1,17 +1,31 @@
 import path from "path";
 import Link from "next/link";
 import Image from "next/image";
-import matter from "gray-matter";
 import { Maps } from "../../components/maps";
 import { getSlugs, getPostFromSlug } from "../api/api";
-import { GiUnlitBomb } from "react-icons/gi";
+import {
+  GiConsoleController,
+  GiUnlitBomb,
+} from "react-icons/gi";
 import {
   IoLocation,
   IoPlayCircleOutline,
   IoStatsChart,
 } from "react-icons/io5";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function Viper({ posts }) {
+  const router = useRouter();
+  const { map, side, diff } = router.query;
+
+  useEffect(() => {
+    const x = posts.filter(
+      (post) => post?.meta?.tags[2].toLowerCase() == map
+    );
+    console.log(x);
+  }, [map, side, diff]);
+
   return (
     <>
       <Maps />

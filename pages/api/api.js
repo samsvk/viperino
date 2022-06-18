@@ -2,9 +2,6 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-// const getPostPath = (uri) =>
-//   path.join(process.cwd(), `classes/${uri}`);
-
 export const getSlugs = (uri) => {
   const paths = path.join(process.cwd(), `classes/${uri}`);
   const slugs = fs.readdirSync(paths).map((path) => {
@@ -34,4 +31,8 @@ export const getPostFromSlug = (slug, uri) => {
       url: data.url ?? "",
     },
   };
+};
+
+export const getPostFromTags = (uri, tags) => {
+  return { uri, tags };
 };
