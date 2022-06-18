@@ -1,5 +1,6 @@
 import path from "path";
 import Link from "next/link";
+import { useState } from "react";
 import Image from "next/image";
 import { Maps } from "../../components/maps";
 import { getSlugs, getPostFromSlug } from "../api/api";
@@ -12,25 +13,34 @@ import {
   IoPlayCircleOutline,
   IoStatsChart,
 } from "react-icons/io5";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Viper({ posts }) {
+  const [filtered, setFiltered] = useState([]);
   const router = useRouter();
   const { map, side, diff } = router.query;
 
   useEffect(() => {
-    const x = posts.filter(
-      (post) => post?.meta?.tags[2].toLowerCase() == map
-    );
-    console.log(x);
+    if (map || side || diff) {
+      setFiltered(
+        posts.filter(
+          (post) => post?.meta?.tags[2].toLowerCase() == map
+        )
+      );
+    } else {
+      setFiltered(posts);
+    }
   }, [map, side, diff]);
 
   return (
     <>
       <Maps />
+      <button onClick={() => Router.push("/viper")}>
+        reset
+      </button>
       <div className="gap-y-6 max-w-[990px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
-        {posts.map((post, index) => {
+        {filtered.map((post, index) => {
           const { title, image, post: link, tags } = post.meta;
           return (
             <div
