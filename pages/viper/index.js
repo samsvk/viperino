@@ -19,7 +19,10 @@ import { useEffect } from "react";
 export default function Viper({ posts }) {
   const [filtered, setFiltered] = useState([]);
   const router = useRouter();
+  const { asPath } = router;
   const { map, side, diff } = router.query;
+
+  console.log(router);
 
   useEffect(() => {
     if (map || side || diff) {
@@ -35,9 +38,20 @@ export default function Viper({ posts }) {
 
   return (
     <>
-      <Maps />
+      <Maps />/
       <button onClick={() => Router.push("/viper")}>
         reset
+      </button>
+      /
+      <button onClick={() => Router.push("?map=breeze")}>
+        Breeze
+      </button>
+      /
+      <button onClick={() => Router.push("?map=fracture")}>
+        Fracture
+      </button>
+      <button onClick={() => Router.push("?side=attack")}>
+        Attack
       </button>
       <div className="gap-y-6 max-w-[990px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
         {filtered.map((post, index) => {
