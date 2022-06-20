@@ -22,9 +22,8 @@ export default function Viper({ posts }) {
   const { asPath } = router;
   const { map, side, diff } = router.query;
 
-  console.log(router);
-
   useEffect(() => {
+    console.log(router.query);
     if (map || side || diff) {
       setFiltered(
         posts.filter(
@@ -34,11 +33,20 @@ export default function Viper({ posts }) {
     } else {
       setFiltered(posts);
     }
-  }, [map, side, diff]);
+  }, [map, side, diff, router.query]);
+
+  function handleRouter(query) {
+    const newRoute = { ...router.query, ...query };
+    return Router.push({ query: newRoute });
+  }
 
   return (
     <>
-      <Maps />/
+      <Maps />
+      <button onClick={() => handleRouter({ side: "attack" })}>
+        Test
+      </button>
+      /
       <button onClick={() => Router.push("/viper")}>
         reset
       </button>
