@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { IoMdReturnLeft } from "react-icons/io";
+import Router, { useRouter } from "next/router";
 
 export const Menu = () => {
   const { asPath } = useRouter();
