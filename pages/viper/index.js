@@ -19,7 +19,6 @@ import { useEffect } from "react";
 export default function Viper({ posts }) {
   const [filtered, setFiltered] = useState([]);
   const router = useRouter();
-  const { asPath } = router;
   const { map, side, diff } = router.query;
 
   useEffect(() => {

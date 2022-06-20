@@ -22,10 +22,11 @@ export const Maps = ({ handleRouter }) => {
         <ul className="flex gap-2 ml-0">
           {mapData.map((map, index) => (
             <li
+              key={index}
               onClick={() => handleRouter({ map })}
               className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
             >
-              <span className="mt-[2px]" key={index}>
+              <span className="mt-[2px]">
                 {map.charAt(0).toUpperCase() +
                   map.slice(1).toLowerCase()}
               </span>
@@ -41,10 +42,11 @@ export const Maps = ({ handleRouter }) => {
         <ul className="flex gap-2 ml-0">
           {sideData.map((side, index) => (
             <li
+              key={index}
               onClick={() => handleRouter({ side })}
               className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
             >
-              <span className="mt-[2px]" key={index}>
+              <span className="mt-[2px]">
                 {side.charAt(0).toUpperCase() +
                   side.slice(1).toLowerCase()}
               </span>

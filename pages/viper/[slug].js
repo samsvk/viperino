@@ -5,15 +5,10 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import { MDXRemote } from "next-mdx-remote";
-import matter from "gray-matter";
 import { YouTube } from "../../components/youtube";
 import { Menu } from "../../components/menu";
 import { getSlugs, getPostFromSlug } from "../api/api";
-import {
-  IoLocation,
-  IoPlayCircleOutline,
-  IoStatsChart,
-} from "react-icons/io5";
+import { IoLocation, IoStatsChart } from "react-icons/io5";
 import { GiUnlitBomb } from "react-icons/gi";
 
 export default function PostPage({ post }) {
@@ -22,11 +17,6 @@ export default function PostPage({ post }) {
       <Head>
         <title>{post.meta.title}</title>
       </Head>
-      {/* <Link href="/">
-        <a className="my-2 text-sm font-medium leading-5 text-blue-300 mb-9">
-          Return to Index
-        </a>
-      </Link> */}
       <div className="w-full max-w-4xl p-10 mx-auto my-0">
         <div className="w-full max-w-4xl mx-auto my-0">
           <h1 className="mb-0">{post.meta.title}</h1>
@@ -67,7 +57,6 @@ export default function PostPage({ post }) {
               $50 a hour in our <a href="discord.gg">Discord</a>
             </p>
           </div>
-
           <YouTube id={post.meta.url} />
           <MDXRemote {...post.source} />
         </div>
