@@ -67,8 +67,7 @@ export default function PostPage({ post }) {
 
 export const getStaticProps = async ({ params }) => {
   const { slug } = params;
-  const { content, meta } = getPostFromSlug(slug, "viper");
-
+  const { content, meta } = getPostFromSlug(slug, "all");
   const mdxSource = await serialize(content, {
     mdxOptions: {
       rehypePlugins: [
@@ -83,7 +82,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const paths = getSlugs("viper").map((slug) => ({
+  const paths = getSlugs("all").map((slug) => ({
     params: { slug },
   }));
 

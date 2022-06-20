@@ -43,7 +43,7 @@ export default function Home({ posts }) {
 
   function checkPassword() {
     if (+pw === password) {
-      Router.push("/viper");
+      Router.push("/lessons");
     } else {
       setErr(true);
     }

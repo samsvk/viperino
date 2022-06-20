@@ -63,7 +63,7 @@ export default function Viper({ posts }) {
                 key={index}
                 className="w-100% max-w-[305px] min-w-[245px] items-center justify-center rounded-md "
               >
-                <Link href={`/lesson/${link}`}>
+                <Link href={`/lessons/${link}`}>
                   <div className="relative block overflow-auto duration-200 rounded-md group drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
                     <div
                       className="absolute flex top-0 justify-center items-center bottom-0 rounded-t 
@@ -138,9 +138,9 @@ export default function Viper({ posts }) {
 }
 
 export async function getStaticProps() {
-  const slugs = getSlugs("viper");
+  const slugs = getSlugs("all");
   const posts = slugs.map((slug) =>
-    getPostFromSlug(slug, "viper")
+    getPostFromSlug(slug, "all")
   );
   return { props: { posts } };
 }
