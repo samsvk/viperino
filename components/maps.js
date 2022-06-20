@@ -26,7 +26,8 @@ export const Maps = ({ handleRouter }) => {
               className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
             >
               <span className="mt-[2px]" key={index}>
-                {map}
+                {map.charAt(0).toUpperCase() +
+                  map.slice(1).toLowerCase()}
               </span>
             </li>
           ))}
@@ -44,7 +45,8 @@ export const Maps = ({ handleRouter }) => {
               className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
             >
               <span className="mt-[2px]" key={index}>
-                {side}
+                {side.charAt(0).toUpperCase() +
+                  side.slice(1).toLowerCase()}
               </span>
             </li>
           ))}
