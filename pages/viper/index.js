@@ -23,11 +23,24 @@ export default function Viper({ posts }) {
   const { map, side, diff } = router.query;
 
   useEffect(() => {
-    console.log(router.query);
-    if (map || side || diff) {
+    if (map && side) {
       setFiltered(
         posts.filter(
-          (post) => post?.meta?.tags[2].toLowerCase() == map
+          (post) =>
+            post?.meta?.tags[2]?.toLowerCase() == map &&
+            post?.meta?.tags[1]?.toLowerCase() == side
+        )
+      );
+    } else if (map) {
+      setFiltered(
+        posts.filter(
+          (post) => post?.meta?.tags[2]?.toLowerCase() == map
+        )
+      );
+    } else if (side) {
+      setFiltered(
+        posts.filter(
+          (post) => post?.meta?.tags[1]?.toLowerCase() == side
         )
       );
     } else {
@@ -36,31 +49,13 @@ export default function Viper({ posts }) {
   }, [map, side, diff, router.query]);
 
   function handleRouter(query) {
-    const newRoute = { ...router.query, ...query };
-    return Router.push({ query: newRoute });
+    const updatedRoute = { ...router.query, ...query };
+    return Router.push({ query: updatedRoute });
   }
 
   return (
     <>
-      <Maps />
-      <button onClick={() => handleRouter({ side: "attack" })}>
-        Test
-      </button>
-      /
-      <button onClick={() => Router.push("/viper")}>
-        reset
-      </button>
-      /
-      <button onClick={() => Router.push("?map=breeze")}>
-        Breeze
-      </button>
-      /
-      <button onClick={() => Router.push("?map=fracture")}>
-        Fracture
-      </button>
-      <button onClick={() => Router.push("?side=attack")}>
-        Attack
-      </button>
+      <Maps handleRouter={handleRouter} />
       <div className="gap-y-6 max-w-[990px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
         {filtered.map((post, index) => {
           const { title, image, post: link, tags } = post.meta;
