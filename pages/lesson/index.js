@@ -1,13 +1,9 @@
-import path from "path";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { Maps } from "../../components/maps";
 import { getSlugs, getPostFromSlug } from "../api/api";
-import {
-  GiConsoleController,
-  GiUnlitBomb,
-} from "react-icons/gi";
+import { GiUnlitBomb } from "react-icons/gi";
 import {
   IoLocation,
   IoPlayCircleOutline,
@@ -67,7 +63,7 @@ export default function Viper({ posts }) {
                 key={index}
                 className="w-100% max-w-[305px] min-w-[245px] items-center justify-center rounded-md "
               >
-                <Link href={`/viper/${link}`}>
+                <Link href={`/lesson/${link}`}>
                   <div className="relative block overflow-auto duration-200 rounded-md group drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
                     <div
                       className="absolute flex top-0 justify-center items-center bottom-0 rounded-t 
