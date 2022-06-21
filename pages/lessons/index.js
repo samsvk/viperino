@@ -13,36 +13,17 @@ import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Viper({ posts }) {
-  const [filtered, setFiltered] = useState([]);
+  const [filtered, setFiltered] = useState(posts);
   const router = useRouter();
   const { map, side, diff, agent } = router.query;
 
-  useEffect(() => {
-    if (map && side && agent) {
-      setFiltered(
-        posts.filter(
-          (post) =>
-            post?.meta?.tags[2]?.toLowerCase() == map &&
-            post?.meta?.tags[1]?.toLowerCase() == side &&
-            post?.meta?.post.split("_")[0] == agent
-        )
-      );
-    } else if (map) {
-      setFiltered(
-        posts.filter(
-          (post) => post?.meta?.tags[2]?.toLowerCase() == map
-        )
-      );
-    } else if (side) {
-      setFiltered(
-        posts.filter(
-          (post) => post?.meta?.tags[1]?.toLowerCase() == side
-        )
-      );
-    } else {
-      setFiltered(posts);
-    }
-  }, [map, side, diff, agent, router.query]);
+  // useEffect(() => {
+  //   setFiltered((prev) => {
+  //     return prev.meta.tags.some(
+  //       (t) => t === map && side && agent
+  //     );
+  //   });
+  // }, [map, side, diff, agent, router.query]);
 
   function handleRouter(query) {
     const updatedRoute = { ...router.query, ...query };
