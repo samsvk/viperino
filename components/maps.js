@@ -11,7 +11,7 @@ const mapData = [
 
 const sideData = ["attack", "defence"];
 
-const agentData = ["viper", "cypher", "killjoy", "sova", "kayo"];
+const agentData = ["viper", "cypher", "killjoy", "sova"];
 
 export const Maps = ({ handleRouter }) => {
   const router = useRouter();
