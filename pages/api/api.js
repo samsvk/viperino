@@ -33,6 +33,19 @@ export const getPostFromSlug = (slug, uri) => {
   };
 };
 
-export const getPostFromTags = (uri, tags) => {
-  return { uri, tags };
+export const getExcerpt = (slug, uri) => {
+  const postPath = path.join(
+    process.cwd(),
+    `classes/${uri}/${slug}.mdx`
+  );
+  const source = fs.readFileSync(postPath);
+  const { data } = matter(source);
+  return {
+    meta: {
+      title: data.title ?? slug,
+      tags: (data.tags ?? []).sort(),
+      image: data.image ?? "",
+      url: data.url ?? "",
+    },
+  };
 };

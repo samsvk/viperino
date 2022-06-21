@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { Maps } from "../../components/maps";
-import { getSlugs, getPostFromSlug } from "../api/api";
+import { getSlugs, getExcerpt } from "../api/api";
 import { GiUnlitBomb } from "react-icons/gi";
 import {
   IoLocation,
@@ -139,8 +139,6 @@ export default function Viper({ posts }) {
 
 export async function getStaticProps() {
   const slugs = getSlugs("all");
-  const posts = slugs.map((slug) =>
-    getPostFromSlug(slug, "all")
-  );
+  const posts = slugs.map((slug) => getExcerpt(slug, "all"));
   return { props: { posts } };
 }
