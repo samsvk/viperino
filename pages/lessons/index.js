@@ -13,7 +13,6 @@ import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Viper({ posts }) {
-  console.log(posts);
   const [filtered, setFiltered] = useState([]);
   const router = useRouter();
   const { map, side, diff } = router.query;
@@ -91,8 +90,9 @@ export default function Viper({ posts }) {
                 </Link>
                 <div className="mt-1.5 flex gap-2">
                   <div className="max-h-35 min-h-35">
+                    {console.log(link.split("_")[0])}
                     <Image
-                      src="/viper.png"
+                      src={`/${link.split("_")[0]}.png`}
                       height="35"
                       width="35"
                       quality={100}

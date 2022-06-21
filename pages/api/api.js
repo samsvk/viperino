@@ -42,6 +42,7 @@ export const getExcerpt = (slug, uri) => {
   const { data } = matter(source);
   return {
     meta: {
+      post: slug,
       title: data.title ?? slug,
       tags: (data.tags ?? []).sort(),
       image: data.image ?? "",
