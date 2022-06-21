@@ -15,15 +15,16 @@ import { useEffect } from "react";
 export default function Viper({ posts }) {
   const [filtered, setFiltered] = useState([]);
   const router = useRouter();
-  const { map, side, diff } = router.query;
+  const { map, side, diff, agent } = router.query;
 
   useEffect(() => {
-    if (map && side) {
+    if (map && side && agent) {
       setFiltered(
         posts.filter(
           (post) =>
             post?.meta?.tags[2]?.toLowerCase() == map &&
-            post?.meta?.tags[1]?.toLowerCase() == side
+            post?.meta?.tags[1]?.toLowerCase() == side &&
+            post?.meta?.post.split("_")[0] == agent
         )
       );
     } else if (map) {
@@ -41,7 +42,7 @@ export default function Viper({ posts }) {
     } else {
       setFiltered(posts);
     }
-  }, [map, side, diff, router.query]);
+  }, [map, side, diff, agent, router.query]);
 
   function handleRouter(query) {
     const updatedRoute = { ...router.query, ...query };
@@ -90,7 +91,6 @@ export default function Viper({ posts }) {
                 </Link>
                 <div className="mt-1.5 flex gap-2">
                   <div className="max-h-35 min-h-35">
-                    {console.log(link.split("_")[0])}
                     <Image
                       src={`/${link.split("_")[0]}.png`}
                       height="35"
