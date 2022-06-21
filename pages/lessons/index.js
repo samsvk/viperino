@@ -13,6 +13,7 @@ import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Viper({ posts }) {
+  console.log(posts);
   const [filtered, setFiltered] = useState([]);
   const router = useRouter();
   const { map, side, diff } = router.query;

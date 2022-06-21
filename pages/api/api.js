@@ -45,7 +45,6 @@ export const getExcerpt = (slug, uri) => {
       title: data.title ?? slug,
       tags: (data.tags ?? []).sort(),
       image: data.image ?? "",
-      url: data.url ?? "",
     },
   };
 };

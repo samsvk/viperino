@@ -1,4 +1,5 @@
 import Router, { useRouter } from "next/router";
+
 const mapData = [
   "breeze",
   "bind",
@@ -8,9 +9,7 @@ const mapData = [
   "icebox",
   "split",
 ];
-
 const sideData = ["attack", "defence"];
-
 const agentData = ["viper", "cypher", "killjoy", "sova"];
 
 export const Maps = ({ handleRouter }) => {
@@ -23,15 +22,15 @@ export const Maps = ({ handleRouter }) => {
             Agent:
           </h1>
           <ul className="flex gap-2 ml-0">
-            {agentData.map((map, index) => (
+            {agentData.map((agent, index) => (
               <li
                 key={index}
-                onClick={() => handleRouter({ map })}
+                onClick={() => handleRouter({ agent })}
                 className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
               >
                 <span className="mt-[2px]">
-                  {map.charAt(0).toUpperCase() +
-                    map.slice(1).toLowerCase()}
+                  {agent.charAt(0).toUpperCase() +
+                    agent.slice(1).toLowerCase()}
                 </span>
               </li>
             ))}
