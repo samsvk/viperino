@@ -45,9 +45,7 @@ export default function Viper({ posts }) {
   }, [map, side, agent, router.query]);
 
   function handleRouter(query) {
-    console.log(query);
     const updatedRoute = { ...router.query, ...query };
-    console.log(updatedRoute);
     return Router.push({ query: updatedRoute });
   }
 
