@@ -13,17 +13,12 @@ import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Viper({ posts }) {
+  const [allPosts, setAllPosts] = useState(posts);
   const [filtered, setFiltered] = useState(posts);
   const router = useRouter();
-  const { map, side, diff, agent } = router.query;
+  const { map, side, agent } = router.query;
 
   useEffect(() => {
-    const possiblePostTags = filtered?.map((post) => [
-      post.meta.post.split("_")[0].toLowerCase(),
-      post.meta.tags[1].toLowerCase(),
-      post.meta.tags[2].toLowerCase(),
-    ]);
-
     let selectedTags = [];
     Object.values(router.query).forEach(
       (tag) => (selectedTags = [...selectedTags, tag])
@@ -35,11 +30,18 @@ export default function Viper({ posts }) {
       );
     }
 
-    const finals = possiblePostTags.filter((post) =>
-      checkTags(post)
-    );
+    const finals = allPosts.filter((post) => {
+      if (
+        checkTags([
+          post.meta.post.split("_")[0].toLowerCase(),
+          post.meta.tags[1].toLowerCase(),
+          post.meta.tags[2].toLowerCase(),
+        ])
+      )
+        return post;
+    });
 
-    console.log(finals);
+    setFiltered(finals);
   }, [map, side, agent, router.query]);
 
   function handleRouter(query) {
