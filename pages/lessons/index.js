@@ -17,13 +17,42 @@ export default function Viper({ posts }) {
   const router = useRouter();
   const { map, side, diff, agent } = router.query;
 
-  // useEffect(() => {
-  //   setFiltered((prev) => {
-  //     return prev.meta.tags.some(
-  //       (t) => t === map && side && agent
-  //     );
-  //   });
-  // }, [map, side, diff, agent, router.query]);
+  useEffect(() => {
+    // setFiltered((prev) => {
+    //   return prev.meta.tags.some(
+    //     (t) => t === map && side && agent
+    //   );
+    // });
+    // setFiltered((prev) => {
+    //   const possibleTags = prev?.map((post) => [
+    //     post.meta.tags[1],
+    //     post.meta.tags[2],
+    //   ]);
+    //   console.log(possibleTags);
+    // });
+    const possiblePostTags = filtered?.map((post) => [
+      post.meta.post.split("_")[0],
+      post.meta.tags[1],
+      post.meta.tags[2],
+    ]);
+
+    let selectedTags = [];
+    Object.values(router.query).forEach(
+      (tag) => (selectedTags = [...selectedTags, tag])
+    );
+
+    function checkTags(tags) {
+      return selectedTags.every((tag, index) =>
+        tags.includes(tag)
+      );
+    }
+
+    const finals = possiblePostTags.filter((post) =>
+      checkTags(post)
+    );
+
+    console.log(finals);
+  }, [map, side, agent, router.query]);
 
   function handleRouter(query) {
     const updatedRoute = { ...router.query, ...query };
