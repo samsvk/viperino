@@ -10,9 +10,9 @@ const mapData = [
   "split",
 ];
 const sideData = ["attack", "defence"];
-const agentData = ["viper", "cypher", "killjoy", "sova"];
+const agentData = ["viper", "cypher", "sova"];
 
-export const Maps = ({ handleRouter }) => {
+export const Maps = ({ handleRouter, handleRouterRemove }) => {
   const router = useRouter();
   return (
     <>

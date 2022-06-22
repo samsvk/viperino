@@ -13,7 +13,7 @@ import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Viper({ posts }) {
-  const [allPosts, setAllPosts] = useState(posts);
+  const [cachedPosts, setCachedPosts] = useState(posts);
   const [filtered, setFiltered] = useState(posts);
   const router = useRouter();
   const { map, side, agent } = router.query;
@@ -30,7 +30,7 @@ export default function Viper({ posts }) {
       );
     }
 
-    const finals = allPosts.filter((post) => {
+    const finals = cachedPosts.filter((post) => {
       if (
         checkTags([
           post.meta.post.split("_")[0].toLowerCase(),
@@ -45,7 +45,9 @@ export default function Viper({ posts }) {
   }, [map, side, agent, router.query]);
 
   function handleRouter(query) {
+    console.log(query);
     const updatedRoute = { ...router.query, ...query };
+    console.log(updatedRoute);
     return Router.push({ query: updatedRoute });
   }
 
@@ -149,7 +151,7 @@ export default function Viper({ posts }) {
             <p>
               Unfortunately, we couldn't find any posts with
               these filters... We're working hard on producing
-              more guides maybe check back later.
+              more guides - check back later for more updates.
             </p>
             <ul className="flex gap-2 ml-0">
               <li
