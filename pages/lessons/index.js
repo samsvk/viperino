@@ -18,22 +18,10 @@ export default function Viper({ posts }) {
   const { map, side, diff, agent } = router.query;
 
   useEffect(() => {
-    // setFiltered((prev) => {
-    //   return prev.meta.tags.some(
-    //     (t) => t === map && side && agent
-    //   );
-    // });
-    // setFiltered((prev) => {
-    //   const possibleTags = prev?.map((post) => [
-    //     post.meta.tags[1],
-    //     post.meta.tags[2],
-    //   ]);
-    //   console.log(possibleTags);
-    // });
     const possiblePostTags = filtered?.map((post) => [
-      post.meta.post.split("_")[0],
-      post.meta.tags[1],
-      post.meta.tags[2],
+      post.meta.post.split("_")[0].toLowerCase(),
+      post.meta.tags[1].toLowerCase(),
+      post.meta.tags[2].toLowerCase(),
     ]);
 
     let selectedTags = [];
