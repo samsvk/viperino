@@ -77,16 +77,16 @@ export const Maps = ({ handleRouter }) => {
           </ul>
         </div>
 
-        {/* <div className="max-w-max">
-          <ul className="flex gap-2 ml-0">
+        <div className="max-w-max">
+          <ul className="flex gap-2 mt-[1rem] ml-0">
             <li
-              onClick={() => Router.push("/viper")}
+              onClick={() => Router.push("/lessons")}
               className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
             >
               <span className="mt-[2px]">Reset</span>
             </li>
           </ul>
-        </div> */}
+        </div>
       </div>
     </>
   );
