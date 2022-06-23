@@ -12,7 +12,7 @@ const mapData = [
 const sideData = ["attack", "defence"];
 const agentData = ["viper", "cypher", "sova"];
 
-export const Maps = ({ handleRouter, handleRouterRemove }) => {
+export const Maps = ({ handleRouter }) => {
   const router = useRouter();
   return (
     <>
