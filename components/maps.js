@@ -7,7 +7,7 @@ const mapData = [
   "ascent",
   "haven",
   "icebox",
-  "split",
+  "pearl",
 ];
 const sideData = ["attack", "defence"];
 const agentData = ["viper", "cypher", "sova"];
