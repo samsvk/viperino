@@ -51,7 +51,7 @@ export default function Viper({ posts }) {
 
   return (
     <>
-      <Maps handleRouter={handleRouter} />
+      <Maps handleRouter={handleRouter} router={router} />
       {filtered.length > 0 && (
         <>
           <div className="gap-y-6 max-w-[990px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
