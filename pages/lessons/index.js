@@ -3,7 +3,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { Maps } from "../../components/maps";
 import { getSlugs, getExcerpt } from "../api/api";
-import { GiUnlitBomb } from "react-icons/gi";
+import {
+  GiConsoleController,
+  GiUnlitBomb,
+} from "react-icons/gi";
 import {
   IoLocation,
   IoPlayCircleOutline,
@@ -48,6 +51,30 @@ export default function Viper({ posts }) {
     const updatedRoute = { ...router.query, ...query };
     return Router.push({ query: updatedRoute });
   }
+
+  function handleRemoveRouter(query) {
+    // let q = { ...router.query, ...query };
+    // console.log(
+    //   Object.values(router.query).filter(
+    //     (item) => !item.includes("fracture")
+    //   )
+    // );
+    const filteredQuery = Object.entries(router.query).filter(
+      (item) => {
+        if (!item.includes("fracture")) {
+          return { [item[0]]: item[1] };
+        }
+      }
+    );
+
+    console.log(filteredQuery);
+
+    // console.log({ [x[0]]: x[1] });
+  }
+
+  useEffect(() => {
+    handleRemoveRouter(map);
+  }, [map, side]);
 
   return (
     <>
