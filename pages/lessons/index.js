@@ -25,9 +25,7 @@ export default function Viper({ posts }) {
     );
 
     function checkTags(tags) {
-      return selectedTags.every((tag, index) =>
-        tags.includes(tag)
-      );
+      return selectedTags.every((tag) => tags.includes(tag));
     }
 
     const finals = cachedPosts.filter((post) => {
