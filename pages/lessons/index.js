@@ -3,10 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Maps } from "../../components/maps";
 import { getSlugs, getExcerpt } from "../api/api";
-import {
-  GiConsoleController,
-  GiUnlitBomb,
-} from "react-icons/gi";
+import { GiUnlitBomb } from "react-icons/gi";
 import {
   IoLocation,
   IoPlayCircleOutline,
@@ -77,12 +74,6 @@ export default function Viper({ posts }) {
         handleRemoveRouter={handleRemoveRouter}
         router={router}
       />
-      <button onClick={() => handleRemoveRouter("viper")}>
-        Viper
-      </button>
-      <button onClick={() => handleRemoveRouter("ascent")}>
-        Ascent
-      </button>
       {filtered.length > 0 && (
         <>
           <div className="gap-y-6 max-w-[990px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
