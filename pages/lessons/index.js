@@ -53,23 +53,15 @@ export default function Viper({ posts }) {
   }
 
   function handleRemoveRouter(query) {
-    // let q = { ...router.query, ...query };
-    // console.log(
-    //   Object.values(router.query).filter(
-    //     (item) => !item.includes("fracture")
-    //   )
-    // );
-    const filteredQuery = Object.entries(router.query).filter(
+    const filteredQuery = Object.entries(router.query).map(
       (item) => {
-        if (!item.includes("fracture")) {
+        if (!item.includes(query)) {
           return { [item[0]]: item[1] };
         }
       }
     );
 
     console.log(filteredQuery);
-
-    // console.log({ [x[0]]: x[1] });
   }
 
   useEffect(() => {
