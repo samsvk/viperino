@@ -52,25 +52,37 @@ export default function Viper({ posts }) {
     return Router.push({ query: updatedRoute });
   }
 
-  function handleRemoveRouter(query) {
-    const filteredQuery = Object.entries(router.query).map(
-      (item) => {
-        if (!item.includes(query)) {
+  function handleRemoveRouter(passedQueryValue) {
+    const filteredQuery = Object.entries(router.query)
+      .map((item) => {
+        if (!item.includes(passedQueryValue)) {
           return { [item[0]]: item[1] };
         }
-      }
-    );
+      })
+      .filter((q) => q !== undefined);
 
-    console.log(filteredQuery);
+    const newQuery = filteredQuery.reduce((obj, item) => {
+      const key = Object.keys(item);
+      const value = Object.values(item).toString();
+      return { ...obj, [key]: value };
+    }, {});
+
+    return Router.push({ query: newQuery });
   }
-
-  useEffect(() => {
-    handleRemoveRouter(map);
-  }, [map, side]);
 
   return (
     <>
-      <Maps handleRouter={handleRouter} router={router} />
+      <Maps
+        handleRouter={handleRouter}
+        handleRemoveRouter={handleRemoveRouter}
+        router={router}
+      />
+      <button onClick={() => handleRemoveRouter("viper")}>
+        Viper
+      </button>
+      <button onClick={() => handleRemoveRouter("ascent")}>
+        Ascent
+      </button>
       {filtered.length > 0 && (
         <>
           <div className="gap-y-6 max-w-[990px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">

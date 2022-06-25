@@ -10,7 +10,11 @@ const mapData = [
 const sideData = ["attack", "defence"];
 const agentData = ["viper", "cypher", "sova"];
 
-export const Maps = ({ handleRouter, router }) => {
+export const Maps = ({
+  handleRouter,
+  handleRemoveRouter,
+  router,
+}) => {
   const { query } = router;
   return (
     <>
@@ -24,7 +28,7 @@ export const Maps = ({ handleRouter, router }) => {
               <span key={index}>
                 {query.agent === agent ? (
                   <li
-                    onClick={() => handleRouter({ agent })}
+                    onClick={() => handleRemoveRouter(agent)}
                     className="text-[12px] bg-slate-200 text-slate-50 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
                   >
                     <span className="mt-[2px]">
@@ -57,7 +61,7 @@ export const Maps = ({ handleRouter, router }) => {
               <span key={index}>
                 {query.map === map ? (
                   <li
-                    onClick={() => handleRouter({ map })}
+                    onClick={() => handleRemoveRouter(map)}
                     className="text-[12px] bg-slate-200 text-slate-50 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
                   >
                     <span className="mt-[2px]">
@@ -90,7 +94,7 @@ export const Maps = ({ handleRouter, router }) => {
               <span key={index}>
                 {query.side === side ? (
                   <li
-                    onClick={() => handleRouter({ side })}
+                    onClick={() => handleRemoveRouter(side)}
                     className="text-[12px] bg-slate-200 text-slate-50 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
                   >
                     <span className="mt-[2px]">
