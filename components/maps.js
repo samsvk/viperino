@@ -18,7 +18,7 @@ export const Maps = ({
   const { query } = router;
   return (
     <>
-      <div className="max-w-[970px] py-5 px-0 w-100 mx-auto text-[12px]flex rounded flex justify-between border-b border-gray-100 items-center mt-10">
+      <div className="max-w-[970px] py-5 px-0 w-100 mx-auto text-[12px]flex rounded flex justify-between border-b border-gray-100 items-center">
         <div className="max-w-max">
           <h1 className="text-[14px] font-semibold tracking-wide text-gray-800">
             Agent:

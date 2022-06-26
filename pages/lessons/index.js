@@ -11,6 +11,7 @@ import {
 } from "react-icons/io5";
 import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
+import Heading from "../../components/heading";
 
 export default function Viper({ posts }) {
   const [cachedPosts, setCachedPosts] = useState(posts);
@@ -67,6 +68,7 @@ export default function Viper({ posts }) {
 
   return (
     <>
+      <Heading title="Valorant Guides" />
       <Maps
         handleRouter={handleRouter}
         handleRemoveRouter={handleRemoveRouter}
