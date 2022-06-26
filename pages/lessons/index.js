@@ -68,7 +68,7 @@ export default function Viper({ posts }) {
 
   return (
     <>
-      <Heading title="Valorant Guides" />
+      {/* <Heading title="Guides" /> */}
       <Maps
         handleRouter={handleRouter}
         handleRemoveRouter={handleRemoveRouter}
