@@ -76,7 +76,7 @@ export default function Viper({ posts }) {
       />
       {filtered.length > 0 && (
         <>
-          <div className="gap-y-6 max-w-[990px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
+          <div className="gap-y-4 max-w-[990px] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5 gap-1">
             {filtered.map((post, index) => {
               const {
                 title,
@@ -91,7 +91,7 @@ export default function Viper({ posts }) {
                 >
                   <div
                     key={index}
-                    className="w-100% max-w-[305px] min-w-[245px] items-center justify-center rounded-md "
+                    className="w-100% min-w-[310px] items-center justify-center rounded-md "
                   >
                     <Link href={`/lessons/${link}`}>
                       <div className="relative block overflow-auto duration-200 rounded-md group drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
@@ -103,9 +103,9 @@ export default function Viper({ posts }) {
                         </div>
                         <div
                           className="group-hover:opacity-5 duration-200 absolute top-0 bottom-0 rounded-t left-0 right-0 z-30 block w-full h-full
-                   bg-zinc-900 opacity-[35%] max-h-[168px] max-w-full"
+                   bg-neutral-900 opacity-[50%] max-h-[168px] max-w-full"
                         />
-                        <div className="w-[305px] h-[168px] block overflow-hidden relative">
+                        <div className="w-[310px] h-[168px] block overflow-hidden relative">
                           <Image
                             quality={90}
                             src={`${image}`}

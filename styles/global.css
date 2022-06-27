@@ -57,21 +57,21 @@ ul {
   @apply my-2 list-disc ml-7 mb-9;
 }
 li {
-  @apply mb-1.5 text-sm leading-5 tracking-wide text-gray-500;
+  @apply mb-1.5 text-sm leading-5 tracking-wide text-neutral-500;
 }
 li::marker {
-  @apply text-gray-200;
+  @apply text-neutral-800;
 }
 input::placeholder {
   @apply flex items-center text-sm font-normal align-middle text-neutral-400;
 }
 
 h1 {
-  @apply text-4xl font-bold leading-none text-gray-900;
+  @apply text-4xl font-bold leading-none text-neutral-100;
 }
 
 h2 > a {
-  @apply relative text-2xl font-bold text-gray-900 hover:text-inherit w-max;
+  @apply relative text-2xl font-bold text-neutral-200 hover:text-inherit w-max;
 }
 h2 > a:hover:after {
   @apply visible;
@@ -81,13 +81,13 @@ h2 > a::after {
   content: "#";
 }
 h2 {
-  @apply mb-5 text-5xl font-bold text-gray-900;
+  @apply mb-5 text-5xl font-bold text-neutral-200;
 }
 ul {
   @apply mt-1 mb-0;
 }
 p {
-  @apply mb-3 text-sm leading-5 tracking-wide text-gray-500;
+  @apply mb-3 text-sm leading-5 tracking-wide text-neutral-500;
 }
 a {
   @apply text-sm leading-5 tracking-wide text-indigo-300 duration-200 hover:cursor-pointer hover:text-indigo-400;
