@@ -16,6 +16,14 @@ export const Maps = ({
   router,
 }) => {
   const { query } = router;
+
+  function toUpperCase(param) {
+    return (
+      param.charAt(0).toUpperCase() +
+      param.slice(1).toLowerCase()
+    );
+  }
+
   return (
     <>
       <div className="max-w-[970px] mt-5 px-0 w-100 mx-auto text-[12px]flex rounded flex justify-between items-center">
@@ -32,8 +40,7 @@ export const Maps = ({
                     className="text-[12px] bg-slate-200 text-slate-50 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
                   >
                     <span className="mt-[2px]">
-                      {agent.charAt(0).toUpperCase() +
-                        agent.slice(1).toLowerCase()}
+                      {toUpperCase(agent)}
                     </span>
                   </li>
                 ) : (
@@ -42,8 +49,7 @@ export const Maps = ({
                     className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
                   >
                     <span className="mt-[2px]">
-                      {agent.charAt(0).toUpperCase() +
-                        agent.slice(1).toLowerCase()}
+                      {toUpperCase(agent)}
                     </span>
                   </li>
                 )}
@@ -65,8 +71,7 @@ export const Maps = ({
                     className="text-[12px] bg-slate-200 text-slate-50 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
                   >
                     <span className="mt-[2px]">
-                      {map.charAt(0).toUpperCase() +
-                        map.slice(1).toLowerCase()}
+                      {toUpperCase(map)}
                     </span>
                   </li>
                 ) : (
@@ -75,8 +80,7 @@ export const Maps = ({
                     className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
                   >
                     <span className="mt-[2px]">
-                      {map.charAt(0).toUpperCase() +
-                        map.slice(1).toLowerCase()}
+                      {toUpperCase(map)}
                     </span>
                   </li>
                 )}
@@ -98,8 +102,7 @@ export const Maps = ({
                     className="text-[12px] bg-slate-200 text-slate-50 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
                   >
                     <span className="mt-[2px]">
-                      {side.charAt(0).toUpperCase() +
-                        side.slice(1).toLowerCase()}
+                      {toUpperCase(side)}
                     </span>
                   </li>
                 ) : (
@@ -108,8 +111,7 @@ export const Maps = ({
                     className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
                   >
                     <span className="mt-[2px]">
-                      {side.charAt(0).toUpperCase() +
-                        side.slice(1).toLowerCase()}
+                      {toUpperCase(side)}
                     </span>
                   </li>
                 )}
