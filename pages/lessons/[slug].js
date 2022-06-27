@@ -10,6 +10,7 @@ import { Menu } from "../../components/menu";
 import { getSlugs, getPostFromSlug } from "../api/api";
 import { IoLocation, IoStatsChart } from "react-icons/io5";
 import { GiUnlitBomb } from "react-icons/gi";
+import { Table } from "../../components/table";
 
 export default function PostPage({ post }) {
   return (
@@ -21,7 +22,7 @@ export default function PostPage({ post }) {
         <div className="w-full max-w-4xl mx-auto my-0">
           <h1 className="mb-0">{post.meta.title}</h1>
           <div className="flex">
-            <ul className="flex gap-2 mb-0 ml-0">
+            <ul className="flex gap-4 mt-2 mb-0 ml-0">
               <li className="text-[12px] bg-neutral-800 text-neutral-400 flex items-center justify-center max-w-fit px-2 rounded gap-1 ">
                 <IoStatsChart />
                 <span className="mt-[2px]">
@@ -47,16 +48,16 @@ export default function PostPage({ post }) {
             </ul>
             <Menu />
           </div>
-
-          <div className="pl-2 mt-4 mb-6 border-l-2 border-gray-100">
-            <p>
+          <div className="flex items-center justify-center p-4 mt-2.5 border rounded-md border-neutral-800">
+            <p className="mb-0 text-fuchsia-600">
               Knowing lineups is great, but knowing when, why and
               how to capitalise on them correctly is key to
               levelling up your game. Find coaching from top
               professional and ranked players for as little as
-              $50 a hour in our <a href="discord.gg">Discord</a>
+              $50 a hour in our Discord.
             </p>
           </div>
+          <Table />
           <YouTube id={post.meta.url} />
           <MDXRemote {...post.source} />
         </div>

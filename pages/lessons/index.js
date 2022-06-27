@@ -118,12 +118,12 @@ export default function Viper({ posts }) {
                         </div>
                       </div>
                     </Link>
-                    <div className="mt-1.5 flex gap-2">
+                    <div className="flex gap-2 mt-2">
                       <div className="max-h-35 min-h-35">
                         <Image
                           src={`/${link.split("_")[0]}.png`}
-                          height="35"
-                          width="35"
+                          height="38"
+                          width="38"
                           quality={100}
                           loading={"eager"}
                         />
