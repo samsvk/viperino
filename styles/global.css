@@ -77,7 +77,7 @@ h2 > a:hover:after {
   @apply visible;
 }
 h2 > a::after {
-  @apply absolute top-0 bottom-0 left-[-1.5rem] right-0 w-full h-full text-gray-200 invisible;
+  @apply absolute top-0 bottom-0 left-[-1.5rem] right-0 w-full h-full text-neutral-700 invisible;
   content: "#";
 }
 h2 {

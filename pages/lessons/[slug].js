@@ -48,13 +48,16 @@ export default function PostPage({ post }) {
             </ul>
             <Menu />
           </div>
-          <div className="flex items-center justify-center p-4 mt-2.5 border rounded-md border-neutral-800">
-            <p className="mb-0 text-fuchsia-600">
+          <div className="flex items-center justify-center p-4 mt-2.5 border rounded-md border-blue-400 bg-slate-800 hover:cursor-pointer duration-200">
+            <p className="mb-0 italic text-blue-300">
+              <strong className="text-inherit">
+                Promotional offer:
+              </strong>{" "}
               Knowing lineups is great, but knowing when, why and
               how to capitalise on them correctly is key to
               levelling up your game. Find coaching from top
               professional and ranked players for as little as
-              $50 a hour in our Discord.
+              $25 in our Discord.
             </p>
           </div>
           <Table />

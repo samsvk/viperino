@@ -2,7 +2,7 @@ import React from "react";
 
 export const Table = () => {
   return (
-    <div className="mt-3 mb-5">
+    <div className="mt-5 mb-7">
       <h2 className="relative mb-0 text-2xl font-bold text-neutral-200 w-max">
         Table of Contents
       </h2>
