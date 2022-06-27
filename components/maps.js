@@ -23,12 +23,13 @@ export const Maps = ({
       param.slice(1).toLowerCase()
     );
   }
+  // bg-neutral-800;
 
   return (
     <>
       <div className="max-w-[970px] mt-5 px-0 w-100 mx-auto text-[12px]flex rounded flex justify-between items-center">
         <div className="max-w-max">
-          <h1 className="text-[14px] font-semibold tracking-wide text-gray-800">
+          <h1 className="text-[14px] font-semibold tracking-wide text-neutral-200">
             Agent:
           </h1>
           <ul className="flex gap-2 ml-0">
@@ -37,7 +38,7 @@ export const Maps = ({
                 {query.agent === agent ? (
                   <li
                     onClick={() => handleRemoveRouter(agent)}
-                    className="text-[12px] bg-slate-200 text-slate-50 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
+                    className="text-[12px] bg-neutral-700 text-neutral-200 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
                   >
                     <span className="mt-[2px]">
                       {toUpperCase(agent)}
@@ -46,7 +47,7 @@ export const Maps = ({
                 ) : (
                   <li
                     onClick={() => handleRouter({ agent })}
-                    className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
+                    className="text-[12px] bg-neutral-800 text-neutral-400 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-neutral-700 hover:text-neutral-200 duration-200"
                   >
                     <span className="mt-[2px]">
                       {toUpperCase(agent)}
@@ -59,7 +60,7 @@ export const Maps = ({
         </div>
 
         <div className="max-w-max">
-          <h1 className="text-[14px] font-semibold tracking-wide text-gray-800">
+          <h1 className="text-[14px] font-semibold tracking-wide text-neutral-200">
             Maps:
           </h1>
           <ul className="flex gap-2 ml-0">
@@ -68,7 +69,7 @@ export const Maps = ({
                 {query.map === map ? (
                   <li
                     onClick={() => handleRemoveRouter(map)}
-                    className="text-[12px] bg-slate-200 text-slate-50 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
+                    className="text-[12px] bg-neutral-700 text-neutral-200 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
                   >
                     <span className="mt-[2px]">
                       {toUpperCase(map)}
@@ -77,7 +78,7 @@ export const Maps = ({
                 ) : (
                   <li
                     onClick={() => handleRouter({ map })}
-                    className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
+                    className="text-[12px] bg-neutral-800 text-neutral-400 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-neutral-700 hover:text-neutral-200 duration-200"
                   >
                     <span className="mt-[2px]">
                       {toUpperCase(map)}
@@ -90,7 +91,7 @@ export const Maps = ({
         </div>
 
         <div className="max-w-max">
-          <h1 className="text-[14px] font-semibold tracking-wide text-gray-800">
+          <h1 className="text-[14px] font-semibold tracking-wide text-neutral-200">
             Side:
           </h1>
           <ul className="flex gap-2 ml-0">
@@ -99,7 +100,7 @@ export const Maps = ({
                 {query.side === side ? (
                   <li
                     onClick={() => handleRemoveRouter(side)}
-                    className="text-[12px] bg-slate-200 text-slate-50 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
+                    className="text-[12px] bg-neutral-700 text-neutral-200 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
                   >
                     <span className="mt-[2px]">
                       {toUpperCase(side)}
@@ -108,7 +109,7 @@ export const Maps = ({
                 ) : (
                   <li
                     onClick={() => handleRouter({ side })}
-                    className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
+                    className="text-[12px] bg-neutral-800 text-neutral-400 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-neutral-700 hover:text-neutral-200 duration-200"
                   >
                     <span className="mt-[2px]">
                       {toUpperCase(side)}
@@ -124,7 +125,7 @@ export const Maps = ({
           <ul className="flex gap-2 mt-[1rem] ml-0">
             <li
               onClick={() => router.push("/lessons")}
-              className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-slate-200 hover:text-slate-50 duration-200"
+              className="text-[12px] bg-neutral-800 flex text-neutral-400 items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-neutral-700 hover:text-neutral-200 duration-200"
             >
               <span className="mt-[2px]">Reset</span>
             </li>

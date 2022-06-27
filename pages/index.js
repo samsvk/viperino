@@ -53,27 +53,12 @@ export default function Home({ posts }) {
     <>
       <div className="flex flex-col items-center justify-center min-h-screen gap-3 p-10 mx-auto my-0 min-w-screen">
         <div className="flex flex-col items-center justify-center max-w-5xl w-100">
-          <div className="w-[105px] h-[105px] block overflow-hidden relative rounded-full shadow-sm border border-gray-100">
-            <Image
-              quality={90}
-              src={`/avatar.png`}
-              alt="folder picture"
-              loading="eager"
-              layout="fill"
-              objectFit="cover"
-              className="inline shadow-inner align-bottom scale-[1.22] line-height"
-            />
-          </div>
-          <h1 className="mt-4 mb-2 text-sm font-medium text-gray-800">
-            Welcome back, Guest.
-          </h1>
-
           <form
             onSubmit={(e) => {
               e.preventDefault();
               checkPassword();
             }}
-            className="rounded-[14px] min-h-[28px]  max-w-[185px] bg-gray-100 pl-2 flex relative"
+            className="rounded-[14px] min-h-[28px]  max-w-[185px] bg-neutral-800 pl-2 flex relative"
           >
             <input
               onChange={(e) => {
@@ -81,12 +66,12 @@ export default function Home({ posts }) {
               }}
               autoComplete="off"
               type="password"
-              className="text-sm block bg-orange-500 font-normal leading-0 items-center text-gray-300 min-height-full max-w-[185px] bg-transparent pl-2 mr-5 focus:outline-none w-[80%]"
+              className="text-sm block bg-orange-500 font-normal leading-0 items-center text-neutral-400 min-height-full max-w-[185px] bg-transparent pl-2 mr-5 focus:outline-none w-[80%]"
               placeholder="Enter Password"
             />
             <button
               type={"submit"}
-              className="absolute text-gray-100 duration-200 rounded-full bg-slate-200 top-1 group right-1 hover:bg-gray-300 hover:text-slate-50 hover:cursor-pointer"
+              className="absolute duration-200 rounded-full text-neutral-400 bg-neutral-700 top-1 group right-1 hover:bg-neutral-600 hover:text-slate-50 hover:cursor-pointer"
             >
               <HiOutlineArrowSmRight size={20} />
             </button>
@@ -112,16 +97,6 @@ export default function Home({ posts }) {
             </Link>
           </div>
         ))} */}
-      </div>
-
-      <div className="fixed bottom-0 z-50 w-screen bg-gradient-to-t from-slate-50 to-bg-transparent left-0 right-0 ml-auto mr-auto h-[40vh] text-center z-100" />
-      <div className="fixed bottom-20 z-50 max-w-[700px] w-full left-0 right-0 ml-auto mr-auto h-[40px] text-center">
-        <p className="text-sm leading-5 tracking-wide text-gray-200">
-          Please consider this iterration of Viperino as Beta.
-          Any bug reports may be filled in on our <a>Discord</a>.
-          If you are looking to support development you can buy
-          me a coffee at <a>Kofi</a>
-        </p>
       </div>
     </>
   );

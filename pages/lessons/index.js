@@ -129,11 +129,11 @@ export default function Viper({ posts }) {
                         />
                       </div>
                       <div className="flex flex-col">
-                        <h1 className="text-[14px] font-semibold tracking-wide text-gray-800 leading-none">
+                        <h1 className="text-[14px] font-semibold tracking-wide text-neutral-200 leading-none">
                           {title.split(" ").slice(1).join(" ")}
                         </h1>
                         <ul className="flex gap-2 mb-0 ml-0">
-                          <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+                          <li className="text-[12px] bg-neutral-800 text-neutral-400 flex items-center justify-center max-w-fit px-2 rounded gap-1 ">
                             <IoStatsChart />
                             <span className="mt-[2px]">
                               {tags[0] == 1
@@ -143,13 +143,13 @@ export default function Viper({ posts }) {
                                 : "Easy"}
                             </span>
                           </li>
-                          <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+                          <li className="text-[12px] bg-neutral-800 text-neutral-400 flex items-center justify-center max-w-fit px-2 rounded gap-1 ">
                             <GiUnlitBomb />
                             <span className="mt-[2px]">
                               {tags[1]}
                             </span>
                           </li>
-                          <li className="text-[12px] bg-gray-100 flex items-center justify-center max-w-fit px-2 rounded gap-1">
+                          <li className="text-[12px] bg-neutral-800 text-neutral-400 flex items-center justify-center max-w-fit px-2 rounded gap-1 ">
                             <IoLocation />
                             <span className="mt-[2px]">
                               {tags[2]}
