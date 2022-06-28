@@ -28,8 +28,8 @@ export default function Home({ posts }) {
             <div className="max-w-[440px] mt-3">
               <p className="mb-0 text-center">
                 Viperino is a modern ecosystem build for your
-                benefit. We'll provide everything you need to go
-                from New to Radiant for{" "}
+                benefit. We&lsquo;ll provide everything you need
+                to go from New to Radiant for{" "}
                 <span className="font-semibold text-yellow-400 underline underline-offset-2">
                   $25.00
                 </span>
@@ -38,8 +38,8 @@ export default function Home({ posts }) {
             <div className="max-w-[400px] mt-10 bg-black/5 duration-300 border rounded-lg border-neutral-900 relative overflow-hidden">
               <p className="px-5 pt-4 pb-4 mb-0 text-center">
                 No Subscription - One Time Payment: for the price
-                of one pizza we'll elevate your game to the next
-                level.
+                of one pizza we&lsquo;ll elevate your game to the
+                next level.
               </p>
               <button className="group hover:bg-white/5 duration-300 w-full py-2 m-0 border-t border-neutral-900 text-[14px] tracking-wide font-light text-white/90 leading-5 flex items-center justify-center">
                 Continue to Payment{" "}

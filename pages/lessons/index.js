@@ -169,9 +169,10 @@ export default function Viper({ posts }) {
         <div className="max-w-[440px] py-3 px-0 w-100 mx-auto text-[12px]flex rounded flex justify-center border-gray-100 items-center mt-10">
           <div className="p-5 border border-gray-100 rounded">
             <p>
-              Unfortunately, we couldn't find any posts with
-              these filters... We're working hard on producing
-              more guides - check back later for more updates.
+              Unfortunately, we couldn&lsquo;t find any posts
+              with these filters... We&lsquo;re working hard on
+              producing more guides - check back later for more
+              updates.
             </p>
             <ul className="flex gap-2 ml-0">
               <li
