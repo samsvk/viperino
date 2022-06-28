@@ -1,111 +1,64 @@
-// import Head from "next/head";
-// export default function Home() {
-//   return (
-//     <div>
-//       <Head>
-//         <title>Viperino</title>
-//       </Head>
-//       <div className="flex flex-col items-center justify-center w-full h-screen">
-//         <div className="w-full max-w-screen-lg border rounded border-gray-100 bg-white drop-shadow-md min-h-[500px] flex flex-row">
-//           <div className="w-full bg-gray-100 max-w-[185px]">
-//             <ul className="inline-block w-full px-3 py-2 justify-evenly">
-//               <li className="inline-block w-3 h-3 mr-1.5 rounded-full max-w-3" style={{ background: "#f87171" }}></li>
-//               <li className="inline-block w-3 h-3 mr-1.5 rounded-full max-w-3" style={{ background: "#facc14" }}></li>
-//               <li className="inline-block w-3 h-3 mr-1.5 rounded-full max-w-3" style={{ background: "#49de80" }}></li>
-//             </ul>
-//             <div className="px-2 py-1">
-//               <div className="px-3.5 rounded bg-gray-200">Svk's Index</div>
-//               <div className="p-3.5">Tags</div>
-//             </div>
-//           </div>
-//           <div className="w-full p-6 max-w-fit">1231231233</div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-import Image from "next/image";
-import path from "path";
-import fs from "fs";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import * as React from "react";
 import Router from "next/router";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import { HiOutlineArrowSmRight } from "react-icons/hi";
+import Image from "next/image";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { BsTwitch } from "react-icons/bs";
 
 export default function Home({ posts }) {
-  const password = 739739;
-  const [pw, setPW] = useState("");
-  const [err, setErr] = useState({
-    type: "No error",
-    truthy: false,
-  });
-
-  function checkPassword() {
-    if (+pw === password) {
-      Router.push("/lessons");
-    } else {
-      setErr(true);
-    }
-  }
-
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen gap-3 p-10 mx-auto my-0 min-w-screen">
-        <div className="flex flex-col items-center justify-center max-w-5xl w-100">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              checkPassword();
-            }}
-            className="rounded-[14px] min-h-[28px]  max-w-[185px] bg-neutral-800 pl-2 flex relative"
-          >
-            <input
-              onChange={(e) => {
-                setPW(e.target.value);
-              }}
-              autoComplete="off"
-              type="password"
-              className="text-sm block bg-orange-500 font-normal leading-0 items-center text-neutral-400 min-height-full max-w-[185px] bg-transparent pl-2 mr-5 focus:outline-none w-[80%]"
-              placeholder="Enter Password"
-            />
-            <button
-              type={"submit"}
-              className="absolute duration-200 rounded-full text-neutral-400 bg-neutral-700 top-1 group right-1 hover:bg-neutral-600 hover:text-slate-50 hover:cursor-pointer"
-            >
-              <HiOutlineArrowSmRight size={20} />
-            </button>
-          </form>
-          {/* <p className="text-[12px] mt-2 flex items-center justify-center max-w-fit px-2 rounded gap-1">
-            Enter Password
-          </p> */}
-        </div>
-        {/* {posts.map((post, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center"
-          >
-            <Link href={`${post}`}>
-              <div className="px-4 py-2.5 rounded-md duration-300 hover:cursor-pointer">
-                <Image
-                  src="/folder.png"
-                  alt="folder picture"
-                  width="100px"
-                  height="100px"
-                />
+      <div className="w-full h-full min-h-screen pt-20 bg-black min-w-screen">
+        <div className="flex w-full max-w-5xl gap-5 mx-auto">
+          <div className="flex flex-col flex-2 max-w-[315px] w-full">
+            <div className="relative min-h-[315px] overflow-hidden min-w-[315] max-h-[315px] max-w-[315px] w-full h-full rounded-xl ">
+              <Image
+                src="/avatar.png"
+                alt="folder picture"
+                objectFit="cover"
+                layout="fill"
+                height="100%"
+                width="100%"
+                quality={100}
+                loading="eager"
+                className="block"
+              />
+            </div>
+            <div className="mt-4">
+              <div className="relative flex">
+                <div className="w-full pb-5 border-b border-white/30">
+                  <h1 className="flex-1 text-base font-semibold leading-none tracking-wide text-neutral-100">
+                    Previously Updated: 28/6/22
+                  </h1>
+                </div>
+                <ul className="absolute top-[-4.5rem] right-[1rem] flex items-center justify-end flex-1 gap-2 mb-0 list-none">
+                  <li className="p-2.5 mb-0 bg-black rounded-full text-neutral-100 flex items-center justify-center  duration-300 hover:bg-neutral-900 hover:cursor-pointer">
+                    <AiOutlineTwitter size={20} />
+                  </li>
+                  <li className="p-2.5 mb-0 bg-black hover:cursor-pointer rounded-full text-neutral-100 flex items-center justify-center  duration-300 hover:bg-neutral-900">
+                    <BsTwitch size={20} />
+                  </li>
+                </ul>
               </div>
-            </Link>
+              <p className="mt-4">
+                X is a multi-genre esports player with thousands
+                in earnings from three different game titles.
+                Bringing the most up to date guides to you.
+              </p>
+            </div>
           </div>
-        ))} */}
+          <div className="flex-1 bg-orange-500">
+            ldfkgsdgsjgd
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
-export async function getStaticProps() {
-  const postDirectory = path.join(process.cwd(), "classes/");
-  const posts = await fs
-    .readdirSync(postDirectory)
-    .map((file) => file);
-  return { props: { posts } };
-}
+// export async function getStaticProps() {
+//   const postDirectory = path.join(process.cwd(), "classes/");
+//   const posts = await fs
+//     .readdirSync(postDirectory)
+//     .map((file) => file);
+//   return { props: { posts } };
+// }
