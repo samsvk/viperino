@@ -1,18 +1,17 @@
 import * as React from "react";
-import Router from "next/router";
 import Image from "next/image";
-import { AiOutlineTwitter } from "react-icons/ai";
-import { BsTwitch } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function Home({ posts }) {
   return (
     <>
-      <div className="w-full h-full min-h-screen pt-20 bg-black min-w-screen">
-        <div className="flex w-full max-w-5xl gap-10 mx-auto">
-          <div className="flex flex-col flex-2 max-w-[315px] w-full">
-            <div className="relative min-h-[315px] overflow-hidden min-w-[315] max-h-[315px] max-w-[315px] w-full h-full rounded-xl ">
+      <div className="flex items-center w-full h-full min-h-screen bg-black/80 min-w-screen">
+        <div className="flex w-full max-w-4xl gap-8 mx-auto">
+          <div className="flex flex-1"></div>
+          <div className="flex flex-col items-center justify-center flex-1 px-3 ">
+            <div className="mx-auto mb-2 relative min-h-[88px] overflow-hidden min-w-[88px] max-h-[88px] max-w-[88px] w-full h-full rounded-xl ">
               <Image
-                src="/avatar.png"
+                src="/radiant.svg"
                 alt="folder picture"
                 objectFit="cover"
                 layout="fill"
@@ -23,57 +22,35 @@ export default function Home({ posts }) {
                 className="block"
               />
             </div>
-            <div className="mt-4">
-              <div className="relative flex">
-                <div className="w-full pb-5 border-b border-white/30">
-                  <h2 className="flex-1 mb-0 text-base font-semibold leading-none tracking-wide text-neutral-100">
-                    Last Updated: 28/6/22
-                  </h2>
-                </div>
-                <ul className="absolute top-[-4.5rem] right-[1rem] flex items-center justify-end flex-1 gap-2 mb-0 list-none">
-                  <li className="p-2.5 mb-0 bg-black rounded-full text-neutral-100 flex items-center justify-center  duration-300 hover:bg-neutral-900 hover:cursor-pointer">
-                    <AiOutlineTwitter size={20} />
-                  </li>
-                  <li className="p-2.5 mb-0 bg-black hover:cursor-pointer rounded-full text-neutral-100 flex items-center justify-center  duration-300 hover:bg-neutral-900">
-                    <BsTwitch size={20} />
-                  </li>
-                </ul>
-              </div>
-              <p className="mt-4">
-                X is a multi-genre esports player with thousands
-                in earnings from three different game titles.
-                Bringing the most up to date guides to you.
+            <h1 className="text-[32px] font-bold text-white">
+              Join Viperino.io
+            </h1>
+            <div className="max-w-[440px] mt-3">
+              <p className="mb-0 text-center">
+                Viperino is a modern ecosystem build for your
+                benefit. We'll provide everything you need to go
+                from New to Radiant for{" "}
+                <span className="font-semibold text-yellow-400 underline underline-offset-2">
+                  $25.00
+                </span>
               </p>
             </div>
-          </div>
-          <div className="flex flex-col flex-1 px-3">
-            <h1 className="text-5xl text-white">
-              From New- to Radiant.
-            </h1>
-            <div className="max-w-[440px] mt-2">
-              <h2 className="text-2xl font-normal text-white/80">
-                40 different extensive guides, <br />
-                for 4 different agents, <br />
-                all for{" "}
-                <span className="text-yellow-400">$25.00</span>
-              </h2>
-              {/* <ul className="flex gap-2 p-0 m-0 text-xl list-none ">
-                <li className="p-0 m-0 text-xl font-normal text-yellow-400">
-                  Viper,
-                </li>
-                <li className="p-0 m-0 text-xl text-yellow-400">
-                  Cypher,
-                </li>
-                <li className="p-0 m-0 text-xl text-yellow-400">
-                  Skye,
-                </li>
-                <li className="p-0 m-0 text-xl text-yellow-400">
-                  Killjoy.
-                </li>
-              </ul> */}
+            <div className="max-w-[400px] mt-10 bg-black/5 duration-300 border rounded-lg border-neutral-900 relative overflow-hidden">
+              <p className="px-5 pt-4 pb-4 mb-0 text-center">
+                No Subscription - One Time Payment: for the price
+                of one pizza we'll elevate your game to the next
+                level.
+              </p>
+              <button className="group hover:bg-white/5 duration-300 w-full py-2 m-0 border-t border-neutral-900 text-[14px] tracking-wide font-light text-white/90 leading-5 flex items-center justify-center">
+                Continue to Payment{" "}
+                <span className="ml-2 group-hover:rotate-[-180deg] will-change-transform duration-500">
+                  <BsArrowRight
+                    size={16}
+                    className="text-white/90 group-hover:text-white"
+                  />
+                </span>
+              </button>
             </div>
-
-            <div className="mt-10">buy me</div>
           </div>
         </div>
       </div>
