@@ -104,3 +104,25 @@ ol > li > a {
 strong {
   @apply font-bold text-neutral-300;
 }
+/* 
+.hero {
+  width: 80%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: radial-gradient(
+      circle at 20% 44%,
+      rgba(33, 149, 243, 0.438),
+      hsla(0, 0%, 100%, 0) 25%
+    ),
+    radial-gradient(
+      circle at 65% 55%,
+      rgba(227, 227, 255, 0.425),
+      hsla(0, 0%, 100%, 0) 25%
+    );
+} */

@@ -8,8 +8,9 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="flex items-center w-full h-full min-h-screen bg-black/80 min-w-screen">
-        <div className="flex w-full max-w-4xl gap-5 mx-auto">
-          <div className="grid max-w-[385px] w-full grid-cols-2 grid-rows-2 gap-4">
+        <div className="hero" />
+        <div className="flex items-center w-full max-w-4xl gap-5 mx-auto">
+          <div className="grid max-w-[385px] w-full grid-cols-2 grid-rows-2 gap-4 max-h-[350px]">
             <div className="flex flex-col items-center justify-center gap-1.5 px-3 border border-green-900 rounded-md bg-green-900/10">
               <h4 className="text-[28px] text-green-500 ">
                 <AiOutlineDollarCircle />
@@ -22,7 +23,7 @@ export default function Home({ posts }) {
                 Subscription, No Contract.
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-1.5 px-3 border rounded-md border-fuchsia-900 bg-fuchsia-900/10">
+            <div className="flex flex-col items-center justify-center gap-1.5 px-3 border rounded-md border-fuchsia-900 bg-fuchsia-900/10 py-4">
               <h4 className="text-[28px] text-fuchsia-500 ">
                 <TbNumbers />
               </h4>
@@ -42,7 +43,7 @@ export default function Home({ posts }) {
                 All Agents & Maps
               </h5>
               <p className="text-center text-[12px] text-white/60 leading-4 pb-0 mb-0">
-                We focus on fundamental game mechanics that
+                We cover fundamental game mechanics that
                 translate to all agents.
               </p>
             </div>
@@ -87,6 +88,7 @@ export default function Home({ posts }) {
               </p>
             </div>
             <div className="max-w-[400px] mt-10 bg-black/5 duration-300 border rounded-lg border-neutral-900 relative overflow-hidden">
+              {/* <div className="absolute max-w-max">80% Summer</div> */}
               <p className="px-5 pt-4 pb-4 mb-0 text-center">
                 One Time Payment - for the price of one in-game
                 skin we&lsquo;ll elevate your game to the next
@@ -102,6 +104,34 @@ export default function Home({ posts }) {
                 </span>
               </button>
             </div>
+            {/* <div className="max-w-[400px] w-full mx-auto flex items-center flex-col justify-center mt-6">
+              <ul className="flex mx-auto list-none gap-7">
+                <li
+                  className="text-center                   hover:cursor-pointer
+                  duration-200
+                  hover:text-yellow-400 text-[13px] text-white/30 leading-4 pb-0 mb-0 font-light relative
+                 after:content-[''] after:absolute after:h-[4px] after:w-[4px] after:bg-white/30 after:rounded-full after:top-[7px] after:right-[-17px]"
+                >
+                  Discord
+                </li>
+                <li
+                  className="text-center                   hover:cursor-pointer
+                  duration-200
+                  hover:text-yellow-400 text-[13px] text-white/30 leading-4 pb-0 mb-0 font-light relative
+                 after:content-[''] after:absolute after:h-[4px] after:w-[4px] after:bg-white/30 after:rounded-full after:top-[7px] after:right-[-17px]"
+                >
+                  Testimonials
+                </li>
+                <li
+                  className="text-center                   hover:cursor-pointer
+                  duration-200
+                  hover:text-yellow-400 text-[13px] text-white/30 leading-4 pb-0 mb-0 font-light relative
+                  after:content-['']"
+                >
+                  FAQ
+                </li>
+              </ul>
+            </div> */}
           </div>
         </div>
       </div>
