@@ -113,7 +113,7 @@ export default function Viper({ posts }) {
                         </div>
                       </Link>
                       <div className="justify-start relative flex p-2 gap-2 bg-white/5 border-t mt-[-13px] border-b border-l border-r border-neutral-900 z-100 rounded-b-lg ">
-                        <div className="relative block border rounded-full border-neutral-900 bg-black/60 h-[40px] w-[40px] overflow-hidden">
+                        <div className="relative block border rounded-full border-neutral-900 bg-black/60 h-[42px] w-[42px] overflow-hidden">
                           <Image
                             src={`/${link.split("_")[0]}.png`}
                             quality={100}
@@ -123,7 +123,7 @@ export default function Viper({ posts }) {
                           />
                         </div>
                         <div className="flex flex-col">
-                          <h1 className="text-xs font-medium text-white">
+                          <h1 className="text-[14px] font-medium text-white tracking-wide mb-0.5">
                             {title.split(" ").slice(1).join(" ")}
                           </h1>
                           <ul className="flex gap-2 mb-0 ml-0">

@@ -27,9 +27,9 @@ export const Maps = ({
 
   return (
     <>
-      <div className="max-w-[1100px] w-100 mx-auto text-[10px] flex justify-between items-center border rounded-lg border-neutral-900 px-2 py-2 bg-neutral-900/60 ">
+      <div className="max-w-[1100px] w-100 mx-auto text-[10px] flex justify-between items-center border rounded-lg border-neutral-900 px-4 py-4 bg-neutral-900/60 ">
         <div className="max-w-max">
-          <ul className="flex gap-2 mt-0 ml-0">
+          <ul className="flex gap-2.5 mt-0 ml-0">
             {agentData.map((agent, index) => (
               <span key={index}>
                 {query.agent === agent ? (
@@ -57,7 +57,7 @@ export const Maps = ({
         </div>
 
         <div className="max-w-max">
-          <ul className="flex gap-2 mt-0 ml-0">
+          <ul className="flex gap-2.5 mt-0 ml-0">
             {mapData.map((map, index) => (
               <span key={index}>
                 {query.map === map ? (
@@ -88,7 +88,7 @@ export const Maps = ({
         </div>
 
         <div className="max-w-max">
-          <ul className="flex gap-2 mt-0 ml-0">
+          <ul className="flex gap-2.5 mt-0 ml-0">
             {sideData.map((side, index) => (
               <span key={index}>
                 {query.side === side ? (
@@ -117,16 +117,20 @@ export const Maps = ({
           </ul>
         </div>
 
-        {/* <div className="max-w-max">
-          <ul className="flex gap-2 mt-[1rem] ml-0">
+        <div className="max-w-max">
+          <ul className="flex gap-2 mt-0 ml-0">
             <li
               onClick={() => router.push("/lessons")}
-              className="text-[10px] bg-neutral-800 flex text-neutral-400 items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-neutral-700 hover:text-neutral-200 duration-200"
+              className="text-center                      font-normal
+                            tracking-wider mb-0
+                            text-[10px] text-white/60 leading-4
+                             bg-white/5 flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1 hover:bg-white/10 duration-300 
+                             hover:cursor-pointer"
             >
               <span>Reset</span>
             </li>
           </ul>
-        </div> */}
+        </div>
       </div>
     </>
   );
