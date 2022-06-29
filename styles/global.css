@@ -23,7 +23,7 @@ a {
   }
 }
 body {
-  @apply bg-neutral-900 text-zinc-500;
+  @apply bg-black/90 text-zinc-500;
 }
 /* p {
   @apply my-2 text-sm font-medium leading-5 mb-9 text-zinc-500;

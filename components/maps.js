@@ -27,31 +27,28 @@ export const Maps = ({
 
   return (
     <>
-      <div className="max-w-[970px] mt-5 px-0 w-100 mx-auto text-[12px]flex rounded flex justify-between items-center">
+      <div className="max-w-[1100px] w-100 mx-auto text-[10px] flex justify-between items-center border rounded-lg border-neutral-900 px-2 py-2 bg-neutral-900/60 ">
         <div className="max-w-max">
-          <h1 className="text-[14px] font-semibold tracking-wide text-neutral-200">
-            Agent:
-          </h1>
-          <ul className="flex gap-2 ml-0">
+          <ul className="flex gap-2 mt-0 ml-0">
             {agentData.map((agent, index) => (
               <span key={index}>
                 {query.agent === agent ? (
                   <li
                     onClick={() => handleRemoveRouter(agent)}
-                    className="text-[12px] bg-neutral-700 text-neutral-200 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
+                    className="text-center text-[10px] text-white leading-4 mb-0     tracking-wider
+                             bg-white/10  flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1  duration-300 
+                             hover:cursor-pointer"
                   >
-                    <span className="mt-[2px]">
-                      {toUpperCase(agent)}
-                    </span>
+                    <span>{toUpperCase(agent)}</span>
                   </li>
                 ) : (
                   <li
                     onClick={() => handleRouter({ agent })}
-                    className="text-[12px] bg-neutral-800 text-neutral-400 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-neutral-700 hover:text-neutral-200 duration-200"
+                    className="text-center text-[10px] text-white/60 leading-4  mb-0     tracking-wider
+                             bg-white/5 flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1 hover:bg-white/10 duration-300 
+                             hover:cursor-pointer"
                   >
-                    <span className="mt-[2px]">
-                      {toUpperCase(agent)}
-                    </span>
+                    <span>{toUpperCase(agent)}</span>
                   </li>
                 )}
               </span>
@@ -60,29 +57,29 @@ export const Maps = ({
         </div>
 
         <div className="max-w-max">
-          <h1 className="text-[14px] font-semibold tracking-wide text-neutral-200">
-            Maps:
-          </h1>
-          <ul className="flex gap-2 ml-0">
+          <ul className="flex gap-2 mt-0 ml-0">
             {mapData.map((map, index) => (
               <span key={index}>
                 {query.map === map ? (
                   <li
                     onClick={() => handleRemoveRouter(map)}
-                    className="text-[12px] bg-neutral-700 text-neutral-200 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
+                    className="text-center text-[10px] text-white leading-4 mb-0     tracking-wider
+                             bg-white/10  flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1  duration-300 
+                             hover:cursor-pointer"
                   >
-                    <span className="mt-[2px]">
-                      {toUpperCase(map)}
-                    </span>
+                    <span>{toUpperCase(map)}</span>
                   </li>
                 ) : (
                   <li
                     onClick={() => handleRouter({ map })}
-                    className="text-[12px] bg-neutral-800 text-neutral-400 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-neutral-700 hover:text-neutral-200 duration-200"
+                    className="text-center                      
+                            font-normal
+                            tracking-wider
+                            text-[10px] text-white/60 leading-4 mb-0
+                             bg-white/5 flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1 hover:bg-white/10 duration-300 
+                             hover:cursor-pointer"
                   >
-                    <span className="mt-[2px]">
-                      {toUpperCase(map)}
-                    </span>
+                    <span>{toUpperCase(map)}</span>
                   </li>
                 )}
               </span>
@@ -91,29 +88,28 @@ export const Maps = ({
         </div>
 
         <div className="max-w-max">
-          <h1 className="text-[14px] font-semibold tracking-wide text-neutral-200">
-            Side:
-          </h1>
-          <ul className="flex gap-2 ml-0">
+          <ul className="flex gap-2 mt-0 ml-0">
             {sideData.map((side, index) => (
               <span key={index}>
                 {query.side === side ? (
                   <li
                     onClick={() => handleRemoveRouter(side)}
-                    className="text-[12px] bg-neutral-700 text-neutral-200 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer "
+                    className="text-center text-[10px] text-white leading-4 mb-0     tracking-wider
+                             bg-white/10  flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1  duration-300 
+                             hover:cursor-pointer"
                   >
-                    <span className="mt-[2px]">
-                      {toUpperCase(side)}
-                    </span>
+                    <span>{toUpperCase(side)}</span>
                   </li>
                 ) : (
                   <li
                     onClick={() => handleRouter({ side })}
-                    className="text-[12px] bg-neutral-800 text-neutral-400 flex items-center justify-center max-w-fit px-2 rounded gap-1 hover:cursor-pointer hover:bg-neutral-700 hover:text-neutral-200 duration-200"
+                    className="text-center                      font-normal
+                            tracking-wider mb-0
+                            text-[10px] text-white/60 leading-4
+                             bg-white/5 flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1 hover:bg-white/10 duration-300 
+                             hover:cursor-pointer"
                   >
-                    <span className="mt-[2px]">
-                      {toUpperCase(side)}
-                    </span>
+                    <span>{toUpperCase(side)}</span>
                   </li>
                 )}
               </span>
@@ -121,16 +117,16 @@ export const Maps = ({
           </ul>
         </div>
 
-        <div className="max-w-max">
+        {/* <div className="max-w-max">
           <ul className="flex gap-2 mt-[1rem] ml-0">
             <li
               onClick={() => router.push("/lessons")}
-              className="text-[12px] bg-neutral-800 flex text-neutral-400 items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-neutral-700 hover:text-neutral-200 duration-200"
+              className="text-[10px] bg-neutral-800 flex text-neutral-400 items-center justify-center max-w-fit px-2 rounded gap-1  hover:cursor-pointer hover:bg-neutral-700 hover:text-neutral-200 duration-200"
             >
-              <span className="mt-[2px]">Reset</span>
+              <span>Reset</span>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </>
   );
