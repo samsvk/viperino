@@ -77,7 +77,7 @@ export default function Viper({ posts }) {
         />
         {filtered.length > 0 && (
           <>
-            <div className="gap-4 max-w-[1150px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
+            <div className="gap-5 max-w-[1150px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
               {filtered.map((post, index) => {
                 const {
                   title,
@@ -95,11 +95,11 @@ export default function Viper({ posts }) {
                       className="relative items-center justify-center w-full rounded-md"
                     >
                       <Link href={`/lessons/${link}`}>
-                        <div className="relative block overflow-auto duration-200 rounded-md group drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
+                        <div className="relative block overflow-hidden duration-200 rounded-md group drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
                           <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full rounded-t text-zinc-100">
                             <IoPlayCircleOutline size={40} />
                           </div>
-                          <div className="absolute top-0 bottom-0 left-0 right-0 z-30 flex items-center justify-center w-full h-full rounded-t bg-black/40 group:hover:opacity-[0%]" />
+                          <div className="absolute top-0 bottom-0 left-0 right-0 z-30 flex items-center justify-center w-full h-full duration-200 rounded-t bg-black/40 group-hover:opacity-5" />
                           <div className="pb-[56.25%] relative h-[0] overflow-hidden max-w-full w-[100000px] mt-1.5 mb-3 rounded-[8px]">
                             <Image
                               quality={100}
@@ -113,7 +113,7 @@ export default function Viper({ posts }) {
                           </div>
                         </div>
                       </Link>
-                      <div className="flex gap-2 mt-2">
+                      <div className="flex gap-2 mt-0">
                         <div className="max-h-35 min-h-35">
                           <Image
                             src={`/${link.split("_")[0]}.png`}
