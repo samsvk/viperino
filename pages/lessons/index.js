@@ -68,7 +68,7 @@ export default function Viper({ posts }) {
 
   return (
     <>
-      <div className="w-full h-full min-h-screen py-10 bg-black/80 min-w-max">
+      <div className="w-full h-full min-w-full min-h-screen py-10 bg-black/80 max-w-max">
         {/* <Heading title="Guides" /> */}
         <Maps
           handleRouter={handleRouter}
@@ -77,7 +77,7 @@ export default function Viper({ posts }) {
         />
         {filtered.length > 0 && (
           <>
-            <div className="gap-5 max-w-[1150px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
+            <div className="gap-5 max-w-[1100px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
               {filtered.map((post, index) => {
                 const {
                   title,
@@ -87,7 +87,7 @@ export default function Viper({ posts }) {
                 } = post.meta;
                 return (
                   <div
-                    className="flex items-start justify-center w-full"
+                    className="flex items-start justify-center w-full p-0 m-0"
                     key={index}
                   >
                     <div
@@ -95,12 +95,11 @@ export default function Viper({ posts }) {
                       className="relative items-center justify-center w-full rounded-md"
                     >
                       <Link href={`/lessons/${link}`}>
-                        <div className="relative block overflow-hidden duration-200 rounded-md group drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
-                          <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full rounded-t text-zinc-100">
-                            <IoPlayCircleOutline size={40} />
-                          </div>
-                          <div className="absolute top-0 bottom-0 left-0 right-0 z-30 flex items-center justify-center w-full h-full duration-200 rounded-t bg-black/40 group-hover:opacity-5" />
-                          <div className="pb-[56.25%] relative h-[0] overflow-hidden max-w-full w-[100000px] mt-1.5 mb-3 rounded-[8px]">
+                        <div className="relative block overflow-hidden border-box drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
+                          {/* <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full rounded-t text-zinc-100"> */}
+                          {/* <IoPlayCircleOutline size={40} /> */}
+                          {/* </div> */}
+                          <div className="pb-[56.25%] border border-l-neutral-900 border-b-0 border-r-neutral-900 border-t-neutral-900 relative top-0 h-[0] block overflow-hidden max-w-full w-[100000px] mt-1.5 mb-3 rounded-t-lg group z-10">
                             <Image
                               quality={100}
                               src={`${image}`}
@@ -108,32 +107,29 @@ export default function Viper({ posts }) {
                               loading="eager"
                               layout="fill"
                               objectFit="cover"
-                              className="absolute top-0 bottom-0 left-0 right-0 w-full h-full border-0"
+                              className="absolute top-0 bottom-0 left-0 right-0 w-full h-full"
                             />
                           </div>
                         </div>
                       </Link>
-                      <div className="flex gap-2 mt-0">
-                        <div className="max-h-35 min-h-35">
+                      <div className="justify-start relative flex p-2 gap-2 bg-white/5 border-t mt-[-13px] border-b border-l border-r border-neutral-900 z-100 rounded-b-lg ">
+                        <div className="relative block border rounded-full border-neutral-900 bg-black/60 h-[40px] w-[40px] overflow-hidden">
                           <Image
                             src={`/${link.split("_")[0]}.png`}
-                            height="28"
-                            width="28"
                             quality={100}
+                            layout="fill"
+                            objectFit="contain"
                             loading={"eager"}
                           />
                         </div>
                         <div className="flex flex-col">
-                          <h1 className="text-sm font-medium text-white">
+                          <h1 className="text-xs font-medium text-white">
                             {title.split(" ").slice(1).join(" ")}
                           </h1>
                           <ul className="flex gap-2 mb-0 ml-0">
                             <li
-                              className="
-                            text-center text-[10px] text-white/60 leading-4
-                            font-normal
-                            tracking-wider
-                             bg-white/5 flex items-center justify-center max-w-fit px-2 rounded gap-1 py-0.5 "
+                              className="text-center text-[10px] text-white/60 leading-4  mb-0     tracking-wider
+                             bg-white/5 flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1 max-h-[22px]"
                             >
                               <span>
                                 {tags[0] == 1
@@ -144,21 +140,14 @@ export default function Viper({ posts }) {
                               </span>
                             </li>
                             <li
-                              className="
-                            text-center text-white/60 leading-4
-                            font-normal
-                            tracking-wider
-                            text-[10px]
-                             bg-white/5 flex items-center justify-center max-w-fit px-2 rounded gap-1 py-0.5 "
+                              className="text-center text-[10px] text-white/60 leading-4  mb-0     tracking-wider
+                             bg-white/5 flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1 max-h-[22px]"
                             >
                               <span>{tags[1]}</span>
                             </li>
                             <li
-                              className="
-                            text-center text-[10px] text-white/60 leading-4
-                            font-normal
-                            tracking-wider
-                             bg-white/5 flex items-center justify-center max-w-fit px-2 rounded gap-1 py-0.5 "
+                              className="text-center text-[10px] text-white/60 leading-4  mb-0     tracking-wider
+                             bg-white/5 flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1 max-h-[22px]"
                             >
                               <span>{tags[2]}</span>
                             </li>
