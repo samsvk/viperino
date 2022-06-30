@@ -23,7 +23,7 @@ a {
   }
 }
 body {
-  @apply bg-black/90 text-zinc-500;
+  @apply bg-white;
 }
 /* p {
   @apply my-2 text-sm font-medium leading-5 mb-9 text-zinc-500;
@@ -104,9 +104,8 @@ ol > li > a {
 strong {
   @apply font-bold text-neutral-300;
 }
-/* 
 .hero {
-  width: 80%;
+  width: 100%;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -116,13 +115,13 @@ strong {
   bottom: 0;
   z-index: -1;
   background: radial-gradient(
-      circle at 20% 44%,
-      rgba(33, 149, 243, 0.438),
+      circle at 12% 55%,
+      rgba(33, 150, 243, 0.2),
       hsla(0, 0%, 100%, 0) 25%
     ),
     radial-gradient(
-      circle at 65% 55%,
-      rgba(227, 227, 255, 0.425),
+      circle at 85% 33%,
+      rgba(108, 99, 255, 0.175),
       hsla(0, 0%, 100%, 0) 25%
     );
-} */
+}

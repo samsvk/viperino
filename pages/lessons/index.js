@@ -68,7 +68,7 @@ export default function Viper({ posts }) {
 
   return (
     <>
-      <div className="w-full h-full min-w-full min-h-screen py-10 bg-black/80 max-w-max">
+      <div className="w-full h-full min-w-full min-h-screen py-10 bg-white/80 max-w-max">
         {/* <Heading title="Guides" /> */}
         <Maps
           handleRouter={handleRouter}
@@ -77,7 +77,7 @@ export default function Viper({ posts }) {
         />
         {filtered.length > 0 && (
           <>
-            <div className="gap-5 max-w-[1100px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-100 grid mx-auto mt-5">
+            <div className="gap-5 max-w-[1100px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 w-100 grid mx-auto mt-5 p-2">
               {filtered.map((post, index) => {
                 const {
                   title,
