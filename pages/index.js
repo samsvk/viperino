@@ -6,6 +6,7 @@ import { MdAutoGraph } from "react-icons/md";
 import { TbNumbers, TbArrowsRandom } from "react-icons/tb";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
+import { Footer } from "../components/footer";
 export default function Home({ posts }) {
   return (
     <>
@@ -129,6 +130,7 @@ export default function Home({ posts }) {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
 
       <div className="hero" />
