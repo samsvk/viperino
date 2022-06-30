@@ -26,13 +26,12 @@ export default function Home({ posts }) {
 
             <button
               className="px-5 py-1.5 bg-black rounded-full text-[14px] leading-6 font-medium text-white hover:cursor-pointer 
-              hover:bg-black/80
-              duration-200"
+              hover:bg-black/80 duration-200"
             >
               Join Viperino Now
             </button>
 
-            <p className="text-[13px] leading-5 font-medium text-neutral-700/80  my-12">
+            <p className="text-[13px] leading-5 font-medium text-neutral-700/80 my-10">
               <span className="underline">
                 Limited price for New Members:
               </span>{" "}
