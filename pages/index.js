@@ -7,9 +7,11 @@ import { TbNumbers, TbArrowsRandom } from "react-icons/tb";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Footer } from "../components/footer";
+import { Navbar } from "../components/navbar";
 export default function Home({ posts }) {
   return (
     <>
+      <Navbar />
       <div className="flex flex-col">
         <div className="max-w-[1200px] w-full mx-auto pt-40">
           <div className="max-w-[600px] relative z-50">
