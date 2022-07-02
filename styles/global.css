@@ -19,11 +19,12 @@ a {
 }
 @layer base {
   html {
-    font-family: "Outfit", sans-serif;
+    /* font-family: "Outfit", sans-serif; */
+    font-family: "Inter", sans-serif;
   }
 }
 body {
-  @apply bg-white;
+  @apply bg-black;
 }
 /* p {
   @apply my-2 text-sm font-medium leading-5 mb-9 text-zinc-500;
@@ -118,12 +119,12 @@ strong {
   z-index: -1;
   background: radial-gradient(
       circle at 12% 55%,
-      rgba(33, 150, 243, 0.2),
+      rgba(33, 150, 243, 0.15),
       hsla(0, 0%, 100%, 0) 25%
     ),
     radial-gradient(
       circle at 85% 33%,
-      rgba(108, 99, 255, 0.175),
+      rgba(108, 99, 255, 0.1),
       hsla(0, 0%, 100%, 0) 25%
     );
 }
