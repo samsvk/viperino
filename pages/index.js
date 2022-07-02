@@ -15,33 +15,33 @@ export default function Home({ posts }) {
       <div className="flex flex-col">
         <div className="max-w-[1200px] w-full mx-auto pt-40">
           <div className="max-w-[800px] relative z-50">
-            <h1 className="text-6xl font-bold tracking-[0] text-white">
-              Become a member.
+            <h1 className="text-6xl font-semibold tracking-tight text-black ">
+              Suport development.
             </h1>
-            <h1 className="text-6xl font-bold tracking-[0] text-white">
-              Gain access forever.
+            <h1 className="text-6xl font-semibold tracking-tight text-black mt-1.5">
+              Get access forever.
             </h1>
-            <p className="text-[18px] leading-7 font-normal tracking-tight text-gray-400/90 my-10 max-w-[660px] w-full">
-              Support Viperino development and gain access to new
-              tools and ideas that will help push you past the
-              Valorant learning curve.
+            <p className="text-[18px] leading-7 font-normal tracking-tight text-neutral-700/60 my-10 max-w-[660px] w-full">
+              Gain access to a new ecosystem with tools and ideas
+              that will help push you past the Valorant learning
+              curve.
             </p>
 
             <button
-              className="px-6 py-2 bg-white rounded-full text-[14px] leading-6 font-medium text-black hover:cursor-pointer 
-              hover:bg-white/80 duration-200
+              className="px-6 py-2 bg-black rounded-full text-[14px] leading-6 font-medium text-white hover:cursor-pointer 
+              hover:bg-black/80 duration-200
               
               "
             >
               Join Viperino Now
             </button>
 
-            <p className="text-[14px] leading-5 font-normal text-gray-400/80 my-10">
+            <p className="text-[14px] leading-5 font-normal text-neutral-700/80 my-10  tracking-tight ">
               <span className="underline">
                 Limited price for New Members:
               </span>{" "}
               <span className="line-through">$65</span> now only{" "}
-              <span className="font-medium text-white/80">
+              <span className="font-medium text-black/80">
                 $25
               </span>{" "}
               for permanent access.
@@ -57,11 +57,11 @@ export default function Home({ posts }) {
               <h4 className="text-[28px] text-neutral-700/10">
                 <AiOutlineDollarCircle />
               </h4>
-              <h5 className="text-base font-medium text-gray">
+              <h5 className="text-base font-medium text-black/80">
                 Value For Money
               </h5>
 
-              <p className="text-[14px] text-center leading-5 font-normal text-gray-400/80  m-0 p-0">
+              <p className="text-[14px] text-center leading-5 font-normal text-neutral-700/80 m-0 p-0  tracking-tight ">
                 We produce the best guides for less. No
                 Subscription, No Contract - Simply a One-Time
                 payment.
@@ -72,10 +72,10 @@ export default function Home({ posts }) {
               <h4 className="text-[28px] text-neutral-700/10">
                 <TbNumbers />
               </h4>
-              <h5 className="text-base font-medium text-white/80">
+              <h5 className="text-base font-medium text-black/80">
                 Unlimited Guides
               </h5>
-              <p className="text-[14px] text-center leading-5 font-normal text-gray-400/80  m-0 p-0">
+              <p className="text-[14px] text-center leading-5 font-normal text-neutral-700/80 m-0 p-0  tracking-tight ">
                 Permanent access to handcrafted guides from top
                 ranked players available at your fingertips.
               </p>
@@ -84,10 +84,10 @@ export default function Home({ posts }) {
               <h4 className="text-[28px] text-neutral-700/10">
                 <TbArrowsRandom />
               </h4>
-              <h5 className="text-base font-medium text-white/80">
+              <h5 className="text-base font-medium text-black/80">
                 All Agents - All Maps
               </h5>
-              <p className="text-[14px] text-center leading-5 font-normal text-gray-400/80  m-0 p-0">
+              <p className="text-[14px] text-center leading-5 font-normal text-neutral-700/80 m-0 p-0  tracking-tight ">
                 We cover fundamental game mechanics that
                 translate to all agents.
               </p>
@@ -96,10 +96,10 @@ export default function Home({ posts }) {
               <h4 className="text-[28px] text-neutral-700/10">
                 <MdAutoGraph />
               </h4>
-              <h5 className="text-base font-medium text-white/80">
+              <h5 className="text-base font-medium text-black/80">
                 Progress Over Time
               </h5>
-              <p className="text-[14px] text-center leading-5 font-normal text-gray-400/80  m-0 p-0">
+              <p className="text-[14px] text-center leading-5 font-normal text-neutral-700/80 m-0 p-0  tracking-tight ">
                 Our guides upscale - Iron to Radiant
                 there&lsquo;s something for everyone.
               </p>
@@ -109,10 +109,10 @@ export default function Home({ posts }) {
               <h4 className="text-[28px] text-neutral-700/10">
                 <BsFillLightningChargeFill />
               </h4>
-              <h5 className="text-base font-medium text-white/80">
+              <h5 className="text-base font-medium text-black/80">
                 Speed
               </h5>
-              <p className="text-[14px] text-center leading-5 font-normal text-gray-400/80  m-0 p-0">
+              <p className="text-[14px] text-center leading-5 font-normal text-neutral-700/80 m-0 p-0  tracking-tight ">
                 New Update? No problem - we guarantee to have
                 content produced or updated intime for
                 competitive release.
@@ -123,10 +123,10 @@ export default function Home({ posts }) {
               <h4 className="text-[28px] text-neutral-700/10">
                 <AiOutlineHeart />
               </h4>
-              <h5 className="text-base font-medium text-white/80">
+              <h5 className="text-base font-medium text-black/80">
                 Quality
               </h5>
-              <p className="text-[14px] text-center leading-5 font-normal text-gray-400/80  m-0 p-0">
+              <p className="text-[14px] text-center leading-5 font-normal text-neutral-700/80 m-0 p-0  tracking-tight ">
                 From our entire system, to our content produced -
                 we have build a foundation that allows us to
                 produce the highest quality guides.

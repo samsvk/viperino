@@ -7,7 +7,7 @@ export const Footer = () => {
         <h1 className="text-4xl font-semibold tracking-[0] text-black">
           Our Community and Contributers.
         </h1>
-        <p className="text-[18px] leading-7 font-normal text-neutral-700/60 my-8 text-center">
+        <p className="text-[18px] leading-7 font-normal text-neutral-700/60 my-8 text-center tracking-tight ">
           We are determined to bring change to educational gaming
           and provide an ecosystem for all - together we
           collaberate to build one tool for you.

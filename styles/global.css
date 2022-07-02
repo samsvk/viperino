@@ -24,7 +24,7 @@ a {
   }
 }
 body {
-  @apply bg-black;
+  @apply bg-white;
 }
 /* p {
   @apply my-2 text-sm font-medium leading-5 mb-9 text-zinc-500;
