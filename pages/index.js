@@ -13,7 +13,7 @@ export default function Home({ posts }) {
     <>
       <Navbar />
       <div className="flex flex-col">
-        <div className="max-w-[1200px] w-full mx-auto pt-[25vh]">
+        <div className="max-w-[1200px] w-full mx-auto pt-[25vh]  px-6 ">
           <div className="max-w-[800px] relative z-50">
             <h1 className="text-6xl font-semibold tracking-tight text-black ">
               Suport development.
@@ -51,8 +51,8 @@ export default function Home({ posts }) {
       </div>
 
       <div>
-        <div className="flex items-center w-full gap-5 mx-auto max-w-[1200px]  rounded-lg mb-10 mt-20">
-          <div className="grid max-w-[100%] w-full grid-cols-3 grid-rows-2 gap-10">
+        <div className="flex items-center w-full gap-5 mx-auto max-w-[1200px] rounded-lg mb-10 mt-20  px-6 ">
+          <div className="grid max-w-[100%] w-full lg:grid-cols-3 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 lg:gap-10 md:gap-10  gap-8">
             <div className="flex py-10 flex-col items-center justify-center gap-1.5 px-8 border border-gray rounded-md overflow-hidden relative">
               <h4 className="text-[28px] text-neutral-700/10">
                 <AiOutlineDollarCircle />
