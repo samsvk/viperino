@@ -13,7 +13,7 @@ export default function Home({ posts }) {
     <>
       <Navbar />
       <div className="flex flex-col">
-        <div className="max-w-[1200px] w-full mx-auto pt-40">
+        <div className="max-w-[1200px] w-full mx-auto pt-[25vh]">
           <div className="max-w-[800px] relative z-50">
             <h1 className="text-6xl font-semibold tracking-tight text-black ">
               Suport development.
@@ -28,7 +28,7 @@ export default function Home({ posts }) {
             </p>
 
             <button
-              className="px-6 py-2 bg-black rounded-full text-[14px] leading-6 font-medium text-white hover:cursor-pointer 
+              className="px-6 py-2 bg-black rounded-full text-[14px] leading-6 font-normal text-white hover:cursor-pointer 
               hover:bg-black/80 duration-200
               
               "
