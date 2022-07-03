@@ -76,29 +76,35 @@ export function Navbar() {
             <HiMenu size={25} />
           </button>
           {show && (
-            <div className="absolute right-0 top-[3rem] z-[100]">
-              <div className="flex flex-row items-center justify-center py-1 min-w-[165px] gap-1.5 border border-gray rounded-md overflow-hidden relative bg-white duration-100">
-                <ul className="flex flex-col flex-1 gap-1.5 py-2 m-0 list-none relative z-[50]">
-                  <li className="mx-1.5 flex items-center gap-2 duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
+            <div className="absolute right-0 top-[2.5rem] z-[100]">
+              <div
+                className="flex flex-row items-center justify-center py-1 min-w-[177px] gap-1.5 border border-gray rounded-md overflow-hidden relative
+              
+              backdrop-blur border-b border-gray
+             bg-white
+              "
+              >
+                <ul className="flex flex-col flex-1 gap-1 py-2 m-0 list-none relative z-[50]">
+                  <li className="mx-1 flex items-center gap-2 duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
                     <span>
                       <HiLogin size={18} />
                     </span>
                     Login Now
                   </li>
-                  <li className="mx-1.5  flex items-center gap-2 duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
+                  <li className="mx-1  flex items-center gap-2 duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
                     <span>
                       <SiDiscord size={16} />
                     </span>
                     Join Discord
                   </li>
                   <hr className="block h-[1px] bg-black/5 border-0 my-0.5" />
-                  <li className="mx-1.5  duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
+                  <li className="mx-1  duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
                     Features
                   </li>
-                  <li className="mx-1.5  duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
+                  <li className="mx-1  duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
                     Community
                   </li>
-                  <li className="mx-1.5 duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
+                  <li className="mx-1 duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
                     Contact
                   </li>
                 </ul>
