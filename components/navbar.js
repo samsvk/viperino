@@ -24,13 +24,11 @@ export function Navbar() {
   return (
     <div
       className={`max-w-[100%] px-6 flex z-[1000] w-full mx-auto fixed left-0 right-0 bottom-0 max-h-[50px]
-      justify-start items-start duration-200
-
-      	${
-          isAtTop
-            ? "bg-transparent border-transparent top-10"
-            : "backdrop-blur top-[0.5rem]"
-        }
+      justify-start items-start duration-200  ${
+        isAtTop
+          ? "bg-transparent border-transparent top-8"
+          : "backdrop-blur border-b border-gray top-[0rem]"
+      }
   `}
     >
       <nav className="max-w-[1155px] mx-auto w-full flex items-center">
@@ -46,7 +44,7 @@ export function Navbar() {
             Contact
           </li>
         </ul>
-        <div className="flex items-end justify-end flex-2">
+        <div className="flex items-center justify-center h-full flex-2 mb-[5px]">
           <button
             className="px-6 py-2 bg-black rounded-full text-[14px] leading-6 font-normal text-white hover:cursor-pointer 
               hover:bg-black/80 duration-200"
