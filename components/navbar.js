@@ -32,7 +32,7 @@ export function Navbar() {
       justify-start items-start duration-200 hidden md:block ${
         isAtTop
           ? "bg-transparent border-transparent top-8"
-          : "backdrop-blur border-b border-gray top-[0rem]"
+          : "backdrop-blur border-b border-gray top-[0rem] bg-white/40"
       }
       `}
       >
