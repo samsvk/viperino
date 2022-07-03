@@ -6,6 +6,7 @@ import { IoMdReturnLeft } from "react-icons/io";
 export const Menu = () => {
   const { asPath } = useRouter();
   const path = asPath.split("/")[1];
+
   return (
     <div className="flex items-center justify-end float-right w-full">
       <Link href={`/${path}`}>

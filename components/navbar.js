@@ -1,11 +1,39 @@
+import { useState, useEffect } from "react";
+
+export function getWindow() {
+  return typeof window !== "undefined" ? window : null;
+}
+
 export function Navbar() {
+  const [isAtTop, setIsAtTop] = useState(true);
+  const window = getWindow();
+
+  function onScroll() {
+    if ((getWindow()?.pageYOffset || 0) < 20) setIsAtTop(true);
+    else if (isAtTop) setIsAtTop(false);
+  }
+
+  useEffect(() => {
+    if (!window) return;
+    setTimeout(onScroll, 0);
+    getWindow()?.addEventListener("scroll", onScroll);
+    return () =>
+      getWindow()?.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div
-      className="max-w-[1200px] px-6 flex z-[1000] w-full mx-auto mt-10 fixed top-0 left-0 right-0 bottom-0 max-h-[50px] rounded-full
-      justify-start items-start
-      "
+      className={`max-w-[100%] px-6 flex z-[1000] w-full mx-auto fixed left-0 right-0 bottom-0 max-h-[50px]
+      justify-start items-start duration-200
+
+      	${
+          isAtTop
+            ? "bg-transparent border-transparent top-10"
+            : "backdrop-blur top-[0.5rem]"
+        }
+  `}
     >
-      <nav className="max-w-[100%] w-full flex items-center">
+      <nav className="max-w-[1155px] mx-auto w-full flex items-center">
         <div className="min-h-[40px] min-w-[40px] w-full h-full max-w-[40px] max-h-[40px] bg-black rounded-full"></div>
         <ul className="flex gap-5 p-0 m-0 list-none  py-3.5 ml-10 flex-1">
           <li className="p-0 m-0 text-base font-normal tracking-tight duration-200 text-neutral-700/60 hover:cursor-pointer hover:text-black/80">
