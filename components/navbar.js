@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { HiMenu } from "react-icons/hi";
 
 export function getWindow() {
   return typeof window !== "undefined" ? window : null;
@@ -6,6 +7,8 @@ export function getWindow() {
 
 export function Navbar() {
   const [isAtTop, setIsAtTop] = useState(true);
+  const [show, setShow] = useState(false);
+
   const window = getWindow();
 
   function onScroll() {
@@ -57,12 +60,23 @@ export function Navbar() {
       </div>
 
       <div
-        className={`max-w-[100%] px-6 z-[1000] w-full mx-auto fixed left-0 right-0 bottom-0 max-h-[50px]
-      justify-start items-start duration-200 backdrop-blur border-b border-gray top-[0rem] block md:hidden lg:hidden"
-    
+        className={`max-w-[100%] z-[1000] w-full mx-auto left-0 right-0 bottom-0 max-h-[50px]
+      justify-start items-start duration-200 backdrop-blur  p-5 top-[0rem] flex md:hidden lg:hidden"
       `}
       >
-        123 123123
+        <div className="min-h-[40px] min-w-[40px] w-full h-full max-w-[40px] max-h-[40px] bg-black rounded-full relative" />
+        <div className="flex items-end justify-end flex-1">
+          <div className="px-1 py-0.5 flex items-center justify-center border border-transparent rounded-md hover:cursor-pointer hover:border-black/5 duration-150 hover:bg-black/5 text-neutral-700/60">
+            <HiMenu
+              size={25}
+              onClick={() => setShow((p) => !p)}
+            />
+          </div>
+        </div>
+
+        {show && (
+          <div className="absolute right-5 top-[5rem]">123</div>
+        )}
       </div>
     </>
   );
