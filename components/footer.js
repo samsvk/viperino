@@ -13,7 +13,7 @@ export const Footer = () => {
           collaberate to build one tool for you.
         </p>
 
-        <div className="grid gap-6 mt-1 lg:gap-8 lg:grid-cols-3 md:grid-cols-2">
+        <div className="grid gap-6 mt-1 lg:gap-10 lg:grid-cols-3 md:grid-cols-2">
           <button className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-black/5 duration-100">
             <span>🐦</span>
             <h5 className="text-base font-medium text-black/80">
