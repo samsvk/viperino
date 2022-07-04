@@ -72,7 +72,7 @@ export default function Viper({ posts }) {
         />
         {filtered.length > 0 && (
           <>
-            <div className="grid mt-10 max-w-[1100px] mx-auto w-full lg:grid-cols-4 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 md:gap-6 gap-8">
+            <div className="grid mt-10 max-w-[1100px] mx-auto w-full lg:grid-cols-4 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 md:gap-5 gap-8">
               {filtered.map((post, index) => {
                 const {
                   title,
@@ -82,17 +82,20 @@ export default function Viper({ posts }) {
                 } = post.meta;
                 return (
                   <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-md">
-                    <div className="border border-gray group hover:cursor-pointer pb-[56.25%] relative top-0 h-[0] block overflow-hidden max-w-full w-[100000px] rounded-md z-10">
+                    <div
+                      className="border border-gray group hover:cursor-pointer pb-[56.25%] relative top-0 h-[0] block 
+                     overflow-hidden max-w-full w-[100000px] rounded-md z-10"
+                    >
                       <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full duration-150 scale-125 group-hover:bg-black/5 bg-black/40 ">
-                        {/* <div
-                          className="duration-150 group-hover:scale-110 h-[36px] w-[36px] 
-                            rounded-full border-[2px] border-white/80 flex items-center justify-center
+                        <div
+                          className="duration-150 group-hover:scale-110 h-[28px] w-[28px] 
+                            rounded-full border-[1px] border-white/80 flex items-center justify-center
                             group-hover:border-white"
                         />
                         <IoPlaySharp
-                          className="absolute ml-[3.6px] duration-150 text-white/80 group-hover:text-white"
-                          size={20}
-                        /> */}
+                          className="absolute ml-[2px] duration-150 text-white/80 group-hover:text-white"
+                          size={14}
+                        />
                       </div>
 
                       <Image
