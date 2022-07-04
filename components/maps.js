@@ -53,12 +53,12 @@ function Dropdown(props) {
           right-0
           flex flex-col items-start justify-center  min-w-[165px] max-w-[165px] gap-1.5 border border-gray rounded-md overflow-hidden
           border-b border-gray
-        bg-gray-100  
+        bg-white  
         ransition-all duration-200
     ${
       props.title.toLowerCase() === props.open
         ? "opacity-1 visible transform origin-top-right -translate-y-0"
-        : "opacity-0 invisible transform origin-top-right -translate-y-2"
+        : "opacity-0 invisible transform origin-top-right -translate-y-1"
     }
         `}
       >
@@ -122,7 +122,7 @@ export const Maps = ({
               className="mb-[3px] text-neutral-700/60"
             />
           </div>
-          <div className="flex flex-col justify-center ml-4">
+          <div className="flex flex-col justify-center ml-3">
             <h1 className="text-[28px] font-semibold tracking-[0] text-black text-left">
               Guides
             </h1>
