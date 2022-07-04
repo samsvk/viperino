@@ -84,7 +84,7 @@ export default function Viper({ posts }) {
                   <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-md">
                     <div
                       className="border border-gray group hover:cursor-pointer pb-[56.25%] relative top-0 h-[0] block 
-                     overflow-hidden max-w-full w-[100000px] rounded-md z-10"
+                     overflow-hidden max-w-full w-full rounded-md z-10"
                     >
                       <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full duration-150 scale-125 group-hover:bg-black/5 bg-black/40 will-change-transform">
                         <div

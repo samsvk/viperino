@@ -45,16 +45,21 @@ function Dropdown(props) {
         </span>
       </button>
       <ul
-        className={`absolute p-2 m-0 list-none z-100
+        className={`
+          absolute p-2 m-0 list-none z-100
           top-[2.5rem]
-          drop-shadow-lg
+          drop-shadow
           mx-auto
           left-0
           right-0
-          flex flex-col items-start justify-center  min-w-[165px] max-w-[165px] gap-1.5 border border-gray rounded-md overflow-hidden
-          border-b border-gray
-        bg-white  
-        ransition-all duration-200
+          flex flex-col items-start justify-center  
+          min-w-[165px] max-w-[165px] gap-1.5 border 
+          border-gray 
+          rounded-md overflow-hidden
+          border-b border-gray-500
+        bg-gray-800/80
+          backdrop-blur 
+          ransition-all duration-200
     ${
       props.title.toLowerCase() === props.open
         ? "opacity-1 visible transform origin-top-right -translate-y-0"
@@ -72,21 +77,21 @@ function Dropdown(props) {
                     })
                   : handleRemoveRouter(opt);
               }}
-              className="w-full flex items-center gap-2 transition-[background] hover:bg-gray-50 hover:cursor-pointer px-2 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md"
+              className="w-full flex items-center gap-2 transition-[background] hover:bg-gray-500/50 hover:cursor-pointer px-2 text-[14px] leading-5 font-normal text-gray-300 m-0 p-0 tracking-tight py-[3px] rounded-md"
               key={opt}
             >
               <span
                 className={`${
                   query[props.title.toLowerCase()] !== opt
-                    ? "bg-neutral-700/20"
-                    : "bg-green-200"
+                    ? "bg-gray-500"
+                    : "bg-green-300/50"
                 } min-h-[15px] min-w-[15px] bg-black/5 relative  rounded`}
               >
                 {query[props.title.toLowerCase()] === opt && (
                   <div className="absolute pt-0.5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                     <IoIosCheckmark
                       size={24}
-                      className="text-green-600"
+                      className="text-lime-400"
                     />
                   </div>
                 )}
