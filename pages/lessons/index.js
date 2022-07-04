@@ -70,9 +70,12 @@ export default function Viper({ posts }) {
           router={router}
           amount={cachedPosts.length}
         />
+        <div className="max-w-[1100px] w-full mx-auto">
+          123456]dfgjdhfg sfdglskdfhglsdkjfgs
+        </div>
         {filtered.length > 0 && (
           <>
-            <div className="grid mt-10 max-w-[1100px] mx-auto w-full lg:grid-cols-4 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 md:gap-5 gap-8">
+            <div className="grid mt-14 max-w-[1100px] mx-auto w-full lg:grid-cols-4 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 md:gap-5 gap-8">
               {filtered.map((post, index) => {
                 const {
                   title,
@@ -81,34 +84,38 @@ export default function Viper({ posts }) {
                   tags,
                 } = post.meta;
                 return (
-                  <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-md">
-                    <div
-                      className="border border-gray group hover:cursor-pointer pb-[56.25%] relative top-0 h-[0] block 
-                     overflow-hidden max-w-full w-full rounded-md z-10"
-                    >
-                      <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full duration-150 scale-125 group-hover:bg-gray-800/5 bg-gray-800/30 will-change-transform">
-                        <div
-                          className="duration-150 group-hover:scale-110 h-[28px] w-[28px] 
-                            rounded-full border-[1px] border-white/80 flex items-center justify-center
-                            group-hover:border-white will-change-transform
-                            "
-                        />
-                        <IoPlaySharp
-                          className="absolute ml-[2px] duration-150 text-white/80 group-hover:text-white"
-                          size={14}
+                  <div
+                    className="relative flex flex-col items-center justify-center overflow-hidden rounded-md"
+                    key={index}
+                  >
+                    <Link href={`/lessons/${link}`}>
+                      <div
+                        className="border border-gray group hover:cursor-pointer pb-[56.25%] relative top-0 h-[0] block 
+                      overflow-hidden max-w-full w-full rounded-md z-10"
+                      >
+                        <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full duration-150 scale-125 group-hover:bg-gray-800/5 bg-gray-800/30 will-change-transform">
+                          <div
+                            className="duration-150 group-hover:scale-110 h-[28px] w-[28px] 
+                          rounded-full border-[1px] border-white/90 flex items-center justify-center
+                          group-hover:border-white will-change-transform
+                          "
+                          />
+                          <IoPlaySharp
+                            className="absolute ml-[2px] duration-150 text-white/90 group-hover:text-white"
+                            size={14}
+                          />
+                        </div>
+                        <Image
+                          quality={100}
+                          src={`${image}`}
+                          alt="folder picture"
+                          loading="eager"
+                          layout="fill"
+                          objectFit="cover"
+                          className="absolute top-0 bottom-0 left-0 right-0 w-full h-full duration-200 scale-[1.1] group-hover:scale-[1.12]"
                         />
                       </div>
-
-                      <Image
-                        quality={100}
-                        src={`${image}`}
-                        alt="folder picture"
-                        loading="eager"
-                        layout="fill"
-                        objectFit="cover"
-                        className="absolute top-0 bottom-0 left-0 right-0 w-full h-full duration-200 scale-[1.1] group-hover:scale-[1.12]"
-                      />
-                    </div>
+                    </Link>
                     <div className="flex flex-row justify-start w-full gap-2 mt-3">
                       <div className="relative block border border-neutral-600/5 rounded-full bg-gray-100 h-[40px] w-[40px] min-w-[40px] overflow-hidden">
                         <Image

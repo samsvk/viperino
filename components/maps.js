@@ -36,7 +36,7 @@ function Dropdown(props) {
         }
         className="bg-gray-100 min-w-[165px] hover:bg-black/5 px-3.5 py-1 rounded-md text-[14px] leading-6 font-normal 
          text-neutral-700/80 hover:cursor-pointer flex
-          focus:outline focus:outline-offset-0 outline-sky-200 outline-2
+          focus:outline focus:outline-offset-0 outline-gray-200 outline-2
          "
       >
         {props.title}
@@ -67,7 +67,7 @@ function Dropdown(props) {
     }
         `}
       >
-        {props.options.map((opt) => {
+        {props.options.map((opt, index) => {
           return (
             <li
               onClick={() => {
@@ -79,13 +79,13 @@ function Dropdown(props) {
               }}
               className="w-full flex items-center gap-2 transition-[background] hover:bg-gray-500/50 
               hover:cursor-pointer px-2 text-[14px] leading-5 font-normal text-gray-300 m-0 p-0 tracking-tight py-[3px] rounded-md"
-              key={opt}
+              key={index}
             >
               <span
                 className={`${
                   query[props.title.toLowerCase()] !== opt
-                    ? "bg-gray-400/40"
-                    : "bg-green-300/40"
+                    ? "bg-gray-400/30"
+                    : "bg-green-600/40"
                 } min-h-[15px] min-w-[15px] bg-black/5 relative  rounded`}
               >
                 {query[props.title.toLowerCase()] === opt && (
