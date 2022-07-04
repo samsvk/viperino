@@ -34,7 +34,7 @@ function Dropdown(props) {
               : props.setOpen(props.title.toLowerCase());
           })
         }
-        className="bg-white drop-shadow-sm px-4 py-2 bg-neutral-500/5 rounded-full text-[14px] leading-6 font-normal 
+        className="bg-neutral-500/5 drop-shadow-sm px-4 py-2 rounded-full text-[14px] leading-6 font-normal 
         text-black hover:cursor-pointer duration-200 hover:bg-neutral-500/10 flex"
       >
         {props.title}
@@ -115,7 +115,7 @@ export const Maps = ({
               className="mb-[3px] text-neutral-700/60"
             />
           </div>
-          <div className="flex flex-col justify-center ml-3">
+          <div className="flex flex-col justify-center ml-4">
             <h1 className="text-3xl font-semibold tracking-[0] text-black text-left">
               Guides
             </h1>
@@ -156,8 +156,8 @@ export const Maps = ({
           />
           <button
             onClick={() => router.push("/lessons")}
-            className="bg-white drop-shadow-sm px-4 py-2 rounded-full text-[14px] leading-6 font-normal 
-        bg-neutral-500/5 hover:cursor-pointer duration-200 hover:bg-black/5 flex"
+            className="bg-neutral-500/5 drop-shadow-sm px-4 py-2 rounded-full text-[14px] leading-6 font-normal 
+             hover:cursor-pointer duration-200 hover:bg-black/5 flex"
           >
             Clear Filters
           </button>
