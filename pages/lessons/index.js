@@ -74,6 +74,7 @@ export default function Viper({ posts }) {
           handleRouter={handleRouter}
           handleRemoveRouter={handleRemoveRouter}
           router={router}
+          amount={cachedPosts.length}
         />
         {/* {filtered.length > 0 && (
           <>

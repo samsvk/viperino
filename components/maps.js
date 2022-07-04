@@ -2,6 +2,7 @@ import { Router } from "next/router";
 import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoIosCheckmark } from "react-icons/io";
+import { IoDocumentTextSharp } from "react-icons/io5";
 
 function toUpperCase(param) {
   return (
@@ -33,8 +34,8 @@ function Dropdown(props) {
               : props.setOpen(props.title.toLowerCase());
           })
         }
-        className="bg-white drop-shadow-sm px-4 py-2 border border-gray rounded-full text-[14px] leading-6 font-normal 
-        text-black hover:cursor-pointer duration-200 hover:bg-black/5 flex"
+        className="bg-white drop-shadow-sm px-4 py-2 bg-neutral-500/5 rounded-full text-[14px] leading-6 font-normal 
+        text-black hover:cursor-pointer duration-200 hover:bg-neutral-500/10 flex"
       >
         {props.title}
         <span className="ml-2">
@@ -63,7 +64,7 @@ function Dropdown(props) {
                       })
                     : handleRemoveRouter(opt);
                 }}
-                className="w-full flex items-center gap-2 duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md"
+                className="w-full flex items-center gap-2 duration-150 hover:bg-neutral-500/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md"
                 key={opt}
               >
                 <span
@@ -96,15 +97,34 @@ export const Maps = ({
   handleRouter,
   handleRemoveRouter,
   router,
+  amount,
 }) => {
   const { query } = router;
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <div className="flex max-w-[1200px] mx-auto">
-        <div className="flex-1"></div>
-        <div className="flex-2 max-w-[700px] w-100 mx-auto text-[10px] flex justify-start gap-5 items-center">
+      <div className="flex max-w-[1200px] mx-auto items-center">
+        <div className="flex-2 max-w-[660px] w-full flex flex-row">
+          <div
+            className="min-h-[66px] min-w-[66px] max-w-[66px] max-h-[66px] w-full h-full  rounded-full
+                    backdrop-blur bg-neutral-500/5 flex items-center justify-center"
+          >
+            <IoDocumentTextSharp
+              size={30}
+              className="mb-[3px] text-neutral-700/60"
+            />
+          </div>
+          <div className="flex flex-col justify-center ml-3">
+            <h1 className="text-3xl font-semibold tracking-[0] text-black text-left">
+              Guides
+            </h1>
+            <p className="text-[18px] leading-5 font-normal tracking-tight text-neutral-700/60 max-w-[660px] w-full">
+              {amount} Total Available
+            </p>
+          </div>
+        </div>
+        <div className="flex-1 max-w-[700px] w-100 mx-auto text-[10px] flex justify-end gap-4 items-center">
           <Dropdown
             options={mapData}
             title={"Map"}
@@ -136,8 +156,8 @@ export const Maps = ({
           />
           <button
             onClick={() => router.push("/lessons")}
-            className="bg-white drop-shadow-sm px-4 py-2 border border-gray rounded-full text-[14px] leading-6 font-normal 
-        text-black hover:cursor-pointer duration-200 hover:bg-black/5 flex"
+            className="bg-white drop-shadow-sm px-4 py-2 rounded-full text-[14px] leading-6 font-normal 
+        bg-neutral-500/5 hover:cursor-pointer duration-200 hover:bg-black/5 flex"
           >
             Clear Filters
           </button>
