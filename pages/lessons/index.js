@@ -77,7 +77,7 @@ export default function Viper({ posts }) {
         />
         {filtered.length > 0 && (
           <>
-            <div className="gap-5 max-w-[1100px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 w-100 grid mx-auto mt-5 p-2">
+            <div className="gap-8 max-w-[1200px] mx-auto flex flex-col">
               {filtered.map((post, index) => {
                 const {
                   title,
@@ -87,72 +87,57 @@ export default function Viper({ posts }) {
                 } = post.meta;
                 return (
                   <div
-                    className="flex items-start justify-center w-full p-0 m-0"
+                    className="flex items-center justify-center w-full p-0 m-0"
                     key={index}
                   >
-                    <div
-                      key={index}
-                      className="relative items-center justify-center w-full rounded-md"
-                    >
-                      <Link href={`/lessons/${link}`}>
-                        <div className="relative block overflow-hidden border-box drop-shadow-sm max-w-max shadow-inner-lg will-change-transform hover:cursor-pointer">
-                          {/* <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full rounded-t text-zinc-100"> */}
-                          {/* <IoPlayCircleOutline size={40} /> */}
-                          {/* </div> */}
-                          <div className="pb-[56.25%] border border-l-neutral-900 border-b-0 border-r-neutral-900 border-t-neutral-900 relative top-0 h-[0] block overflow-hidden max-w-full w-[100000px] mt-1.5 mb-3 rounded-t-lg group z-10">
-                            <Image
-                              quality={100}
-                              src={`${image}`}
-                              alt="folder picture"
-                              loading="eager"
-                              layout="fill"
-                              objectFit="cover"
-                              className="absolute top-0 bottom-0 left-0 right-0 w-full h-full"
-                            />
-                          </div>
-                        </div>
-                      </Link>
-                      <div className="justify-start relative flex p-2 gap-2 bg-white/5 border-t mt-[-13px] border-b border-l border-r border-neutral-900 z-100 rounded-b-lg ">
-                        <div className="relative block border rounded-full border-neutral-900 bg-black/60 h-[42px] w-[42px] overflow-hidden">
-                          <Image
-                            src={`/${link.split("_")[0]}.png`}
-                            quality={100}
-                            layout="fill"
-                            objectFit="contain"
-                            loading={"eager"}
-                          />
-                        </div>
-                        <div className="flex flex-col">
-                          <h1 className="text-[14px] font-medium text-white tracking-wide mb-0.5">
-                            {title.split(" ").slice(1).join(" ")}
-                          </h1>
-                          <ul className="flex gap-2 mb-0 ml-0">
-                            <li
-                              className="text-center text-[10px] text-white/60 leading-4  mb-0     tracking-wider
+                    <div className="relative block  rounded-full bg-black/60 h-[42px] w-[42px] overflow-hidden">
+                      <Image
+                        src={`/${link.split("_")[0]}.png`}
+                        quality={100}
+                        layout="fill"
+                        objectFit="contain"
+                        loading={"eager"}
+                      />
+                    </div>
+                    <div className="relative block  rounded-full bg-black/60 h-[42px] w-[42px] overflow-hidden">
+                      <Image
+                        src={`/${link.split("_")[0]}.png`}
+                        quality={100}
+                        layout="fill"
+                        objectFit="contain"
+                        loading={"eager"}
+                      />
+
+                      <div className="flex flex-col">
+                        <h1 className="text-[14px] font-medium text-white tracking-wide mb-0.5">
+                          {title.split(" ").slice(1).join(" ")}
+                        </h1>
+                        <ul className="flex gap-2 mb-0 ml-0">
+                          <li
+                            className="text-center text-[10px] text-white/60 leading-4  mb-0     tracking-wider
                              bg-white/5 flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1 max-h-[22px]"
-                            >
-                              <span>
-                                {tags[0] == 1
-                                  ? "Hard"
-                                  : tags[0] === 2
-                                  ? "Medium"
-                                  : "Easy"}
-                              </span>
-                            </li>
-                            <li
-                              className="text-center text-[10px] text-white/60 leading-4  mb-0     tracking-wider
+                          >
+                            <span>
+                              {tags[0] == 1
+                                ? "Hard"
+                                : tags[0] === 2
+                                ? "Medium"
+                                : "Easy"}
+                            </span>
+                          </li>
+                          <li
+                            className="text-center text-[10px] text-white/60 leading-4  mb-0     tracking-wider
                              bg-white/5 flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1 max-h-[22px]"
-                            >
-                              <span>{tags[1]}</span>
-                            </li>
-                            <li
-                              className="text-center text-[10px] text-white/60 leading-4  mb-0     tracking-wider
+                          >
+                            <span>{tags[1]}</span>
+                          </li>
+                          <li
+                            className="text-center text-[10px] text-white/60 leading-4  mb-0     tracking-wider
                              bg-white/5 flex items-center justify-center max-w-fit px-2 py-0.5 rounded gap-1 max-h-[22px]"
-                            >
-                              <span>{tags[2]}</span>
-                            </li>
-                          </ul>
-                        </div>
+                          >
+                            <span>{tags[2]}</span>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>

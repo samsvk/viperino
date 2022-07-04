@@ -91,7 +91,7 @@ export function Navbar() {
                     </span>
                     Login Now
                   </li>
-                  <li className="mx-1  flex items-center gap-2 duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md">
+                  <li className="mx-1  flex items-center gap-2 duration-150 hover:bg-black/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] r  ounded-md">
                     <span>
                       <SiDiscord size={16} />
                     </span>
