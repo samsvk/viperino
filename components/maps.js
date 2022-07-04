@@ -1,6 +1,7 @@
 import { Router } from "next/router";
 import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { IoIosCheckmark } from "react-icons/io";
 
 function toUpperCase(param) {
   return (
@@ -32,7 +33,7 @@ function Dropdown(props) {
               : props.setOpen(props.title.toLowerCase());
           })
         }
-        className="px-4 py-2 border border-gray rounded-full text-[14px] leading-6 font-normal 
+        className="bg-white drop-shadow-sm px-4 py-2 border border-gray rounded-full text-[14px] leading-6 font-normal 
         text-black hover:cursor-pointer duration-200 hover:bg-black/5 flex"
       >
         {props.title}
@@ -69,9 +70,18 @@ function Dropdown(props) {
                   className={`${
                     query[props.title.toLowerCase()] !== opt
                       ? "bg-black/5"
-                      : "bg-green-400"
-                  } min-h-[12px] min-w-[12px] bg-black/5  rounded`}
-                ></span>
+                      : "bg-green-200"
+                  } min-h-[15px] min-w-[15px] bg-black/5 relative  rounded`}
+                >
+                  {query[props.title.toLowerCase()] === opt && (
+                    <div className="absolute pt-0.5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                      <IoIosCheckmark
+                        size={24}
+                        className="text-green-600"
+                      />
+                    </div>
+                  )}
+                </span>
                 {toUpperCase(opt)}
               </li>
             );
@@ -92,36 +102,47 @@ export const Maps = ({
 
   return (
     <>
-      <div className="max-w-[700px] w-100 mx-auto text-[10px] flex justify-start gap-5 items-center">
-        <Dropdown
-          options={mapData}
-          title={"Map"}
-          query={query}
-          handleRouter={handleRouter}
-          handleRemoveRouter={handleRemoveRouter}
-          setOpen={setOpen}
-          open={open}
-        />
+      <div className="flex max-w-[1200px] mx-auto">
+        <div className="flex-1">
+          <button
+            onClick={() => router.push("/lessons")}
+            className="bg-white drop-shadow-sm px-4 py-2 border border-gray rounded-full text-[14px] leading-6 font-normal 
+        text-black hover:cursor-pointer duration-200 hover:bg-black/5 flex"
+          >
+            Reset Filters
+          </button>
+        </div>
+        <div className="flex-2 max-w-[700px] w-100 mx-auto text-[10px] flex justify-start gap-5 items-center">
+          <Dropdown
+            options={mapData}
+            title={"Map"}
+            query={query}
+            handleRouter={handleRouter}
+            handleRemoveRouter={handleRemoveRouter}
+            setOpen={setOpen}
+            open={open}
+          />
 
-        <Dropdown
-          options={agentData}
-          title={"Agent"}
-          query={query}
-          handleRouter={handleRouter}
-          handleRemoveRouter={handleRemoveRouter}
-          setOpen={setOpen}
-          open={open}
-        />
+          <Dropdown
+            options={agentData}
+            title={"Agent"}
+            query={query}
+            handleRouter={handleRouter}
+            handleRemoveRouter={handleRemoveRouter}
+            setOpen={setOpen}
+            open={open}
+          />
 
-        <Dropdown
-          options={sideData}
-          title={"Side"}
-          query={query}
-          handleRouter={handleRouter}
-          handleRemoveRouter={handleRemoveRouter}
-          setOpen={setOpen}
-          open={open}
-        />
+          <Dropdown
+            options={sideData}
+            title={"Side"}
+            query={query}
+            handleRouter={handleRouter}
+            handleRemoveRouter={handleRemoveRouter}
+            setOpen={setOpen}
+            open={open}
+          />
+        </div>
       </div>
     </>
   );
