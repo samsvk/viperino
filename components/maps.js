@@ -77,14 +77,15 @@ function Dropdown(props) {
                     })
                   : handleRemoveRouter(opt);
               }}
-              className="w-full flex items-center gap-2 transition-[background] hover:bg-gray-500/50 hover:cursor-pointer px-2 text-[14px] leading-5 font-normal text-gray-300 m-0 p-0 tracking-tight py-[3px] rounded-md"
+              className="w-full flex items-center gap-2 transition-[background] hover:bg-gray-500/50 
+              hover:cursor-pointer px-2 text-[14px] leading-5 font-normal text-gray-300 m-0 p-0 tracking-tight py-[3px] rounded-md"
               key={opt}
             >
               <span
                 className={`${
                   query[props.title.toLowerCase()] !== opt
-                    ? "bg-gray-500"
-                    : "bg-green-300/50"
+                    ? "bg-gray-400/40"
+                    : "bg-green-300/40"
                 } min-h-[15px] min-w-[15px] bg-black/5 relative  rounded`}
               >
                 {query[props.title.toLowerCase()] === opt && (

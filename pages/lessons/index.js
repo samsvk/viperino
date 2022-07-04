@@ -86,11 +86,12 @@ export default function Viper({ posts }) {
                       className="border border-gray group hover:cursor-pointer pb-[56.25%] relative top-0 h-[0] block 
                      overflow-hidden max-w-full w-full rounded-md z-10"
                     >
-                      <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full duration-150 scale-125 group-hover:bg-black/5 bg-black/40 will-change-transform">
+                      <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full duration-150 scale-125 group-hover:bg-gray-800/5 bg-gray-800/30 will-change-transform">
                         <div
                           className="duration-150 group-hover:scale-110 h-[28px] w-[28px] 
                             rounded-full border-[1px] border-white/80 flex items-center justify-center
-                            group-hover:border-white will-change-transform"
+                            group-hover:border-white will-change-transform
+                            "
                         />
                         <IoPlaySharp
                           className="absolute ml-[2px] duration-150 text-white/80 group-hover:text-white"
