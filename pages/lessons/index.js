@@ -75,9 +75,9 @@ export default function Viper({ posts }) {
           handleRemoveRouter={handleRemoveRouter}
           router={router}
         />
-        {filtered.length > 0 && (
+        {/* {filtered.length > 0 && (
           <>
-            <div className="gap-8 max-w-[1200px] mx-auto flex flex-col mt-10">
+            <div className="gap-8 max-w-[1200px] mx-auto flex flex-col">
               {filtered.map((post, index) => {
                 const {
                   title,
@@ -87,7 +87,7 @@ export default function Viper({ posts }) {
                 } = post.meta;
                 return (
                   <div
-                    className="flex items-center w-full p-0 m-0"
+                    className="flex items-center justify-center w-full p-0 m-0"
                     key={index}
                   >
                     <div className="relative block  rounded-full bg-black/60 h-[42px] w-[42px] overflow-hidden">
@@ -167,8 +167,9 @@ export default function Viper({ posts }) {
               </ul>
             </div>
           </div>
-        )}
+        )} */}
       </div>
+      <div className="hero" />
     </>
   );
 }

@@ -29,9 +29,7 @@ export default function Home({ posts }) {
 
             <button
               className="px-6 py-2 bg-black rounded-full text-[14px] leading-6 font-normal text-white hover:cursor-pointer 
-              hover:bg-black/80 duration-200
-              
-              "
+              hover:bg-black/80 duration-200"
             >
               Join Viperino Now
             </button>

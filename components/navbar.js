@@ -79,7 +79,6 @@ export function Navbar() {
             <div className="absolute right-0 top-[2.5rem] z-[100]">
               <div
                 className="flex flex-row items-center justify-center py-1 min-w-[177px] gap-1.5 border border-gray rounded-md overflow-hidden relative
-              
               backdrop-blur border-b border-gray
              bg-white
               "
