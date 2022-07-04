@@ -34,8 +34,8 @@ function Dropdown(props) {
               : props.setOpen(props.title.toLowerCase());
           })
         }
-        className="bg-gray-100  drop-shadow-sm px-4 py-2 rounded-full text-[14px] leading-6 font-normal 
-        text-black hover:cursor-pointer duration-200  flex"
+        className="bg-gray-100 px-4 py-2 rounded-full text-[14px] leading-6 font-normal 
+         text-neutral-700/80 hover:cursor-pointer duration-200  flex"
       >
         {props.title}
         <span className="ml-2">
