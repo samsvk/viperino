@@ -103,15 +103,7 @@ export const Maps = ({
   return (
     <>
       <div className="flex max-w-[1200px] mx-auto">
-        <div className="flex-1">
-          <button
-            onClick={() => router.push("/lessons")}
-            className="bg-white drop-shadow-sm px-4 py-2 border border-gray rounded-full text-[14px] leading-6 font-normal 
-        text-black hover:cursor-pointer duration-200 hover:bg-black/5 flex"
-          >
-            Reset Filters
-          </button>
-        </div>
+        <div className="flex-1"></div>
         <div className="flex-2 max-w-[700px] w-100 mx-auto text-[10px] flex justify-start gap-5 items-center">
           <Dropdown
             options={mapData}
@@ -142,6 +134,13 @@ export const Maps = ({
             setOpen={setOpen}
             open={open}
           />
+          <button
+            onClick={() => router.push("/lessons")}
+            className="bg-white drop-shadow-sm px-4 py-2 border border-gray rounded-full text-[14px] leading-6 font-normal 
+        text-black hover:cursor-pointer duration-200 hover:bg-black/5 flex"
+          >
+            Clear Filters
+          </button>
         </div>
       </div>
     </>
