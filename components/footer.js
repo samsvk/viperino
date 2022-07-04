@@ -14,13 +14,13 @@ export const Footer = () => {
         </p>
 
         <div className="grid gap-6 mt-1 lg:gap-10 lg:grid-cols-3 md:grid-cols-2">
-          <button className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-black/5 duration-100">
+          <button className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-gray-100 duration-100">
             <span>🐦</span>
             <h5 className="text-base font-medium text-black/80">
               Twitter
             </h5>
           </button>
-          <button className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-black/5 duration-100">
+          <button className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-gray-100 duration-100">
             <span> 🔴</span>
             <h5 className="text-base font-medium text-black/80">
               YouTube
@@ -28,7 +28,7 @@ export const Footer = () => {
           </button>
           <button
             className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative 
-          hover:bg-black/5 duration-100"
+          hover:bg-gray-100 duration-100"
           >
             <span>🟣</span>
             <h5 className="text-base font-medium text-black/80">

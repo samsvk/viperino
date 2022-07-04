@@ -3,15 +3,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { Maps } from "../../components/maps";
 import { getSlugs, getExcerpt } from "../api/api";
-import { GiUnlitBomb } from "react-icons/gi";
-import {
-  IoLocation,
-  IoPlayCircleOutline,
-  IoStatsChart,
-} from "react-icons/io5";
 import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
 import Heading from "../../components/heading";
+import { IoPlaySharp } from "react-icons/io5";
 
 export default function Viper({ posts }) {
   const [cachedPosts, setCachedPosts] = useState(posts);
@@ -68,7 +63,7 @@ export default function Viper({ posts }) {
 
   return (
     <>
-      <div className="w-full h-full min-w-full min-h-screen py-10 scale-90 bg-white rounded-md max-w-max">
+      <div className="w-full h-full min-w-full min-h-screen py-10 bg-white rounded-md max-w-max">
         <Maps
           handleRouter={handleRouter}
           handleRemoveRouter={handleRemoveRouter}
@@ -77,7 +72,7 @@ export default function Viper({ posts }) {
         />
         {filtered.length > 0 && (
           <>
-            <div className="grid mt-10 max-w-[1200px] mx-auto w-full lg:grid-cols-3 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 md:gap-10  gap-8">
+            <div className="grid mt-10 max-w-[1100px] mx-auto w-full lg:grid-cols-4 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 md:gap-6 gap-8">
               {filtered.map((post, index) => {
                 const {
                   title,
@@ -88,7 +83,18 @@ export default function Viper({ posts }) {
                 return (
                   <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-md">
                     <div className="border border-gray group hover:cursor-pointer pb-[56.25%] relative top-0 h-[0] block overflow-hidden max-w-full w-[100000px] rounded-md z-10">
-                      <div className="absolute top-0 bottom-0 left-0 right-0 z-50 block w-full h-full duration-150 scale-125 group-hover:bg-black/5 bg-black/20" />
+                      <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center w-full h-full duration-150 scale-125 group-hover:bg-black/5 bg-black/40 ">
+                        {/* <div
+                          className="duration-150 group-hover:scale-110 h-[36px] w-[36px] 
+                            rounded-full border-[2px] border-white/80 flex items-center justify-center
+                            group-hover:border-white"
+                        />
+                        <IoPlaySharp
+                          className="absolute ml-[3.6px] duration-150 text-white/80 group-hover:text-white"
+                          size={20}
+                        /> */}
+                      </div>
+
                       <Image
                         quality={100}
                         src={`${image}`}
@@ -96,11 +102,11 @@ export default function Viper({ posts }) {
                         loading="eager"
                         layout="fill"
                         objectFit="cover"
-                        className="absolute top-0 bottom-0 left-0 right-0 w-full h-full"
+                        className="absolute top-0 bottom-0 left-0 right-0 w-full h-full duration-200 scale-[1.1] group-hover:scale-[1.12]"
                       />
                     </div>
-                    <div className="flex flex-row justify-start w-full gap-4 mt-2">
-                      <div className="relative block border border-neutral-900/5 rounded-full bg-gray-100  h-[58px] w-[58px] overflow-hidden">
+                    <div className="flex flex-row justify-start w-full gap-2 mt-3">
+                      <div className="relative block border border-neutral-600/5 rounded-full bg-gray-100 h-[40px] w-[40px] min-w-[40px] overflow-hidden">
                         <Image
                           src={`/${link.split("_")[0]}.png`}
                           quality={100}
@@ -110,34 +116,23 @@ export default function Viper({ posts }) {
                         />
                       </div>
                       <div className="flex-1">
-                        <h5 className="text-base font-medium text-left text-black/80">
-                          {title}
-                        </h5>
-                        <ul className="flex flex-row gap-2.5 p-0 m-0 mt-1 list-none">
-                          <li
-                            className="bg-gray-100  drop-shadow-sm px-3.5 py-0.5 rounded-full
-                            flex
-                          text-[14px] leading-5 font-normal text-neutral-700/80
-                          "
-                          >
+                        <Link href={`/lessons/${link}`}>
+                          <h5 className="text-[13px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer">
+                            {title}
+                          </h5>
+                        </Link>
+                        <ul className="flex flex-row gap-1.5 p-0 m-0 mt-0.5 list-none">
+                          <li className="bg-gray-100 px-2.5  rounded-md flex text-[11px] leading-5 font-normal text-neutral-700/80">
                             {tags[0] == 1
                               ? "Hard"
                               : tags[0] === 2
                               ? "Medium"
                               : "Easy"}
                           </li>
-                          <li
-                            className="bg-gray-100  drop-shadow-sm px-3.5 py-0.5 rounded-full
-                          flex
-                          text-[14px] leading-5 font-normal text-neutral-700/80"
-                          >
+                          <li className="bg-gray-100 px-2.5  rounded-md flex text-[11px] leading-5 font-normal text-neutral-700/80">
                             {tags[1]}
                           </li>
-                          <li
-                            className="bg-gray-100 drop-shadow-sm px-3.5 py-0.5 rounded-full
-                           flex
-                          text-[14px] leading-5 font-normal text-neutral-700/80"
-                          >
+                          <li className="bg-gray-100 px-2.5  rounded-md flex text-[11px] leading-5 font-normal text-neutral-700/80">
                             {tags[2]}
                           </li>
                         </ul>

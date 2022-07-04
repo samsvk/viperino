@@ -97,7 +97,7 @@ export default function Home({ posts }) {
               <h5 className="text-base font-medium text-black/80">
                 Progress Over Time
               </h5>
-              <p className="text-[14px] text-center leading-5 font-normal text-neutral-700/80 m-0 p-0  tracking-tight ">
+              <p className="text-[14px] text-center leading-5 font-normal text-neutral-700/80 m-0 p-0  tracking-tight">
                 Our guides upscale - Iron to Radiant
                 there&lsquo;s something for everyone.
               </p>
