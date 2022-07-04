@@ -51,7 +51,7 @@ function Dropdown(props) {
           right-0
           flex flex-col items-start justify-center  w-[90%] min-w-[185px] max-w-[185px] gap-1.5 border border-gray rounded-md overflow-hidden
           backdrop-blur border-b border-gray
-        bg-gray-100 
+        bg-white 
         "
         >
           {props.options.map((opt) => {
@@ -64,7 +64,7 @@ function Dropdown(props) {
                       })
                     : handleRemoveRouter(opt);
                 }}
-                className="w-full flex items-center gap-2 duration-150 hover:bg-neutral-500/5 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md"
+                className="w-full flex items-center gap-2 duration-150 hover:bg-gray-100 hover:cursor-pointer px-3 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md"
                 key={opt}
               >
                 <span
