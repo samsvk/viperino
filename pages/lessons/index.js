@@ -68,7 +68,7 @@ export default function Viper({ posts }) {
 
   return (
     <>
-      <div className="w-full h-full min-w-full min-h-screen py-10 bg-white/80 max-w-max">
+      <div className="w-full h-full min-w-full min-h-screen py-10 bg-white max-w-max">
         <Maps
           handleRouter={handleRouter}
           handleRemoveRouter={handleRemoveRouter}
@@ -87,8 +87,8 @@ export default function Viper({ posts }) {
                 } = post.meta;
                 return (
                   <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-md">
-                    <div className="group hover:cursor-pointer pb-[56.25%] relative top-0 h-[0] block overflow-hidden max-w-full w-[100000px] rounded-md z-10">
-                      <div className="absolute top-0 bottom-0 left-0 right-0 z-50 block w-full h-full duration-150 scale-125 group-hover:bg-black/5 bg-black/30" />
+                    <div className="border border-gray group hover:cursor-pointer pb-[56.25%] relative top-0 h-[0] block overflow-hidden max-w-full w-[100000px] rounded-md z-10">
+                      <div className="absolute top-0 bottom-0 left-0 right-0 z-50 block w-full h-full duration-150 scale-125 group-hover:bg-black/5 bg-black/20" />
                       <Image
                         quality={100}
                         src={`${image}`}
@@ -100,7 +100,7 @@ export default function Viper({ posts }) {
                       />
                     </div>
                     <div className="flex flex-row justify-start w-full gap-4 mt-2">
-                      <div className="relative block border border-neutral-900/5 rounded-full bg-neutral-500/5 h-[58px] w-[58px] overflow-hidden">
+                      <div className="relative block border border-neutral-900/5 rounded-full bg-gray-100  h-[58px] w-[58px] overflow-hidden">
                         <Image
                           src={`/${link.split("_")[0]}.png`}
                           quality={100}
@@ -115,7 +115,7 @@ export default function Viper({ posts }) {
                         </h5>
                         <ul className="flex flex-row gap-2.5 p-0 m-0 mt-1 list-none">
                           <li
-                            className="bg-neutral-500/5 drop-shadow-sm px-3 py-0.5 rounded-full
+                            className="bg-gray-100  drop-shadow-sm px-3.5 py-0.5 rounded-full
                             flex
                           text-[14px] leading-5 font-normal text-neutral-700/80
                           "
@@ -127,14 +127,14 @@ export default function Viper({ posts }) {
                               : "Easy"}
                           </li>
                           <li
-                            className="bg-neutral-500/5 drop-shadow-sm px-3 py-0.5 rounded-full
+                            className="bg-gray-100  drop-shadow-sm px-3.5 py-0.5 rounded-full
                           flex
                           text-[14px] leading-5 font-normal text-neutral-700/80"
                           >
                             {tags[1]}
                           </li>
                           <li
-                            className="bg-neutral-500/5 drop-shadow-sm px-3 py-0.5 rounded-full
+                            className="bg-gray-100 drop-shadow-sm px-3.5 py-0.5 rounded-full
                            flex
                           text-[14px] leading-5 font-normal text-neutral-700/80"
                           >

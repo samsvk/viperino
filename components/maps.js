@@ -34,8 +34,8 @@ function Dropdown(props) {
               : props.setOpen(props.title.toLowerCase());
           })
         }
-        className="bg-neutral-500/5 drop-shadow-sm px-4 py-2 rounded-full text-[14px] leading-6 font-normal 
-        text-black hover:cursor-pointer duration-200 hover:bg-neutral-500/10 flex"
+        className="bg-gray-100  drop-shadow-sm px-4 py-2 rounded-full text-[14px] leading-6 font-normal 
+        text-black hover:cursor-pointer duration-200  flex"
       >
         {props.title}
         <span className="ml-2">
@@ -51,7 +51,7 @@ function Dropdown(props) {
           right-0
           flex flex-col items-start justify-center  w-[90%] min-w-[185px] max-w-[185px] gap-1.5 border border-gray rounded-md overflow-hidden
           backdrop-blur border-b border-gray
-        bg-white
+        bg-gray-100 
         "
         >
           {props.options.map((opt) => {
@@ -108,7 +108,7 @@ export const Maps = ({
         <div className="flex-2 max-w-[660px] w-full flex flex-row">
           <div
             className="min-h-[66px] min-w-[66px] max-w-[66px] max-h-[66px] w-full h-full  rounded-full
-                    backdrop-blur bg-neutral-500/5 flex items-center justify-center"
+                    backdrop-blur bg-gray-100 flex items-center justify-center"
           >
             <IoDocumentTextSharp
               size={30}
@@ -156,7 +156,7 @@ export const Maps = ({
           />
           <button
             onClick={() => router.push("/lessons")}
-            className="bg-neutral-500/5 drop-shadow-sm px-4 py-2 rounded-full text-[14px] leading-6 font-normal 
+            className="bg-gray-100 drop-shadow-sm px-4 py-2 rounded-full text-[14px] leading-6 font-normal 
              hover:cursor-pointer duration-200 hover:bg-black/5 flex"
           >
             Clear Filters
