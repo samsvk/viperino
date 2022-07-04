@@ -68,7 +68,7 @@ export default function Viper({ posts }) {
 
   return (
     <>
-      <div className="w-full h-full min-w-full min-h-screen py-10 bg-white max-w-max">
+      <div className="w-full h-full min-w-full min-h-screen py-10 scale-90 bg-white rounded-md max-w-max">
         <Maps
           handleRouter={handleRouter}
           handleRemoveRouter={handleRemoveRouter}
