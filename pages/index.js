@@ -61,7 +61,7 @@ export default function Home({ posts }) {
                 Value For Money
               </h5>
 
-              <p className="text-[14px] text-center leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight ">
+              <p className="text-[14px] text-center leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight">
                 We produce the best guides for less. No
                 Subscription, No Contract - Simply a One-Time
                 payment.
