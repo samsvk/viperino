@@ -34,61 +34,68 @@ function Dropdown(props) {
               : props.setOpen(props.title.toLowerCase());
           })
         }
-        className="bg-gray-100 hover:bg-black/5 px-3.5 py-1 rounded-md text-[14px] leading-6 font-normal 
-         text-neutral-700/80 hover:cursor-pointer duration-200 flex"
+        className="bg-gray-100 min-w-[165px] hover:bg-black/5 px-3.5 py-1 rounded-md text-[14px] leading-6 font-normal 
+         text-neutral-700/80 hover:cursor-pointer flex
+          focus:outline focus:outline-offset-0 outline-sky-200 outline-2
+         "
       >
         {props.title}
         <span className="ml-0 mr-[-4px]">
           <RiArrowDropDownLine size={23} className="mr-[-4px]" />
         </span>
       </button>
-      {props.title.toLowerCase() === props.open && (
-        <ul
-          className="absolute p-2 m-0 list-none z-100
-          top-[3rem]
+      <ul
+        className={`absolute p-2 m-0 list-none z-100
+          top-[2.5rem]
+          drop-shadow-lg
           mx-auto
-          left-1
+          left-0
           right-0
-          flex flex-col items-start justify-center  w-[90%] min-w-[185px] max-w-[185px] gap-1.5 border border-gray rounded-md overflow-hidden
-          backdrop-blur border-b border-gray
-        bg-white 
-        "
-        >
-          {props.options.map((opt) => {
-            return (
-              <li
-                onClick={() => {
+          flex flex-col items-start justify-center  min-w-[165px] max-w-[165px] gap-1.5 border border-gray rounded-md overflow-hidden
+          border-b border-gray
+        bg-gray-100  
+        ransition-all duration-200
+    ${
+      props.title.toLowerCase() === props.open
+        ? "opacity-1 visible transform origin-top-right -translate-y-0"
+        : "opacity-0 invisible transform origin-top-right -translate-y-2"
+    }
+        `}
+      >
+        {props.options.map((opt) => {
+          return (
+            <li
+              onClick={() => {
+                query[props.title.toLowerCase()] !== opt
+                  ? handleRouter({
+                      [props.title.toLowerCase()]: opt,
+                    })
+                  : handleRemoveRouter(opt);
+              }}
+              className="w-full flex items-center gap-2 transition-[background] hover:bg-gray-50 hover:cursor-pointer px-2 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md"
+              key={opt}
+            >
+              <span
+                className={`${
                   query[props.title.toLowerCase()] !== opt
-                    ? handleRouter({
-                        [props.title.toLowerCase()]: opt,
-                      })
-                    : handleRemoveRouter(opt);
-                }}
-                className="w-full flex items-center gap-2 duration-150 hover:bg-gray-100 hover:cursor-pointer px-2 text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight py-[3px] rounded-md"
-                key={opt}
+                    ? "bg-neutral-700/20"
+                    : "bg-green-200"
+                } min-h-[15px] min-w-[15px] bg-black/5 relative  rounded`}
               >
-                <span
-                  className={`${
-                    query[props.title.toLowerCase()] !== opt
-                      ? "bg-black/5"
-                      : "bg-green-200"
-                  } min-h-[15px] min-w-[15px] bg-black/5 relative  rounded`}
-                >
-                  {query[props.title.toLowerCase()] === opt && (
-                    <div className="absolute pt-0.5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                      <IoIosCheckmark
-                        size={24}
-                        className="text-green-600"
-                      />
-                    </div>
-                  )}
-                </span>
-                {toUpperCase(opt)}
-              </li>
-            );
-          })}
-        </ul>
-      )}
+                {query[props.title.toLowerCase()] === opt && (
+                  <div className="absolute pt-0.5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <IoIosCheckmark
+                      size={24}
+                      className="text-green-600"
+                    />
+                  </div>
+                )}
+              </span>
+              {toUpperCase(opt)}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
@@ -105,7 +112,7 @@ export const Maps = ({
   return (
     <>
       <div className="flex max-w-[1100px] mx-auto items-center ">
-        <div className="flex-2 max-w-[660px] w-full flex flex-row">
+        <div className="flex flex-row w-full max-w-max">
           <div
             className="min-h-[66px] min-w-[66px] max-w-[66px] max-h-[66px] w-full h-full  rounded-full
                     backdrop-blur bg-gray-100 flex items-center justify-center"
@@ -124,7 +131,7 @@ export const Maps = ({
             </p>
           </div>
         </div>
-        <div className="flex-1 max-w-[700px] w-100 mx-auto text-[10px] flex justify-end gap-3 items-center">
+        <div className="flex-1 max-w-[100%] w-100 mx-auto text-[10px] flex justify-end gap-3 items-center">
           <Dropdown
             options={mapData}
             title={"Map"}
