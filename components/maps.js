@@ -25,7 +25,7 @@ const agentData = ["viper", "cypher", "sova"];
 function Dropdown(props) {
   const { query, handleRemoveRouter, handleRouter } = props;
   return (
-    <div className="relative z-50">
+    <div className="relative z-50 flex items-center">
       <button
         onClick={() =>
           props.setOpen(() => {
@@ -34,31 +34,38 @@ function Dropdown(props) {
               : props.setOpen(props.title.toLowerCase());
           })
         }
-        className="bg-gray-100 min-w-[165px] hover:bg-black/5 px-3.5 py-1 rounded-md text-[14px] leading-6 font-normal 
+        className="bg-gray-100 min-w-full  px-4 py-1 rounded-md text-[14px] leading-6 font-normal 
          text-neutral-700/80 hover:cursor-pointer flex
-          focus:outline focus:outline-offset-0 outline-gray-200 outline-2
+          focus:outline focus:outline-offset-0 
+          hover:outline hover:outline-offset-0
+          outline-gray-200 outline-2    items-center       min-h-[35px]
          "
       >
-        {props.title}
-        <span className="ml-0 mr-[-4px]">
-          <RiArrowDropDownLine size={23} className="mr-[-4px]" />
+        <p className="flex-1 w-full p-0 m-0 text-base text-[13px] font-medium tracking-tight text-left text-black/80 ">
+          {props.title}
+        </p>
+        <span className="ml-0 mr-[-4px] border-l border-gray-150">
+          <RiArrowDropDownLine
+            size={23}
+            className="mr-[-4px] ml-2"
+          />
         </span>
       </button>
       <ul
         className={`
           absolute p-2 m-0 list-none z-100
-          top-[2.5rem]
+          top-[3.8rem]
           drop-shadow
           mx-auto
           left-0
           right-0
           flex flex-col items-start justify-center  
-          min-w-[165px] max-w-[165px] gap-1.5 border 
+          w-full gap-1.5 border 
           border-gray 
           rounded-md overflow-hidden
           border-b border-gray-500
         bg-gray-800/80
-          backdrop-blur 
+          backdrop-blur
           ransition-all duration-200
     ${
       props.title.toLowerCase() === props.open
@@ -84,7 +91,7 @@ function Dropdown(props) {
               <span
                 className={`${
                   query[props.title.toLowerCase()] !== opt
-                    ? "bg-gray-500"
+                    ? "bg-gray-400/50"
                     : "bg-gray-300"
                 } min-h-[15px] min-w-[15px] bg-black/5 relative  rounded`}
               >
@@ -117,27 +124,27 @@ export const Maps = ({
 
   return (
     <>
-      <div className="flex max-w-[1100px] mx-auto items-center ">
-        <div className="flex flex-row w-full max-w-max">
-          <div
-            className="min-h-[66px] min-w-[66px] max-w-[66px] max-h-[66px] w-full h-full  rounded-full
+      <div className="flex max-w-[1100px] mx-auto items-center mb-8">
+        <div className="relative mt-10 grid max-w-[1100px] mx-auto w-full grid-cols-4 gap-5">
+          <div className="flex flex-row w-full max-w-max">
+            <div
+              className="min-h-[54px] min-w-[54px] max-w-[54px] max-h-[54px] w-full h-full  rounded-full
                     backdrop-blur bg-gray-100 flex items-center justify-center"
-          >
-            <IoDocumentTextSharp
-              size={30}
-              className="mb-[3px] text-neutral-700/60"
-            />
+            >
+              <IoDocumentTextSharp
+                size={30}
+                className="mb-[3px] text-neutral-700/60"
+              />
+            </div>
+            <div className="flex flex-col justify-center ml-3">
+              <h1 className="text-[22px] font-semibold tracking-tight text-black text-left">
+                Guides
+              </h1>
+              <p className="text-[13px] tracking-normal font-medium leading-0 p-0 m-0 text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer">
+                {amount} Available
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col justify-center ml-3">
-            <h1 className="text-[28px] font-semibold tracking-[0] text-black text-left">
-              Guides
-            </h1>
-            <p className="text-[16px] m-0 leading-7 font-normal tracking-tight text-neutral-700/60 max-w-[660px] w-full">
-              {amount} Total Available
-            </p>
-          </div>
-        </div>
-        <div className="flex-1 max-w-[100%] w-100 mx-auto text-[10px] flex justify-end gap-3 items-center">
           <Dropdown
             options={mapData}
             title={"Map"}
@@ -167,16 +174,20 @@ export const Maps = ({
             setOpen={setOpen}
             open={open}
           />
-          <button
+          {/* <button
             onClick={() => {
               router.push("/lessons");
               setOpen(false);
             }}
-            className="bg-gray-100  text-neutral-700/80 px-3.5 py-1 rounded-md text-[14px] leading-6 font-normal 
-             hover:cursor-pointer duration-200 hover:bg-black/5 flex"
+            className="absolute right-0 bg-gray-100 max-w-max flex justify-end items-end float-right px-3.5 py-1 rounded-md leading-6 font-normal 
+             hover:cursor-pointer 
+             flex-1 w-full p-0 m-0 text-base text-[13px] tracking-tight text-left text-black/80
+           focus:outline focus:outline-offset-0 hover:outline hover:outline-offset-0
+          outline-gray-200 outline-2    
+          min-h-[33px]"
           >
-            Clear Filters
-          </button>
+            Reset
+          </button> */}
         </div>
       </div>
     </>

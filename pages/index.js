@@ -1,6 +1,4 @@
 import * as React from "react";
-import Image from "next/image";
-import { BsArrowRight } from "react-icons/bs";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 import { MdAutoGraph } from "react-icons/md";
 import { TbNumbers, TbArrowsRandom } from "react-icons/tb";
@@ -16,7 +14,7 @@ export default function Home({ posts }) {
         <div className="max-w-[1200px] w-full mx-auto pt-[25vh]  px-6 ">
           <div className="max-w-[800px] relative">
             <h1 className="text-6xl font-semibold tracking-tight text-black z-[-10]">
-              Suport development.
+              Support development.
             </h1>
             <h1 className="text-6xl font-semibold tracking-tight text-black mt-1.5">
               Get access forever.
