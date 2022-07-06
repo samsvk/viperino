@@ -70,7 +70,7 @@ export function Navbar() {
           <button
             onClick={() => setShow((p) => !p)}
             className={`px-1 py-0.5 flex items-center justify-center border border-transparent rounded-md hover:cursor-pointer hover:border-black/5 duration-150 hover:bg-black/5 text-neutral-700/60
-              ${show && "bg-black/5 border-black/5"}
+              ${show && "bg-gray-100 border-black/5"}
             `}
           >
             <HiMenu size={25} />
@@ -81,10 +81,7 @@ export function Navbar() {
                 className="flex flex-row items-center justify-center py-1 min-w-[177px] gap-1.5  border-gray overflow-hidden relative
              border-gray
              bg-white
-
-              
               border 
-    
               rounded-md 
               border-b 
             bg-gray-800/80

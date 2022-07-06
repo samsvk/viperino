@@ -72,7 +72,7 @@ h1 {
 }
 
 h2 > a {
-  @apply relative text-2xl font-bold text-neutral-200 hover:text-inherit w-max;
+  @apply relative text-2xl font-semibold tracking-tight text-black hover:text-inherit w-max;
 }
 h2 > a:hover:after {
   @apply visible;
@@ -82,7 +82,7 @@ h2 > a::after {
   content: "#";
 }
 h2 {
-  @apply mb-5 text-5xl font-bold text-neutral-200;
+  @apply mb-5 text-5xl font-bold text-black/80;
 }
 ul {
   @apply mt-1 mb-0;

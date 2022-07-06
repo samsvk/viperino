@@ -91,12 +91,12 @@ function Dropdown(props) {
               <span
                 className={`${
                   query[props.title.toLowerCase()] !== opt
-                    ? "bg-gray-400/50"
-                    : "bg-gray-300"
+                    ? "bg-gray-600"
+                    : "bg-green-600"
                 } min-h-[15px] min-w-[15px] bg-black/5 relative  rounded`}
               >
                 {query[props.title.toLowerCase()] === opt && (
-                  <div className="absolute pt-0.5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                  <div className="absolute pt-0 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                     <IoIosCheckmark
                       size={24}
                       className="text-white"
