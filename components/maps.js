@@ -91,9 +91,9 @@ function Dropdown(props) {
               <span
                 className={`${
                   query[props.title.toLowerCase()] !== opt
-                    ? "bg-gray-600"
-                    : "bg-green-600"
-                } min-h-[15px] min-w-[15px] bg-black/5 relative  rounded`}
+                    ? "bg-gray-500"
+                    : "bg-green-300"
+                } min-h-[15px] min-w-[15px] relative  rounded`}
               >
                 {query[props.title.toLowerCase()] === opt && (
                   <div className="absolute pt-0 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
@@ -140,7 +140,7 @@ export const Maps = ({
               <h1 className="text-[22px] font-semibold tracking-tight text-black text-left">
                 Guides
               </h1>
-              <p className="text-[13px] tracking-normal font-medium leading-0 p-0 m-0 text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer">
+              <p className="text-[13px] tracking-normal font-medium leading-none p-0 m-0 text-left duration-75 text-black/80 mt-0.5">
                 {amount} Available
               </p>
             </div>

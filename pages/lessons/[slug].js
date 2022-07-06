@@ -6,10 +6,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import { MDXRemote } from "next-mdx-remote";
 import { YouTube } from "../../components/youtube";
-import { Menu } from "../../components/menu";
 import { getSlugs, getPostFromSlug } from "../api/api";
-import { IoLocation, IoStatsChart } from "react-icons/io5";
-import { GiUnlitBomb } from "react-icons/gi";
 import { Table } from "../../components/table";
 
 export default function PostPage({ post }) {
@@ -18,8 +15,11 @@ export default function PostPage({ post }) {
       <Head>
         <title>{post.meta.title}</title>
       </Head>
-      <div className="w-full max-w-4xl p-10 mx-auto my-0">
-        <div className="flex gap-4 p-3 border rounded-md border-gray-100/50 bg-gray-50">
+      <div className="w-full max-w-3xl p-10 mx-auto">
+        <h1 className="text-[35px] font-semibold tracking-tight mb-5 text-black text-left">
+          {post.meta.title}
+        </h1>
+        <div className="flex gap-4 p-3 border rounded-md mt-7 border-gray-100/50 bg-gray-50">
           <span className="text-[22px] flex items-start justify-start relative">
             💡
           </span>

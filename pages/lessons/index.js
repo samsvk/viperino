@@ -70,46 +70,6 @@ export default function Viper({ posts }) {
           router={router}
           amount={cachedPosts.length}
         />
-        {/* <div className="max-w-[1100px] w-full mx-auto my-5 p-0 t-5 rounded-md flex gap-2 flex-col">
-          <div className="grid mt-0 max-w-[1100px] mx-auto w-full grid-cols-4 md:gap-5">
-            <div className="flex items-center">
-              <IoDocumentTextSharp
-                size={19}
-                className="mr-1.5 text-neutral-700/10"
-              />
-              <h5 className="text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]">
-                Crosshair Placement
-              </h5>
-            </div>
-            <div className="flex items-center">
-              <IoDocumentTextSharp
-                size={19}
-                className="mr-2 text-neutral-700/10"
-              />
-              <h5 className="text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]">
-                Crosshair Placement
-              </h5>
-            </div>
-            <div className="flex items-center">
-              <IoDocumentTextSharp
-                size={19}
-                className="mr-2 text-neutral-700/10"
-              />
-              <h5 className="text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]">
-                Crosshair Placement
-              </h5>
-            </div>
-            <div className="flex items-center">
-              <IoDocumentTextSharp
-                size={19}
-                className="mr-2 text-neutral-700/10"
-              />
-              <h5 className="text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]">
-                Crosshair Placement
-              </h5>
-            </div>
-          </div>
-        </div> */}
         {filtered.length > 0 && (
           <>
             <div className="mt-0 grid max-w-[1100px] mx-auto w-full lg:grid-cols-4 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 md:gap-5 gap-8">

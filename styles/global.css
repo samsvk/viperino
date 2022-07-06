@@ -58,10 +58,10 @@ ul {
   @apply my-2 list-disc ml-7 mb-9;
 }
 li {
-  @apply mb-1.5 text-sm leading-5 tracking-wide text-neutral-400;
+  @apply mb-2.5 text-[14px] text-left leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight;
 }
 li::marker {
-  @apply text-neutral-800;
+  @apply text-gray-200;
 }
 input::placeholder {
   @apply flex items-center text-sm font-normal align-middle text-neutral-400;
@@ -70,28 +70,30 @@ input::placeholder {
 h1 {
   @apply text-4xl font-bold leading-none text-white;
 }
-
+li > strong {
+  @apply tracking-normal no-underline text-[14px] font-medium text-left duration-75 text-black/80 relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px];
+}
 h2 > a {
-  @apply relative text-2xl font-semibold tracking-tight text-black hover:text-inherit w-max;
+  @apply relative text-2xl font-bold tracking-tight text-black hover:text-inherit w-max;
 }
 h2 > a:hover:after {
   @apply visible;
 }
 h2 > a::after {
-  @apply absolute top-0 bottom-0 left-[-1.5rem] right-0 w-full h-full text-neutral-700 invisible;
+  @apply absolute top-0 bottom-0 left-[-1.5rem] right-0 w-full h-full text-gray-200 invisible;
   content: "#";
 }
 h2 {
-  @apply mb-5 text-5xl font-bold text-black/80;
+  @apply my-5 text-2xl leading-none tracking-tight;
 }
 ul {
   @apply mt-1 mb-0;
 }
 p {
-  @apply text-[14px] tracking-wide font-light text-white/90 leading-5 mb-3;
+  @apply text-[14px] text-left leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight;
 }
 a {
-  @apply ml-1 text-sm leading-5 tracking-wide text-blue-400 duration-200 hover:cursor-pointer hover:text-blue-500;
+  @apply ml-0 text-sm leading-5 tracking-wide text-blue-400 duration-200 hover:cursor-pointer hover:text-blue-500;
 }
 ol {
   @apply mt-3 ml-6 list-disc;

@@ -3,7 +3,7 @@ import { IoDocumentTextSharp } from "react-icons/io5";
 
 export const Table = () => {
   return (
-    <div className="mt-5 mb-7">
+    <div className="my-7">
       <h1 className="text-2xl font-semibold tracking-tight text-black z-[-10] mb-3.5">
         Table of Content
       </h1>
@@ -15,7 +15,7 @@ export const Table = () => {
           />
           <a
             href="#why-this-lineup"
-            className="no-underline text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]"
+            className="tracking-normal t no-underline text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]"
           >
             Why this lineup?
           </a>
@@ -28,7 +28,7 @@ export const Table = () => {
           />
           <a
             href="#benefits"
-            className="no-underline text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]"
+            className="tracking-normal no-underline text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]"
           >
             Benefits
           </a>
@@ -40,7 +40,7 @@ export const Table = () => {
           />
           <a
             href="#limitations"
-            className="no-underline text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]"
+            className="tracking-normal no-underline text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]"
           >
             Limitations
           </a>
