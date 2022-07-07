@@ -35,7 +35,7 @@ export const Maps = ({
           <div className="flex flex-row w-full max-w-max">
             <div
               className="min-h-[54px] min-w-[54px] max-w-[54px] max-h-[54px] w-full h-full  rounded-full
-                    backdrop-blur bg-gray-100 flex items-center justify-center"
+              backdrop-blur bg-gray-100 flex items-center justify-center"
             >
               <IoDocumentTextSharp
                 size={30}
