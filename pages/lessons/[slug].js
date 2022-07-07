@@ -5,11 +5,13 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import { MDXRemote } from "next-mdx-remote";
+import Image from "next/image";
 import { YouTube } from "../../components/youtube";
 import { getSlugs, getPostFromSlug } from "../api/api";
 import { Table } from "../../components/table";
 
 export default function PostPage({ post }) {
+  console.log(post);
   return (
     <>
       <Head>
@@ -19,6 +21,26 @@ export default function PostPage({ post }) {
         <h1 className="text-[35px] font-semibold tracking-tight mb-5 text-black text-left">
           {post.meta.title}
         </h1>
+        <div className="flex items-center my-10">
+          <div className="relative">
+            <Image
+              src="/avatar.png"
+              loading="lazy"
+              height={30}
+              width={30}
+              quality={100}
+              className="rounded-full"
+              objectFit="cover"
+            />
+          </div>
+          <div className="text-[14px] leading-5 font-normal text-neutral-700/80 my-10  tracking-tight flex gap-1">
+            <span>Admin /</span>
+            <span>{post.meta.date.split(" ")[1]}</span>
+            <span>{post.meta.date.split(" ")[2]},</span>
+            <span>{post.meta.date.split(" ")[3]}</span>
+          </div>
+        </div>
+
         <div className="flex gap-4 p-3 border rounded-md mt-7 border-gray-100/50 bg-gray-50">
           <span className="text-[22px] flex items-start justify-start relative">
             💡
