@@ -130,3 +130,10 @@ strong {
       hsla(0, 0%, 100%, 0) 25%
     );
 }
+
+::selection {
+  background: rgba(0, 0, 0, 0);
+}
+::-moz-selection {
+  background: rgba(0, 0, 0, 0);
+}
