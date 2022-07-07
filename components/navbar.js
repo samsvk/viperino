@@ -1,29 +1,15 @@
 import { useState, useEffect } from "react";
 import { HiMenu, HiLogin } from "react-icons/hi";
 import { SiDiscord } from "react-icons/si";
+import { useWindowScroll } from "./useWindowScroll";
 
 export function getWindow() {
   return typeof window !== "undefined" ? window : null;
 }
 
 export function Navbar() {
-  const [isAtTop, setIsAtTop] = useState(true);
   const [show, setShow] = useState(false);
-
-  const window = getWindow();
-
-  function onScroll() {
-    if ((getWindow()?.pageYOffset || 0) < 20) setIsAtTop(true);
-    else if (isAtTop) setIsAtTop(false);
-  }
-
-  useEffect(() => {
-    if (!window) return;
-    setTimeout(onScroll, 0);
-    getWindow()?.addEventListener("scroll", onScroll);
-    return () =>
-      getWindow()?.removeEventListener("scroll", onScroll);
-  }, []);
+  const isAtTop = useWindowScroll();
 
   return (
     <>
