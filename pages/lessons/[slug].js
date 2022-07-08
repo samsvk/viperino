@@ -19,35 +19,15 @@ export default function PostPage({ post }) {
       </Head>
       <div className="w-full max-w-3xl p-10 mx-auto">
         <div className="flex items-center mt-5">
-          <h1 className="flex-1 text-3xl font-bold tracking-tight text-black">
+          <h1 className="relative flex items-center text-3xl font-bold tracking-tight text-black">
             {post.meta.title}
+            <span className="absolute right-[-3rem] top-[-0.2rem] mb-3 ml-3 text-3xl">
+              ✨
+            </span>
           </h1>
-          <div className="flex items-end justify-end w-max">
-            <div
-              className="mr-3
-         
-            tracking-normal no-underline text-[14px] font-medium text-left duration-75  text-black/80 relative
-            flex gap-1"
-            >
-              <span>Admin /</span>
-              <span>{post.meta.date.split(" ")[1]}</span>
-              <span>{post.meta.date.split(" ")[2]},</span>
-              <span>{post.meta.date.split(" ")[3]}</span>
-            </div>
-            <div className="relative flex items-end justify-end w-max">
-              <Image
-                src="/avatar.png"
-                loading="lazy"
-                height={26}
-                width={26}
-                quality={100}
-                className="block border rounded-full border-gray"
-                objectFit="cover"
-              />
-            </div>
-          </div>
         </div>
-        <div className="flex gap-4 p-3 mt-4 rounded-md bg-gray-50">
+        <Table post={post} />
+        <div className="flex gap-4 p-3 mt-2 rounded-md bg-gray-50">
           <span className="text-[22px] flex items-start justify-start relative">
             💡
           </span>
@@ -65,7 +45,6 @@ export default function PostPage({ post }) {
             </p>
           </div>
         </div>
-        <Table />
 
         <YouTube id={post.meta.url} />
         <MDXRemote {...post.source} />
