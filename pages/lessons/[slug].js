@@ -12,25 +12,69 @@ import { Table } from "../../components/table";
 import { Menu } from "../../components/menu";
 
 export default function PostPage({ post }) {
+  console.log(post.meta.tags);
   return (
     <>
       <Head>
-        <title>{post.meta.title}</title>
+        <title>Viperino | {post.meta.title}</title>
       </Head>
       <div className="w-full max-w-3xl p-10 mx-auto">
-        <div className="flex items-center mt-5">
-          <h1 className="relative flex items-center text-3xl font-bold tracking-tight text-black">
-            {post.meta.title}
-            <span className="absolute right-[-3rem] top-[-0.2rem] mb-3 ml-3 text-3xl">
-              ✨
-            </span>
-          </h1>
+        <Menu />
+
+        <div className="flex flex-row w-full mt-5 max-w-max">
+          <div
+            className="min-h-[64px] min-w-[64px] max-w-[64px] max-h-[64px] w-full h-full 
+              backdrop-blur bg-gray-100 flex items-center justify-center overflow-hidden
+              border-neutral-600/5 border rounded-full
+              "
+          >
+            <Image
+              src={`/${post.meta.post.split("_")[0]}.png`}
+              quality={100}
+              layout="fill"
+              objectFit="contain"
+              loading={"eager"}
+            />
+          </div>
+          <div className="flex flex-col justify-center ml-3">
+            <h1 className="relative flex items-center text-3xl font-bold tracking-tight text-black">
+              {post.meta.title}
+              {/* <span className="absolute right-[-3rem] top-[-0.2rem] mb-3 ml-3 text-3xl">
+                ✨
+              </span> */}
+            </h1>
+            <ul className="flex flex-row gap-1.5 p-0 m-0 mt-0.5 list-none">
+              <li
+                className="bg-gray-100 px-2.5  rounded-md flex
+
+              text-[14px] leading-5 font-normal text-neutral-700/80 tracking-tight"
+              >
+                {post?.meta?.tags[0] == 1
+                  ? "Hard"
+                  : post.meta?.tags[0] === 2
+                  ? "Medium"
+                  : "Easy"}
+              </li>
+              <li
+                className="bg-gray-100 px-2.5  rounded-md flex
+
+              text-[14px] leading-5 font-normal text-neutral-700/80 tracking-tight"
+              >
+                {post?.meta?.tags[1]}
+              </li>
+              <li
+                className="bg-gray-100 px-2.5  rounded-md flex
+
+              text-[14px] leading-5 font-normal text-neutral-700/80 tracking-tight
+              "
+              >
+                {post?.meta?.tags[2]}
+              </li>
+            </ul>
+          </div>
         </div>
-        <Table post={post} />
-        <div className="flex gap-4 p-3 mt-2 rounded-md bg-gray-50">
-          <span className="text-[22px] flex items-start justify-start relative">
-            💡
-          </span>
+
+        <div className="flex gap-4 px-5 py-3 mt-5 bg-gray-100 rounded-md">
           <div>
             <p className="p-o m-0 text-[14px] leading-5 font-normal text-neutral-700/80 tracking-tight ">
               <span className="underline">
@@ -45,7 +89,7 @@ export default function PostPage({ post }) {
             </p>
           </div>
         </div>
-
+        <Table post={post} />
         <YouTube id={post.meta.url} />
         <MDXRemote {...post.source} />
       </div>

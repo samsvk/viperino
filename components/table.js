@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Table = ({ post }) => {
   return (
-    <div className="flex items-center mt-3 mb-5">
+    <div className="flex items-center mt-5 mb-5">
       <ol className="flex flex-row items-center flex-1 m-0 gap-7 p0">
         <li className="flex items-center mb-0">
           <IoDocumentTextSharp
