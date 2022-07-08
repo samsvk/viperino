@@ -18,39 +18,36 @@ export default function PostPage({ post }) {
         <title>{post.meta.title}</title>
       </Head>
       <div className="w-full max-w-3xl p-10 mx-auto">
-        <h1 className="mb-5 text-5xl font-bold tracking-tight text-left text-black">
-          {post.meta.title}
-        </h1>
-        <div className="flex items-center my-0">
-          <div className="relative">
-            <Image
-              src="/avatar.png"
-              loading="lazy"
-              height={28}
-              width={28}
-              quality={100}
-              className="block border rounded-full border-gray"
-              objectFit="cover"
-            />
-          </div>
-          <div
-            className="ml-3 w-full flex-1
-            mb-[5px]
+        <div className="flex items-center mt-5">
+          <h1 className="flex-1 text-3xl font-bold tracking-tight text-black">
+            {post.meta.title}
+          </h1>
+          <div className="flex items-end justify-end w-max">
+            <div
+              className="mr-3
+         
             tracking-normal no-underline text-[14px] font-medium text-left duration-75  text-black/80 relative
             flex gap-1"
-          >
-            <span>Admin /</span>
-            <span>{post.meta.date.split(" ")[1]}</span>
-            <span>{post.meta.date.split(" ")[2]},</span>
-            <span>{post.meta.date.split(" ")[3]}</span>
-          </div>
-
-          <div className="flex items-end justify-end">
-            <Menu />
+            >
+              <span>Admin /</span>
+              <span>{post.meta.date.split(" ")[1]}</span>
+              <span>{post.meta.date.split(" ")[2]},</span>
+              <span>{post.meta.date.split(" ")[3]}</span>
+            </div>
+            <div className="relative flex items-end justify-end w-max">
+              <Image
+                src="/avatar.png"
+                loading="lazy"
+                height={26}
+                width={26}
+                quality={100}
+                className="block border rounded-full border-gray"
+                objectFit="cover"
+              />
+            </div>
           </div>
         </div>
-
-        <div className="flex gap-4 p-3 mt-5 rounded-md bg-gray-50">
+        <div className="flex gap-4 p-3 mt-4 rounded-md bg-gray-50">
           <span className="text-[22px] flex items-start justify-start relative">
             💡
           </span>
@@ -69,6 +66,7 @@ export default function PostPage({ post }) {
           </div>
         </div>
         <Table />
+
         <YouTube id={post.meta.url} />
         <MDXRemote {...post.source} />
       </div>
