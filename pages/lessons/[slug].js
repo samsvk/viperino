@@ -12,7 +12,6 @@ import { Table } from "../../components/table";
 import { Menu } from "../../components/menu";
 
 export default function PostPage({ post }) {
-  console.log(post.meta.tags);
   return (
     <>
       <Head>

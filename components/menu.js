@@ -9,18 +9,13 @@ export const Menu = () => {
 
   return (
     <Link href={`/${path}`}>
-      <li
-        className="hover:bg-gray-100 duration-150 hover:cursor-pointer px-2.5  rounded-md flex max-w-max
-
-              text-[14px] relative leading-5 font-normal text-neutral-700/80 tracking-tight
-              "
-      >
+      <li className="relative flex items-center mb-0">
         <MdOutlineKeyboardReturn
-          size={18}
-          className="top-[2px] absolute text-neutral-700/50"
+          size={19}
+          className="mr-1.5 text-neutral-700/10 top-[3px] absolute"
         />
-        <span className="pl-6">
-          {path.charAt(0).toUpperCase() + path.slice(1)}{" "}
+        <span className="ml-6 tracking-normal no-underline text-[14px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]">
+          {path.charAt(0).toUpperCase() + path.slice(1)}
         </span>
       </li>
       {/* <button
