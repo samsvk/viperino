@@ -1,6 +1,6 @@
 export function YouTube({ id }) {
   return (
-    <div className="pb-[56.25%] relative h-[0] overflow-hidden max-w-full mt-1.5 mb-8">
+    <div className="pb-[56.25%] relative h-[0] overflow-hidden max-w-full mt-1.5 mb-8 rounded-md">
       <iframe
         src={`https://www.youtube.com/embed/${id}`}
         allow="autoplay; encrypted-media"

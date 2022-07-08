@@ -3,8 +3,8 @@ import { IoDocumentTextSharp } from "react-icons/io5";
 
 export const Table = () => {
   return (
-    <div className="my-7">
-      <h1 className="text-2xl font-semibold tracking-tight text-black z-[-10] mb-3.5">
+    <div className="my-5">
+      <h1 className="text-2xl font-semibold tracking-tight text-black z-[-10] mb-5">
         Table of Content
       </h1>
       <ol className="flex flex-col gap-0.5 m-0 p0">

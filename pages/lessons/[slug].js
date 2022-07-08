@@ -9,39 +9,48 @@ import Image from "next/image";
 import { YouTube } from "../../components/youtube";
 import { getSlugs, getPostFromSlug } from "../api/api";
 import { Table } from "../../components/table";
+import { Menu } from "../../components/menu";
 
 export default function PostPage({ post }) {
-  console.log(post);
   return (
     <>
       <Head>
         <title>{post.meta.title}</title>
       </Head>
       <div className="w-full max-w-3xl p-10 mx-auto">
-        <h1 className="text-[35px] font-semibold tracking-tight mb-5 text-black text-left">
+        <h1 className="mb-5 text-5xl font-bold tracking-tight text-left text-black">
           {post.meta.title}
         </h1>
-        <div className="flex items-center my-10">
+        <div className="flex items-center my-0">
           <div className="relative">
             <Image
               src="/avatar.png"
               loading="lazy"
-              height={30}
-              width={30}
+              height={28}
+              width={28}
               quality={100}
-              className="rounded-full"
+              className="block border rounded-full border-gray"
               objectFit="cover"
             />
           </div>
-          <div className="text-[14px] leading-5 font-normal text-neutral-700/80 my-10  tracking-tight flex gap-1">
+          <div
+            className="ml-3 w-full flex-1
+            mb-[5px]
+            tracking-normal no-underline text-[14px] font-medium text-left duration-75  text-black/80 relative
+            flex gap-1"
+          >
             <span>Admin /</span>
             <span>{post.meta.date.split(" ")[1]}</span>
             <span>{post.meta.date.split(" ")[2]},</span>
             <span>{post.meta.date.split(" ")[3]}</span>
           </div>
+
+          <div className="flex items-end justify-end">
+            <Menu />
+          </div>
         </div>
 
-        <div className="flex gap-4 p-3 border rounded-md mt-7 border-gray-100/50 bg-gray-50">
+        <div className="flex gap-4 p-3 mt-5 rounded-md bg-gray-50">
           <span className="text-[22px] flex items-start justify-start relative">
             💡
           </span>
