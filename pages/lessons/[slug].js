@@ -38,9 +38,6 @@ export default function PostPage({ post }) {
           <div className="flex flex-col justify-center ml-3">
             <h1 className="relative flex items-center text-3xl font-bold tracking-tight text-black">
               {post.meta.title}
-              {/* <span className="absolute right-[-3rem] top-[-0.2rem] mb-3 ml-3 text-3xl">
-                ✨
-              </span> */}
             </h1>
             <ul className="flex flex-row gap-1.5 p-0 m-0 mt-0.5 list-none">
               <li

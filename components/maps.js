@@ -80,20 +80,6 @@ export const Maps = ({
             setOpen={setOpen}
             open={open}
           />
-          {/* <button
-            onClick={() => {
-              router.push("/lessons");
-              setOpen(false);
-            }}
-            className="absolute right-0 bg-gray-100 max-w-max flex justify-end items-end float-right px-3.5 py-1 rounded-md leading-6 font-normal 
-             hover:cursor-pointer 
-             flex-1 w-full p-0 m-0 text-base text-[13px] tracking-tight text-left text-black/80
-           focus:outline focus:outline-offset-0 hover:outline hover:outline-offset-0
-          outline-gray-200 outline-2    
-          min-h-[33px]"
-          >
-            Reset
-          </button> */}
         </div>
       </div>
     </>
