@@ -19,41 +19,12 @@ a {
 }
 @layer base {
   html {
-    /* font-family: "Outfit", sans-serif; */
     font-family: "Inter", sans-serif;
   }
 }
 body {
   @apply bg-white;
 }
-/* p {
-  @apply my-2 text-sm font-medium leading-5 mb-9 text-zinc-500;
-} */
-
-/* h1,
-h2,
-h3 {
-  @apply tracking-wide;
-}
-h1 {
-  @apply mb-3 text-4xl font-bold text-zinc-50;
-}
-h2 {
-  @apply mb-3 text-xl font-semibold text-zinc-200;
-}
-h3 {
-  @apply text-base font-semibold text-zinc-200;
-}
-p {
-  @apply tracking-wide;
-}
-ul {
-  @apply my-2 ml-8 list-disc mb-9;
-}
-li {
-  @apply mb-1.5 text-sm font-medium leading-5 text-zinc-500;
-} */
-
 ul {
   @apply my-2 list-disc ml-7 mb-9;
 }
