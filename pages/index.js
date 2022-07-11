@@ -7,6 +7,20 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
 export default function Home({ posts }) {
+  React.useEffect(() => {
+    const query = new URLSearchParams(window.location.search);
+    if (query.get("success")) {
+      console.log(
+        "Order placed! You will receive an email confirmation."
+      );
+    }
+
+    if (query.get("canceled")) {
+      console.log(
+        "Order canceled -- continue to shop around and checkout when you’re ready."
+      );
+    }
+  }, []);
   return (
     <>
       <Navbar />
@@ -25,12 +39,16 @@ export default function Home({ posts }) {
               curve.
             </p>
 
-            <button
-              className="px-6 py-2 bg-black rounded-full text-[14px] leading-6 font-normal text-white hover:cursor-pointer 
+            <form action="/api/checkout_sessions" method="POST">
+              <button
+                type="submit"
+                role="link"
+                className="px-6 py-2 bg-black rounded-full text-[14px] leading-6 font-normal text-white hover:cursor-pointer 
               hover:bg-black/80 duration-200"
-            >
-              Join Viperino Now
-            </button>
+              >
+                Join Viperino Now
+              </button>
+            </form>
 
             <p className="text-[14px] leading-5 font-normal text-neutral-700/80 my-10  tracking-tight ">
               <span className="underline">
