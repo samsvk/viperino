@@ -6,7 +6,9 @@ import { BsFillLightningChargeFill } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
-export default function Home({ posts }) {
+import { Topbar } from "../components/topbar";
+
+export default function Home() {
   React.useEffect(() => {
     const query = new URLSearchParams(window.location.search);
     if (query.get("success")) {
@@ -21,8 +23,10 @@ export default function Home({ posts }) {
       );
     }
   }, []);
+
   return (
     <>
+      <Topbar />
       <Navbar />
       <div className="flex flex-col">
         <div className="max-w-[1200px] w-full mx-auto pt-[25vh]  px-6 ">
