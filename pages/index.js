@@ -26,7 +26,9 @@ export default function Home() {
 
   return (
     <>
-      <Topbar />
+      <Topbar type="failure">
+        Your order failed or cancelled :(
+      </Topbar>
       <Navbar />
       <div className="flex flex-col">
         <div className="max-w-[1200px] w-full mx-auto pt-[25vh]  px-6 ">
