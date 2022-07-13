@@ -11,7 +11,8 @@ export const Topbar = (props) => {
 
     const x = setTimeout(() => {
       setOpen(false);
-    }, [5000]);
+    }, [10000]);
+
     return () => {
       clearTimeout(x);
       clearTimeout(y);
@@ -28,6 +29,7 @@ export const Topbar = (props) => {
            top-5 z-[2000] rounded-full border 
          border-green-600
            transition-all duration-500 delay-300
+           overflow-hidden
           ${
             open
               ? "opacity-1 visible transform origin-top-right -translate-y-0"
@@ -44,6 +46,12 @@ export const Topbar = (props) => {
           >
             <RiCloseFill />
           </button>
+          <div
+            className={`absolute bottom-0 w-full h-[5px] bg-neutral-900/10  
+            left-[100%]
+            animate-fade-in-down
+          `}
+          />
         </div>
       );
     case "failure":

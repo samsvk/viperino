@@ -10,8 +10,6 @@ import { Topbar } from "../components/topbar";
 import { useRouter } from "next/router";
 export default function Home() {
   const router = useRouter();
-  console.log(router.query.success);
-
   return (
     <>
       {router.query.success && (
