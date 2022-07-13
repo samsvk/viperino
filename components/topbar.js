@@ -5,12 +5,17 @@ export const Topbar = (props) => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    setOpen(true);
+    const y = setTimeout(() => {
+      setOpen(true);
+    }, [150]);
+
     const x = setTimeout(() => {
       setOpen(false);
-      console.log("x");
     }, [5000]);
-    return () => clearTimeout(x);
+    return () => {
+      clearTimeout(x);
+      clearTimeout(y);
+    };
   }, []);
 
   switch (props.type) {
@@ -22,7 +27,7 @@ export const Topbar = (props) => {
            left-0 right-0 absolute 
            top-5 z-[2000] rounded-full border 
          border-green-600
-           transition-all duration-200 delay-150
+           transition-all duration-500 delay-300
           ${
             open
               ? "opacity-1 visible transform origin-top-right -translate-y-0"
