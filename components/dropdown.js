@@ -23,7 +23,7 @@ export function Dropdown(props) {
          text-neutral-700/80 hover:cursor-pointer flex
           focus:outline focus:outline-offset-0 
           hover:outline hover:outline-offset-0
-          outline-gray-200 outline-2    items-center       min-h-[35px]
+          outline-gray-200 outline-2 items-center       min-h-[35px]
          "
       >
         <p className="flex-1 w-full p-0 m-0 text-base text-[13px] font-medium tracking-tight text-left text-black/80 ">
@@ -51,7 +51,7 @@ export function Dropdown(props) {
           border-b border-gray-500
         bg-gray-800/80
           backdrop-blur
-          ransition-all duration-200
+          transition-all duration-200
     ${
       props.title.toLowerCase() === props.open
         ? "opacity-1 visible transform origin-top-right -translate-y-0"

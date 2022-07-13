@@ -7,28 +7,24 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
 import { Topbar } from "../components/topbar";
-
+import { useRouter } from "next/router";
 export default function Home() {
-  React.useEffect(() => {
-    const query = new URLSearchParams(window.location.search);
-    if (query.get("success")) {
-      console.log(
-        "Order placed! You will receive an email confirmation."
-      );
-    }
-
-    if (query.get("canceled")) {
-      console.log(
-        " :D Order canceled -- continue to shop around and checkout when you’re ready."
-      );
-    }
-  }, []);
+  const router = useRouter();
+  console.log(router.query.success);
 
   return (
     <>
-      <Topbar type="failure">
-        Your order failed or cancelled :(
-      </Topbar>
+      {router.query.success && (
+        <Topbar type="success">
+          Order placed! Please check your email for confirmation!
+        </Topbar>
+      )}
+
+      {router.query.canceled && (
+        <Topbar type="failure">
+          Order failed! Please try again later!
+        </Topbar>
+      )}
       <Navbar />
       <div className="flex flex-col">
         <div className="max-w-[1200px] w-full mx-auto pt-[25vh]  px-6 ">
