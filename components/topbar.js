@@ -11,7 +11,7 @@ export const Topbar = (props) => {
 
     const x = setTimeout(() => {
       setOpen(false);
-    }, [10000]);
+    }, [5000]);
 
     return () => {
       clearTimeout(x);
@@ -49,7 +49,7 @@ export const Topbar = (props) => {
           <div
             className={`absolute bottom-0 w-full h-[5px] bg-neutral-900/10  
             left-[100%]
-            animate-fade-in-down
+            animate-leftToRight
           `}
           />
         </div>
