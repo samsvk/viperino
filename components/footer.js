@@ -17,27 +17,36 @@ export const Footer = () => {
         </p>
 
         <div className="grid gap-6 mt-1 lg:gap-10 lg:grid-cols-3 md:grid-cols-2">
-          <button className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-gray-100 duration-100">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-gray-100 duration-100 text-inherit hover:text-inherit"
+          >
             <span>🐦</span>
             <h5 className="text-base font-medium text-black/80">
               Twitter
             </h5>
-          </button>
-          <button className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-gray-100 duration-100">
+          </a>
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-gray-100 duration-100 text-inherit hover:text-inherit"
+          >
             <span> 🔴</span>
             <h5 className="text-base font-medium text-black/80">
               YouTube
             </h5>
-          </button>
-          <button
-            className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative 
-          hover:bg-gray-100 duration-100"
+          </a>
+          <a
+            href="https://discord.gg"
+            target="_blank"
+            className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-gray-100 duration-100 text-inherit hover:text-inherit"
           >
             <span>🟣</span>
             <h5 className="text-base font-medium text-black/80">
               Discord
             </h5>
-          </button>
+          </a>
         </div>
       </div>
     </>
