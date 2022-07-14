@@ -10,7 +10,6 @@ import { Topbar } from "../components/topbar";
 import { useRouter } from "next/router";
 export default function Home() {
   const router = useRouter();
-  const refref = React.useRef();
   return (
     <>
       {router.query.success && (
@@ -156,11 +155,3 @@ export default function Home() {
     </>
   );
 }
-
-// export async function getStaticProps() {
-//   const postDirectory = path.join(process.cwd(), "classes/");
-//   const posts = await fs
-//     .readdirSync(postDirectory)
-//     .map((file) => file);
-//   return { props: { posts } };
-// }
