@@ -26,13 +26,28 @@ export function Navbar() {
           <div className="min-h-[40px] min-w-[40px] w-full h-full max-w-[40px] max-h-[40px] bg-black rounded-full"></div>
           <ul className="flex gap-5 p-0 m-0 list-none  py-3.5 ml-10 flex-1">
             <li className="text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight hover:cursor-pointer hover:text-black">
-              Features
+              <a
+                href="#features"
+                className="tracking-tight text-inherit hover:text-black"
+              >
+                Features
+              </a>
             </li>
             <li className="text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight hover:cursor-pointer hover:text-black">
-              Community
+              <a
+                href="#contact"
+                className="tracking-tight text-inherit hover:text-black"
+              >
+                Community
+              </a>
             </li>
             <li className="text-[14px] leading-5 font-normal text-neutral-700/80 m-0 p-0 tracking-tight hover:cursor-pointer hover:text-black">
-              Contact
+              <a
+                href="#contact"
+                className="tracking-tight text-inherit hover:text-black"
+              >
+                Contact
+              </a>
             </li>
           </ul>
           <div className="flex items-center justify-center h-full flex-2">

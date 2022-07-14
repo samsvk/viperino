@@ -3,7 +3,10 @@ import React from "react";
 export const Footer = () => {
   return (
     <>
-      <div className="max-w-[800px] w-full mx-auto p-12 pb-[8rem] mt-20 rounded-lg flex flex-col items-center justify-center relative">
+      <div
+        id="contact"
+        className="max-w-[800px] w-full mx-auto p-12 pb-[8rem] mt-20 rounded-lg flex flex-col items-center justify-center relative"
+      >
         <h1 className="text-4xl font-semibold tracking-[0] text-black text-center">
           Our Community and Contributers.
         </h1>

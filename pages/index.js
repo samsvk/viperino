@@ -10,6 +10,7 @@ import { Topbar } from "../components/topbar";
 import { useRouter } from "next/router";
 export default function Home() {
   const router = useRouter();
+  const refref = React.useRef();
   return (
     <>
       {router.query.success && (
@@ -64,7 +65,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
+      <div id="features">
         <div className="flex items-center w-full gap-5 mx-auto max-w-[1200px] rounded-lg mb-10 mt-20  px-6 ">
           <div className="grid max-w-[100%] w-full lg:grid-cols-3 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 md:gap-10  gap-8">
             <div className="flex py-10 flex-col items-center justify-center gap-1.5 px-8 border border-gray rounded-md overflow-hidden relative">
