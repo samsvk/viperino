@@ -72,7 +72,7 @@ export default function Viper({ posts }) {
         />
         {filtered.length > 0 && (
           <>
-            <div className="mt-0 grid max-w-[1100px] mx-auto w-full lg:grid-cols-4 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 md:gap-5 gap-8">
+            <div className="p-5 md:p-2.5 mt-0 grid max-w-[1100px] mx-auto w-full lg:grid-cols-4 md:grid-cols-2 lg:grid-rows-2 md:grid-rows-3 grid-rows-6 md:gap-5 gap-8">
               {filtered.map((post, index) => {
                 const {
                   title,

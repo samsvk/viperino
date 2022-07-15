@@ -31,7 +31,10 @@ export const Maps = ({
   return (
     <>
       <div className="flex max-w-[1100px] mx-auto items-center mb-8">
-        <div className="relative mt-10 grid max-w-[1100px] mx-auto w-full grid-cols-4 gap-5">
+        <div
+          className="relative mt-10 grid max-w-[1100px] mx-auto w-full grid-cols-2 lg:grid-cols-4 gap-5 px-5 md:px-2.5
+        "
+        >
           <div className="flex flex-row w-full max-w-max">
             <div
               className="min-h-[54px] min-w-[54px] max-w-[54px] max-h-[54px] w-full h-full  rounded-full
