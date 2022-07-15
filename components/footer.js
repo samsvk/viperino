@@ -20,6 +20,7 @@ export const Footer = () => {
           <a
             href="https://twitter.com"
             target="_blank"
+            rel="noreferrer"
             className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-gray-100 duration-100 text-inherit hover:text-inherit"
           >
             <span>🐦</span>
@@ -30,6 +31,7 @@ export const Footer = () => {
           <a
             href="https://youtube.com"
             target="_blank"
+            rel="noreferrer"
             className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-gray-100 duration-100 text-inherit hover:text-inherit"
           >
             <span> 🔴</span>
@@ -40,6 +42,7 @@ export const Footer = () => {
           <a
             href="https://discord.gg"
             target="_blank"
+            rel="noreferrer"
             className="flex flex-row items-center justify-center gap-1.5 py-5 px-8 border border-gray rounded-md overflow-hidden relative hover:bg-gray-100 duration-100 text-inherit hover:text-inherit"
           >
             <span>🟣</span>
