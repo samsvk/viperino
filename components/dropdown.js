@@ -10,7 +10,7 @@ function toUpperCase(param) {
 export function Dropdown(props) {
   const { query, handleRemoveRouter, handleRouter } = props;
   return (
-    <div className="relative z-50 flex items-center">
+    <div className="relative flex items-center">
       <button
         onClick={() =>
           props.setOpen(() => {
@@ -43,6 +43,7 @@ export function Dropdown(props) {
           drop-shadow
           mx-auto
           left-0
+          z-[3000]
           right-0
           flex flex-col items-start justify-center  
           w-full gap-1.5 border 
