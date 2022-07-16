@@ -9,6 +9,8 @@ function toUpperCase(param) {
 
 export function Dropdown(props) {
   const { query, handleRemoveRouter, handleRouter } = props;
+  const x = query[props.title.toLowerCase()];
+  console.log(x?.toString().split(" "));
   return (
     <div className="relative flex items-center">
       <button
@@ -27,7 +29,13 @@ export function Dropdown(props) {
          "
       >
         <p className="flex-1 w-full p-0 m-0 text-base text-[13px] font-medium tracking-tight text-left text-black/80 ">
-          {props.title}
+          {query[props.title.toLowerCase()]
+            ?.toString("")
+            .split("")[0]
+            .toUpperCase() +
+            query[props.title.toLowerCase()]
+              ?.toString()
+              .slice(1) || props.title}
         </p>
         <span className="ml-0 mr-[-4px] border-l border-gray-150">
           <RiArrowDropDownLine
