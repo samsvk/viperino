@@ -26,7 +26,7 @@ export default function Home() {
       )}
       <Navbar />
       <div className="flex flex-col">
-        <div className="max-w-[1200px] w-full mx-auto pt-[25vh]  px-6 ">
+        <div className="max-w-[1200px] w-full mx-auto pt-[25vh] px-6 ">
           <div className="max-w-[800px] relative">
             <h1 className="text-6xl font-semibold tracking-tight text-black z-[-10]">
               Support development.
