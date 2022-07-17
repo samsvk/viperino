@@ -51,6 +51,13 @@ export const Footer = () => {
             </h5>
           </a>
         </div>
+        <p className="text-[14px] leading-5 font-normal text-neutral-700/80 my-10  tracking-tight ">
+          <span className="underline">Issues with payment?</span>{" "}
+          Email us -{" "}
+          <span className="font-medium text-black/80">
+            help@viperino.gg
+          </span>{" "}
+        </p>
       </div>
     </>
   );
