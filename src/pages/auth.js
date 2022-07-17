@@ -44,7 +44,7 @@ const Auth = () => {
             <div className="flex flex-row">
               <p className="text-[14px] flex-1 mt-12 leading-5 font-normal text-neutral-700/80 my-10  tracking-tight  flex gap-1 items-center">
                 <span className="underline">
-                  Don't have a login?
+                  Don&apos;t have a login?
                 </span>{" "}
                 <span className="line-through">$65</span> now
                 only{" "}
