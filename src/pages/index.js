@@ -8,6 +8,7 @@ import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
 import { Topbar } from "../components/topbar";
 import { useRouter } from "next/router";
+
 export default function Home() {
   const router = useRouter();
   return (

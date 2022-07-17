@@ -55,7 +55,7 @@ export const Footer = () => {
           <span className="underline">Issues with payment?</span>{" "}
           Email us -{" "}
           <span className="font-medium text-black/80">
-            help@viperino.gg
+            payment@viperino.gg
           </span>{" "}
         </p>
       </div>
