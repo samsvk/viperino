@@ -8,11 +8,10 @@ const Auth = () => {
       <div className="flex flex-col items-center justify-center">
         <Link href={`/`}>
           <li className="relative flex items-center mt-5 mb-0">
-            <MdOutlineKeyboardReturn
-              size={19}
-              className="mr-1.5 text-neutral-700/10 top-[3px] absolute"
-            />
-            <span className="ml-6 tracking-normal no-underline text-[13px] font-medium text-left duration-75 hover:text-black text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]">
+            <span
+              className="tracking-normal no-underline text-[13px] font-medium text-left duration-75 hover:text-black
+             text-black/80 hover:cursor-pointer relative after:absolute after:w-full after:bottom-[-0px] after:left-0 after:bg-black/5 after:h-[1px]"
+            >
               Return to Homepage
             </span>
           </li>
@@ -20,7 +19,7 @@ const Auth = () => {
         <div className="max-w-[1200px] w-full mx-auto pt-[25vh] px-6">
           <div className="max-w-[800px] mx-auto relative flex items-center justify-center flex-col">
             <h1 className="text-6xl font-semibold tracking-tight text-black z-[-10] mb-0">
-              Sign in to Viperino
+              Sign-in to Viperino
             </h1>
             <p className="text-[18px] text-center leading-7 font-normal tracking-tight text-neutral-700/60 my-8 max-w-[660px] w-full">
               Gain access to a new ecosystem with tools and ideas
