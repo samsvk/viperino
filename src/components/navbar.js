@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { HiMenu, HiLogin } from "react-icons/hi";
 import { SiDiscord } from "react-icons/si";
+import Link from "next/link";
 import { useWindowScroll } from "./useWindowScroll";
 
 export function getWindow() {
@@ -50,14 +51,16 @@ export function Navbar() {
               </a>
             </li>
           </ul>
-          <div className="flex items-center justify-center h-full flex-2">
-            <button
-              className="px-6 py-2 bg-black rounded-full text-[14px] leading-6 font-normal text-white hover:cursor-pointer 
-            hover:bg-black/80 duration-200"
-            >
-              Login Now
-            </button>
-          </div>
+          <Link href="/auth">
+            <div className="flex items-center justify-center h-full flex-2">
+              <button
+                className="px-6 py-2 bg-black rounded-full text-[14px] leading-6 font-normal text-white hover:cursor-pointer 
+              hover:bg-black/80 duration-200"
+              >
+                Login Now
+              </button>
+            </div>
+          </Link>
         </nav>
       </div>
 
@@ -92,15 +95,17 @@ export function Navbar() {
               "
               >
                 <ul className="flex flex-col flex-1 gap-1 py-2 m-0 list-none relative z-[50] px-2">
-                  <li
-                    className="w-full flex items-center gap-2 transition-[background] hover:bg-gray-500/50 
+                  <Link href="/auth">
+                    <li
+                      className="w-full flex items-center gap-2 transition-[background] hover:bg-gray-500/50 
                     hover:cursor-pointer px-2 text-[14px] leading-5 font-normal text-gray-300 m-0 p-0 tracking-tight py-[3px] rounded-md"
-                  >
-                    <span>
-                      <HiLogin size={18} />
-                    </span>
-                    Login Now
-                  </li>
+                    >
+                      <span>
+                        <HiLogin size={18} />
+                      </span>
+                      Login Now
+                    </li>
+                  </Link>
                   <li
                     className="w-full flex items-center gap-2 transition-[background] hover:bg-gray-500/50 
                     hover:cursor-pointer px-2 text-[14px] leading-5 font-normal text-gray-300 m-0 p-0 tracking-tight py-[3px] rounded-md"
