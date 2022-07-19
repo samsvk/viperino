@@ -1,5 +1,4 @@
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import { MdOutlineKeyboardReturn } from "react-icons/md";
 import Link from "next/link";
 const Auth = () => {
   return (
@@ -26,33 +25,54 @@ const Auth = () => {
               that will help push you past the Valorant learning
               curve.
             </p>
-            <input
-              placeholder="Enter your password..."
-              role="input"
-              type="password"
-              className="
-              max-w-[440px]
-              w-full
-            bg-gray-100  px-4 pt-1 pb-1.5 rounded-md
-              hover:cursor-pointer flex  
+            <form
+              className="  max-w-[440px] w-full
+            bg-gray-100  
+            flex
               focus:outline focus:outline-offset-0 
               hover:outline hover:outline-offset-0
-              outline-gray-200 outline-2 items-center       
+              outline-gray-200 outline-2 
+             hover:cursor-pointer 
+             min-h-[35px]
+             rounded-full 
+             px-1 py-1
+            "
+            >
+              <input
+                placeholder="Enter your password..."
+                role="input"
+                type="password"
+                className="
+              flex-1
+              px-4 pt-1 pb-1.5 flex 
+              items-center      
+              bg-transparent 
               min-h-[35px]
+              focus:outline-none focus:outline-offset-0 
+              hover:outline-none hover:outline-offset-0
               placeholder:text-base 
               placeholder:text-[14px] 
               placeholder:font-medium 
               placeholder:tracking-tight 
               placeholder:text-left 
-            placeholder:text-black/80
+              placeholder:text-black/80
               text-base 
               text-[14px] 
               font-medium 
               tracking-tight 
               text-left 
-             text-black/80
+              text-black/80
               "
-            />
+              />
+              <button
+                type="submit"
+                role="link"
+                className="px-6 py-2 bg-black rounded-full text-[14px] leading-6 font-normal text-white hover:cursor-pointer 
+              hover:bg-black/80 duration-200"
+              >
+                Sign-in
+              </button>
+            </form>
             <div className="flex flex-row">
               <p className="text-[14px] flex-1 mt-12 leading-5 font-normal text-neutral-700/80 my-10  tracking-tight  flex gap-1 items-center">
                 <span className="underline">
